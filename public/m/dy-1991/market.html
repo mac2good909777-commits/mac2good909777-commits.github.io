@@ -1,0 +1,583 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>大園民族街廠房｜實價登錄行情分析</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --green: #4B872F; --forest: #2B5937; --gold: #C0A434;
+  --cream: #F5F3EE; --text: #2d2d2d; --muted: #888;
+  --border: #E0DDD7; --bg-card: #F8F7F3; --down: #C0533A;
+}
+*{ box-sizing:border-box; margin:0; padding:0; }
+body{ font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif; background:#ECEAE3; color:var(--text); font-size:13.5px; line-height:1.75; overflow-x:hidden; }
+.wrap{ max-width:980px; margin:0 auto; padding-bottom:60px; overflow-x:hidden; }
+/* 全域：凡非數字類元素一律允許換行 */
+p, li, td, th, div, span{ word-break:break-word; overflow-wrap:break-word; }
+
+/* HEADER */
+.hdr{ background:var(--forest); color:#fff; padding:28px 36px 0; position:relative; overflow:hidden; }
+.hdr-inner{ display:flex; align-items:flex-start; gap:22px; margin-bottom:22px; }
+.logo{ height:40px; width:auto; flex-shrink:0; }
+.hdr-text h1{ font-size:20px; font-weight:700; letter-spacing:.6px; margin-bottom:4px; }
+.hdr-text .sub{ font-size:11px; opacity:.7; }
+.wheat{ position:absolute; right:-5px; top:0; opacity:.07; pointer-events:none; }
+.meta-row{ display:flex; flex-wrap:wrap; border-top:1px solid rgba(255,255,255,.1); }
+.mi{ flex:1; min-width:120px; padding:12px 14px; border-right:1px solid rgba(255,255,255,.08); }
+.mi:last-child{ border-right:none; }
+.mi .v{ font-family:"Inter",monospace; font-size:17px; font-weight:700; color:var(--gold); line-height:1.2; word-break:break-word; overflow-wrap:break-word; }
+.mi .l{ font-size:10px; opacity:.6; margin-top:3px; word-break:break-word; }
+.gline{ height:3px; background:var(--gold); }
+.body{ background:#fff; padding:26px 36px 0; }
+
+/* SUBJECT */
+.sbj{ border:1px solid var(--border); border-radius:3px; margin-bottom:22px; overflow:hidden; }
+.sbj-hd{ background:var(--bg-card); padding:9px 16px; border-bottom:1px solid var(--border); font-size:11px; font-weight:700; color:var(--forest); letter-spacing:1.5px; text-transform:uppercase; }
+.sbj-bd{ padding:14px 16px; }
+.pg{ display:grid; grid-template-columns:repeat(3,1fr); gap:10px; }
+.pi .k{ font-size:10.5px; color:var(--muted); margin-bottom:1px; }
+.pi .v{ font-size:13px; font-weight:600; word-break:break-word; overflow-wrap:break-word; }
+.pi.hl .v{ color:var(--down); font-size:14.5px; font-weight:700; }
+.callout{ background:var(--cream); border-left:3px solid var(--gold); padding:8px 12px; margin-top:11px; font-size:11.5px; color:#6b5000; }
+
+/* SECTION */
+.sec{ margin-bottom:22px; border:1px solid var(--border); border-radius:3px; overflow:hidden; }
+.sec-hd{ padding:10px 16px; background:var(--bg-card); border-bottom:1px solid var(--border); border-left:3px solid var(--green); display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+.sec-hd h2{ font-size:13px; font-weight:700; color:var(--forest); }
+.tag{ font-size:10px; background:var(--gold); color:#fff; padding:1px 6px; border-radius:2px; font-weight:700; white-space:nowrap; }
+.sec-bd{ padding:16px; }
+
+/* TABLE WRAPPER */
+.tbl-wrap{ width:100%; overflow-x:auto; }
+table.dt{
+  width:100%; min-width:600px; border-collapse:collapse; font-size:11.5px;
+}
+table.dt th{
+  background:var(--forest); color:#fff; padding:8px 11px;
+  text-align:left; font-weight:600; font-size:11px;
+  white-space:normal; word-break:keep-all; line-height:1.4;
+}
+table.dt td{
+  padding:7px 11px; border-bottom:1px solid var(--border);
+  vertical-align:top; white-space:normal;
+  overflow-wrap:break-word; word-break:break-word; line-height:1.6;
+}
+table.dt tr:nth-child(odd) td{ background:#fafaf8; }
+table.dt tr:nth-child(even) td{ background:#fff; }
+table.dt tr:hover td{ background:#f2f5ee; }
+/* 數字欄：靠右 + 不折行 */
+table.dt .num{
+  text-align:right; font-family:"Inter",monospace; font-weight:600;
+  white-space:nowrap;
+}
+/* 日期、區域欄不折行 */
+table.dt td:first-child,
+table.dt td.nowrap{ white-space:nowrap; }
+/* note row */
+tr.note-row td{ padding:3px 11px 8px; font-size:11px; color:var(--muted); font-style:italic; background:#fdfcf8 !important; border-bottom:1px solid var(--border); }
+tr.note-row td span{ color:#7a5c00; }
+/* row highlight */
+tr.best td{ background:#faf3d8 !important; }
+tr.same td{ background:#ecf5ea !important; }
+tr.excl td{ opacity:.38; }
+tr.warn td{ background:#fff8e1 !important; }
+
+/* BADGES */
+.b{ display:inline-block; padding:1px 5px; border-radius:2px; font-size:10px; font-weight:700; white-space:nowrap; }
+.bl{ background:#ede8f5; color:#4a148c; border:1px solid #c5aee5; }
+.bi{ background:#e6f3ea; color:#1b5e20; border:1px solid #8bc89c; }
+.bo{ background:#e3edf8; color:#0d3a7a; border:1px solid #8ab0d8; }
+.bx{ background:#fce4ec; color:#880e4f; border:1px solid #f48fb1; }
+.bs{ background:#fff8dc; color:#8b6914; border:1px solid var(--gold); }
+.bk{ background:#ecf5ea; color:var(--forest); border:1px solid #8bc89c; font-weight:800; }
+.by{ background:#fff3e0; color:#b45309; border:1px solid #fcd34d; }
+
+/* PRICE */
+.phi{ color:var(--down); font-weight:700; }
+.pmi{ color:#b45309; font-weight:700; }
+.plo{ color:var(--green); font-weight:700; }
+
+/* AGE */
+.ahi{ color:var(--down); font-weight:700; }
+.ami{ color:#b45309; }
+.alo{ color:var(--green); }
+
+/* KPI */
+.kpi-row{ display:flex; gap:9px; margin-bottom:16px; flex-wrap:wrap; }
+.kpi{ flex:1; min-width:105px; background:var(--bg-card); border:1px solid var(--border); border-radius:3px; padding:11px 13px; text-align:center; }
+.kpi .kv{ font-family:"Inter",monospace; font-size:22px; font-weight:700; color:var(--gold); line-height:1.1; }
+.kpi .ku{ font-size:10px; color:var(--forest); font-weight:600; }
+.kpi .kl{ font-size:10px; color:var(--muted); margin-top:2px; }
+.kpi.ks .kv{ color:var(--down); }
+.kpi.kg .kv{ color:var(--green); }
+
+/* COMP BAR */
+.comp-line{ display:flex; align-items:center; gap:8px; padding:7px 0; border-bottom:1px solid var(--border); font-size:12px; flex-wrap:nowrap; }
+.comp-line:last-child{ border-bottom:none; }
+.cl{ min-width:160px; flex:0 1 200px; color:#555; font-size:11px; line-height:1.4; word-break:break-word; }
+.cv{ font-family:"Inter",monospace; font-weight:700; flex:0 0 auto; text-align:right; font-size:11.5px; white-space:nowrap; }
+.cb{ flex:1; min-width:40px; }
+.cbg{ height:8px; background:var(--border); border-radius:8px; position:relative; }
+.cf{ height:100%; border-radius:8px; background:var(--green); }
+.cm{ position:absolute; top:-4px; width:3px; height:16px; background:var(--down); border-radius:2px; }
+.cd{ font-size:10.5px; flex:0 0 auto; text-align:right; font-weight:700; white-space:nowrap; }
+.dpos{ color:var(--down); }
+.dneg{ color:var(--green); }
+
+/* FACTORS */
+.factors{ display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+.factor{ padding:8px 12px; font-size:11.5px; border-radius:0 3px 3px 0; word-break:break-word; overflow-wrap:break-word; }
+.fp{ background:#eef5ea; border-left:3px solid var(--green); }
+.fm{ background:var(--cream); border-left:3px solid var(--gold); }
+.ft{ font-weight:700; margin-bottom:1px; font-size:12px; }
+
+/* INSIGHT BOX */
+.insight{ background:#f5f0e0; border:1px solid #d4b84a; border-radius:3px; padding:12px 15px; margin:14px 0; }
+.insight .it{ font-size:12px; font-weight:700; color:#7a5c00; margin-bottom:8px; }
+.ig{ display:grid; grid-template-columns:repeat(3,1fr); gap:8px; }
+.ig-item{ background:rgba(255,255,255,.6); padding:8px 11px; border-radius:3px; border:1px solid #e8d98c; }
+.ig-item .iv{ font-family:"Inter",monospace; font-size:17px; font-weight:700; color:var(--forest); }
+.ig-item .il{ font-size:10.5px; color:#666; }
+
+/* SPECIAL CASE BOX */
+.special-case{ background:#e8f5e9; border:1px solid #81c784; border-radius:3px; padding:13px 15px; margin:14px 0; }
+.sc-title{ font-size:12.5px; font-weight:700; color:#1b5e20; margin-bottom:10px; }
+.sc-grid{ display:grid; grid-template-columns:1fr 1fr 1fr; gap:8px; }
+.sc-item{ background:rgba(255,255,255,.7); padding:9px 11px; border-radius:3px; border:1px solid #a5d6a7; }
+.sc-item .sv{ font-family:"Inter",monospace; font-size:16px; font-weight:700; color:#1b5e20; }
+.sc-item .sl{ font-size:10.5px; color:#444; }
+.sc-arrow{ display:flex; align-items:center; justify-content:center; font-size:18px; color:#4B872F; }
+
+/* VERDICT */
+.verdict{ background:#eef5ea; border:1px solid #81c784; border-radius:3px; padding:18px 20px; margin-top:10px; }
+.verdict h3{ font-size:13px; font-weight:700; color:var(--forest); margin-bottom:11px; }
+.vd-split{ display:flex; gap:24px; flex-wrap:wrap; margin-bottom:12px; align-items:flex-start; }
+.vp{ font-family:"Inter",monospace; font-size:26px; font-weight:800; color:#1b5e20; }
+.vps{ font-size:11px; color:#555; margin-top:2px; }
+.vrec{ border-left:3px solid var(--forest); padding-left:16px; }
+.vrl{ font-size:11.5px; font-weight:700; color:var(--forest); margin-bottom:2px; }
+.vrp{ font-family:"Inter",monospace; font-size:20px; font-weight:800; color:var(--forest); }
+.verdict ul{ list-style:none; padding:0; }
+.verdict li{ font-size:12px; padding:3px 0 3px 15px; position:relative; }
+.verdict li::before{ content:"▸"; position:absolute; left:0; color:var(--green); }
+
+/* INFO/WARN */
+.info-box{ background:#eef5ea; border-left:3px solid var(--green); padding:10px 13px; margin-top:12px; font-size:12px; color:#2a4a1e; border-radius:0 3px 3px 0; }
+.warn-box{ background:var(--cream); border-left:3px solid var(--gold); padding:10px 13px; margin-top:10px; font-size:11.5px; color:#6b5000; border-radius:0 3px 3px 0; }
+.alert-box{ background:#fff8e1; border:1px solid var(--gold); border-radius:3px; padding:12px 15px; margin-top:12px; }
+.alert-box .alt{ font-weight:700; color:#8b6914; margin-bottom:8px; font-size:12px; }
+.alert-box ul{ list-style:none; padding:0; }
+.alert-box li{ font-size:11.5px; padding:4px 0; border-bottom:1px solid #f0e5b8; }
+.alert-box li:last-child{ border-bottom:none; }
+
+/* FOOTER */
+.footer{ background:var(--forest); color:rgba(255,255,255,.7); padding:14px 36px; font-size:10.5px; line-height:1.8; }
+.footer strong{ color:#fff; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- HEADER -->
+<div class="hdr">
+  <svg class="wheat" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 300" height="100%">
+    <g fill="#C0A434">
+      <ellipse cx="40" cy="18" rx="14" ry="22"/>
+      <ellipse cx="22" cy="52" rx="12" ry="18" transform="rotate(-18 22 52)"/>
+      <ellipse cx="58" cy="52" rx="12" ry="18" transform="rotate(18 58 52)"/>
+      <ellipse cx="18" cy="92" rx="11" ry="16" transform="rotate(-22 18 92)"/>
+      <ellipse cx="62" cy="92" rx="11" ry="16" transform="rotate(22 62 92)"/>
+      <ellipse cx="20" cy="130" rx="10" ry="14" transform="rotate(-15 20 130)"/>
+      <ellipse cx="60" cy="130" rx="10" ry="14" transform="rotate(15 60 130)"/>
+      <ellipse cx="22" cy="166" rx="9" ry="13" transform="rotate(-20 22 166)"/>
+      <ellipse cx="58" cy="166" rx="9" ry="13" transform="rotate(20 58 166)"/>
+    </g>
+    <line x1="40" y1="5" x2="40" y2="300" stroke="#C0A434" stroke-width="2.5" opacity="0.5"/>
+  </svg>
+  <div class="hdr-inner">
+    <img src="./logo-ruihe.png" class="logo" alt="瑞禾開發">
+    <div class="hdr-text">
+      <h1>桃園大園民族街廠房｜實價登錄行情分析</h1>
+      <div class="sub">資料來源：內政部不動產實價登錄（112Q3–115Q1）　｜　瑞禾 張現傑　115年6月</div>
+    </div>
+  </div>
+  <div class="meta-row">
+    <div class="mi"><div class="v">1,992 坪</div><div class="l">土地面積</div></div>
+    <div class="mi"><div class="v">5.99 億</div><div class="l">掛牌總價</div></div>
+    <div class="mi"><div class="v">30.07 萬/坪</div><div class="l">掛牌土地單價</div></div>
+    <div class="mi"><div class="v">≤46.3 年</div><div class="l">建物屋齡</div></div>
+    <div class="mi"><div class="v">14 筆</div><div class="l">核心可比交易</div></div>
+  </div>
+</div>
+<div class="gline"></div>
+
+<div class="body">
+<!-- 標的 -->
+<div style="margin-top:22px" class="sbj">
+  <div class="sbj-hd">▌ 本案標的條件</div>
+  <div class="sbj-bd">
+    <div class="pg">
+      <div class="pi"><div class="k">地址</div><div class="v">桃園市大園區民族街 8、8-1、10 號</div></div>
+      <div class="pi"><div class="k">地段地號</div><div class="v">內海墘段特工區小段（共 3 筆）</div></div>
+      <div class="pi"><div class="k">使用分區</div><div class="v">非都市：工業區（丁種建築用地）70% / 300%</div></div>
+      <div class="pi"><div class="k">土地面積</div><div class="v">1,991.66 坪（6,588.42 ㎡）</div></div>
+      <div class="pi"><div class="k">建物面積</div><div class="v">1,109 坪（5 建號）</div></div>
+      <div class="pi"><div class="k">建物屋齡</div><div class="v"><span class="ahi nowrap">最高 46.3 年</span></div></div>
+      <div class="pi"><div class="k">臨路面寬</div><div class="v">民族街約 12 米｜面寬約 80 米</div></div>
+      <div class="pi hl"><div class="k">掛牌總價</div><div class="v">5 億 9,888 萬元</div></div>
+      <div class="pi hl"><div class="k">有效土地單價</div><div class="v">30.07 萬/坪</div></div>
+    </div>
+    
+  </div>
+</div>
+
+<!-- 一、同地段 -->
+<div class="sec">
+  <div class="sec-hd"><h2>一、同地段成交行情</h2><span class="tag">最直接可比</span></div>
+  <div class="sec-bd">
+    <div class="tbl-wrap">
+    <table class="dt">
+      <thead><tr>
+        <th>交易日期</th><th>地號</th><th>標的</th><th>使用分區</th>
+        <th class="num">土地坪</th><th class="num">建物坪</th><th>屋齡</th>
+        <th class="num">總價（萬）</th><th class="num">土地單價</th><th>備注</th>
+      </tr></thead>
+      <tbody>
+        <tr class="same">
+          <td><strong>113年11月</strong></td>
+          <td>內海墘段特工區小段 41-5 地號</td>
+          <td><span class="b bl">純土地</span></td>
+          <td>非都市<br>工業區（丁種）</td>
+          <td class="num">1,059<br><span style="font-size:10px;color:#888;">丁建 852<br>道路 207</span></td>
+          <td class="num">—</td><td>N/A</td>
+          <td class="num"><strong>22,500</strong></td>
+          <td class="num plo"><strong>21.25</strong><br><span style="font-size:10px;color:#C0533A;font-weight:600;">混合均價↑</span></td>
+          <td><span class="b bk">⭐ 同地段</span></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div style="background:#fff3e0;border-left:3px solid #e8a848;padding:10px 14px;margin-top:12px;font-size:12px;color:#7a4500;border-radius:0 3px 3px 0;">
+      <strong>⚠️ 注意：此筆登記面積 1,059 坪 = 丁種建築用地 852 坪 ＋ 道路用地 207 坪（混合地目）</strong><br>
+      成交單價 21.25 萬/坪 為兩種地目的<strong>加權均價</strong>，道路用地單價低於丁建，實際丁建有效單價<strong>高於 21.25 萬/坪</strong>，本筆僅作底部錨點參考，不可直接比較。
+    </div>
+    
+  </div>
+</div>
+
+<!-- 二、大園區 -->
+<div class="sec">
+  <div class="sec-hd"><h2>二、大園區工業地成交（近三年）</h2></div>
+  <div class="sec-bd">
+    <div class="tbl-wrap">
+    <table class="dt">
+      <thead><tr>
+        <th>交易日期</th><th>地址 / 地號</th><th>標的</th><th>使用分區</th>
+        <th class="num">土地坪</th><th class="num">建物坪</th><th>屋齡</th>
+        <th class="num">總價（萬）</th><th class="num">土地單價</th><th>用途</th><th>備注</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td>112年8月</td><td>北港段 61 地號</td><td><span class="b bl">純土地</span></td>
+          <td>非都市<br>工業區（丁種）</td>
+          <td class="num">1,391</td><td class="num">—</td><td>—</td>
+          <td class="num">32,800</td><td class="num pmi">23.59</td><td>—</td><td>—</td>
+        </tr>
+        <tr>
+          <td>112年8月</td><td>工四路 2 號</td><td><span class="b bo">房地</span></td>
+          <td>非都市<br>工業區（丁種）</td>
+          <td class="num">1,508</td><td class="num">1,340</td><td class="ahi nowrap">38年</td>
+          <td class="num">36,900</td><td class="num pmi">24.47</td>
+          <td><span class="b bo">辦公用</span></td><td>—</td>
+        </tr>
+        <tr>
+          <td>112年10月</td><td>工六路 1 號</td><td><span class="b bo">房地</span></td>
+          <td>非都市<br>工業區（丁種）</td>
+          <td class="num">1,271</td><td class="num">350</td><td class="ahi nowrap">39年</td>
+          <td class="num">30,740</td><td class="num pmi">24.18</td>
+          <td><span class="b bo">辦公用</span></td>
+          <td><span class="by b">未登記建物</span></td>
+        </tr>
+        <tr>
+          <td>113年4月</td><td>工四路 7、9 號</td><td><span class="b bo">房地</span></td>
+          <td>非都市<br>工業區（丁種）</td>
+          <td class="num">1,083</td><td class="num">847</td><td class="ahi nowrap">40年</td>
+          <td class="num">23,500</td><td class="num plo">21.71</td>
+          <td><span class="b bo">辦公用</span></td>
+          <td style="font-size:10.5px;color:#666;">土地22,950萬<br>建物550萬</td>
+        </tr>
+        <tr class="best">
+          <td><strong>113年6月</strong></td><td><strong>民生路 115 號</strong></td><td><span class="b bi">房地</span></td>
+          <td>非都市<br>工業區（丁種）</td>
+          <td class="num"><strong>1,053</strong></td><td class="num"><strong>597</strong></td><td class="ami nowrap"><strong>22年</strong></td>
+          <td class="num"><strong>36,000</strong></td><td class="num phi"><strong>34.18</strong></td>
+          <td><span class="b bi">工業用 ✓</span></td>
+          <td><span class="bs b">★最佳可比</span><br><span style="font-size:10px;color:#888;">其他增建</span></td>
+        </tr>
+        <tr class="same">
+          <td>113年11月</td><td>內海墘段特工區小段 41-5</td><td><span class="b bl">純土地</span></td>
+          <td>非都市<br>工業區（丁種）</td>
+          <td class="num">1,059</td><td class="num">—</td><td>—</td>
+          <td class="num">22,500</td><td class="num plo">21.25</td><td>—</td>
+          <td><span class="b bk">⭐同地段</span><br><span style="font-size:10px;color:var(--forest);font-weight:700;">丁建852+道路207<br>均價21.25萬（含道路）</span></td>
+        </tr>
+        <tr class="excl">
+          <td>113年11月</td><td>國際路一段 66 號</td><td><span class="b bx">房地</span></td>
+          <td>都市<br>工業</td>
+          <td class="num">2,882</td><td class="num">8,178</td><td class="alo nowrap">1年</td>
+          <td class="num">258,889</td><td class="num">89.82</td>
+          <td><span class="b bx">工業用</span></td>
+          <td><span class="b bx">❌排除</span><br><span style="font-size:10px;color:#888;">整棟倉儲物流<br>航空城特殊</span></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+    
+
+    <div class="warn-box">大園區 114–115 年無千坪以上工業地新成交，以下 112–113 年數據為近三年完整行情基礎。</div>
+
+    <div style="font-size:12px;font-weight:700;color:var(--forest);margin:16px 0 8px;">
+      大園區工業廠房　逐年均價走勢
+    </div>
+    <div class="tbl-wrap">
+    <table class="dt" style="min-width:400px;">
+      <thead><tr>
+        <th>年度</th><th class="num">件數</th><th class="num">均價（萬/坪）</th>
+        <th class="num">低</th><th class="num">高</th><th>案例說明</th><th>走勢</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td class="nowrap">民 112 年</td><td class="num">2</td>
+          <td class="num pmi">24.32</td><td class="num">24.18</td><td class="num">24.47</td>
+          <td>工四路2號、工六路1號（辦公用，屋齡38–39年）</td>
+          <td class="nowrap">── 基準</td>
+        </tr>
+        <tr>
+          <td class="nowrap">民 113 年</td><td class="num">2</td>
+          <td class="num pmi">27.95</td><td class="num">21.71</td><td class="num">34.18</td>
+          <td>工四路7、9號（辦公21.71）+ 民生路115號（工業34.18，屋齡22年）</td>
+          <td class="nowrap" style="color:var(--green);font-weight:700;">↑ +3.6萬</td>
+        </tr>
+        <tr style="background:#faf3d8 !important;">
+          <td class="nowrap"><strong>民 114 年</strong></td><td class="num">—</td>
+          <td class="num" style="color:var(--muted);">（無新案）</td>
+          <td class="num">—</td><td class="num">—</td>
+          <td style="color:var(--muted);font-size:11px;">大園區近兩年無1,000坪以上新成交，以鄰區114年行情推估</td>
+          <td class="nowrap" style="color:var(--muted);">待更新</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="info-box">大園區 114 年無新案，議價以 113 年最新成交（工業在用 34.18 萬/坪）及鄰區 114 年行情（觀音 26–27 萬）為主要錨點。</div>
+  </div>
+</div>
+
+<!-- 三、鄰區 -->
+<div class="sec">
+  <div class="sec-hd"><h2>三、鄰區工業廠房成交（蘆竹 · 觀音，近三年）</h2></div>
+  <div class="sec-bd">
+    <div class="tbl-wrap">
+    <table class="dt">
+      <thead><tr>
+        <th>交易日期</th><th>區域</th><th>地址</th><th>使用分區</th>
+        <th class="num">土地坪</th><th class="num">建物坪</th><th>屋齡</th>
+        <th class="num">總價（萬）</th><th class="num">土地單價</th><th>用途</th><th>備注</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td>112年10月</td><td class="nowrap">蘆竹</td><td>大有街 29 巷 6 號</td>
+          <td>非都市<br>工業區（丁種）</td>
+          <td class="num">977</td><td class="num">1,396</td><td class="ahi nowrap">29年</td>
+          <td class="num">29,000</td><td class="num pmi">29.68</td>
+          <td><span class="b bo">辦公用</span></td>
+          <td><span style="font-size:10px;color:#888;">其他增建</span></td>
+        </tr>
+        <tr>
+          <td>112年12月</td><td class="nowrap">觀音</td><td>工業六路 2 號</td>
+          <td>非都市<br>工業區（丁種）</td>
+          <td class="num">1,513</td><td class="num">1,061</td><td class="ahi nowrap">30年</td>
+          <td class="num">36,875</td><td class="num pmi">24.38</td>
+          <td><span class="b bo">辦公用</span></td><td>—</td>
+        </tr>
+        <tr>
+          <td>113年1月</td><td class="nowrap">觀音</td><td>工業六路 4 號</td>
+          <td>非都市<br>工業區（丁種）</td>
+          <td class="num">1,512</td><td class="num">1,683</td><td class="ami nowrap">24年</td>
+          <td class="num">37,000</td><td class="num pmi">24.46</td>
+          <td><span class="b bo">辦公用</span></td>
+          <td><span style="font-size:10px;color:#888;">鍋爐室增建<br>頂樓增建</span></td>
+        </tr>
+        <tr>
+          <td>113年7月</td><td class="nowrap">觀音</td><td>環西路 99 號</td>
+          <td>非都市<br>工業區（丁種）</td>
+          <td class="num">2,235</td><td class="num">2,158</td><td class="alo nowrap">15年</td>
+          <td class="num">49,174</td><td class="num plo">22.00</td>
+          <td><span class="b bi">工業用 ✓</span></td><td>—</td>
+        </tr>
+        <tr>
+          <td>113年10月</td><td class="nowrap">觀音</td><td>成功路一段 502 號</td>
+          <td>非都市<br>工業區（丁種）</td>
+          <td class="num">2,705</td><td class="num">583</td><td class="ahi nowrap">36年</td>
+          <td class="num">65,500</td><td class="num pmi">24.21</td>
+          <td><span class="b bi">工業用 ✓</span></td>
+          <td><span style="font-size:10px;color:#888;">其他增建</span></td>
+        </tr>
+        <tr class="best">
+          <td><strong>114年5月</strong></td><td class="nowrap">觀音</td><td>榮工南路 8 號</td>
+          <td>非都市<br>工業區（丁種）</td>
+          <td class="num">4,634</td><td class="num">1,707</td><td class="ahi nowrap">29年</td>
+          <td class="num">120,476</td><td class="num pmi"><strong>26.00</strong></td>
+          <td><span class="b bi">工業用 ✓</span></td>
+          <td><span style="font-size:10px;color:#888;">5建號同門牌<br>土地113,151萬<br>建物7,325萬</span></td>
+        </tr>
+        <tr class="best">
+          <td><strong>114年7月</strong></td><td class="nowrap">觀音</td><td>大同一路 11 號</td>
+          <td>非都市<br>工業區（丁種）</td>
+          <td class="num">1,512</td><td class="num">478</td><td class="alo nowrap">3年</td>
+          <td class="num">40,500</td><td class="num pmi"><strong>26.78</strong></td>
+          <td><span class="b bi">工業用 ✓</span></td>
+          <td><span style="font-size:10px;color:#888;">土地37,337萬<br>建物3,163萬</span></td>
+        </tr>
+        <tr>
+          <td>114年11月</td><td class="nowrap">觀音</td><td>工業一路 10 號</td>
+          <td>非都市<br>工業區（丁種）</td>
+          <td class="num">1,357</td><td class="num">91</td><td class="ami nowrap">23年</td>
+          <td class="num">28,195</td><td class="num plo">20.77</td>
+          <td><span class="b bi">工業用 ✓</span></td>
+          <td><span style="font-size:10px;color:#888;">含4個建號<br>詳見實登</span></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    <div style="font-size:12px;font-weight:700;color:var(--forest);margin:16px 0 8px;">
+      觀音區工業廠房　逐年均價走勢（鄰區最新錨點）
+    </div>
+    <div class="tbl-wrap">
+    <table class="dt" style="min-width:400px;">
+      <thead><tr>
+        <th>年度</th><th class="num">件數</th><th class="num">均價（萬/坪）</th>
+        <th class="num">低</th><th class="num">高</th><th>主要案例</th><th>走勢</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td class="nowrap">民 112 年</td><td class="num">1</td>
+          <td class="num pmi">24.38</td><td class="num">24.38</td><td class="num">24.38</td>
+          <td>工業六路2號（辦公用，屋齡30年）</td>
+          <td class="nowrap">── 基準</td>
+        </tr>
+        <tr>
+          <td class="nowrap">民 113 年</td><td class="num">3</td>
+          <td class="num pmi">23.56</td><td class="num">22.00</td><td class="num">24.46</td>
+          <td>工業六路4號（辦公24.46）、環西路99號（工業22.00）、成功路502（工業24.21）</td>
+          <td class="nowrap" style="color:var(--muted);">→ 持平</td>
+        </tr>
+        <tr style="background:#eef5ea !important;">
+          <td class="nowrap"><strong>民 114 年</strong></td><td class="num">2 <span style="font-size:10px;color:var(--muted);">（主要）</span></td>
+          <td class="num" style="color:var(--forest);font-weight:800;">26.39</td>
+          <td class="num">26.00</td><td class="num">26.78</td>
+          <td><strong>榮工南路8號</strong>（工業，26.00，4,634坪）、<strong>大同一路11號</strong>（工業，26.78，1,512坪，屋齡3年）</td>
+          <td class="nowrap" style="color:var(--green);font-weight:800;">↑ +2.0萬</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="info-box" style="margin-top:10px;">
+      <strong>觀音工業廠房走勢：民112年 24.38 → 民113年 23.56 → 民114年 26.39 萬/坪</strong>。
+      113年略跌（樣本含大坪數低價案），114年反彈創三年新高，<strong>以114年 26–27 萬/坪作為本案現行市場錨點</strong>最為合理。
+      三年均值（約 24.8 萬/坪）低估現行行情約 1.5 萬/坪。
+    </div>
+  </div>
+</div>
+
+<!-- 特殊案例說明 -->
+<div class="sec">
+  <div class="sec-hd"><h2>特殊標記案例說明（已從可比交易排除）</h2></div>
+  <div class="sec-bd">
+    <div class="tbl-wrap">
+    <table class="dt">
+      <thead><tr>
+        <th>交易日期</th><th>區域</th><th>地址</th><th class="num">土地坪</th>
+        <th class="num">單價</th><th>排除原因</th>
+      </tr></thead>
+      <tbody>
+        <tr class="excl">
+          <td>113年11月</td><td class="nowrap">大園</td><td>國際路一段66號</td>
+          <td class="num">2,882</td><td class="num">89.82萬</td>
+          <td><span class="b bx">❌ 特殊交易</span> 整棟新建倉儲物流（屋齡1年）、都市工業區、航空城高溢價，性質與丁種廠房不可比</td>
+        </tr>
+        <tr class="warn">
+          <td>112年11月</td><td class="nowrap">蘆竹</td><td>山鼻段696地號</td>
+          <td class="num">1,233</td><td class="num">32.50萬</td>
+          <td><span class="b bx">❌ 特殊關係</span> 備注：「親友、員工、共有人或其他特殊關係間之交易」——非公開市場成交，不具參考性</td>
+        </tr>
+        <tr class="warn">
+          <td>113年6月</td><td class="nowrap">蘆竹</td><td>長興段316地號</td>
+          <td class="num">1,032</td><td class="num">22.28萬</td>
+          <td><span class="b by">含公設地</span> 備注：「包含公共設施保留地用地」——混合地目，丁建實際單價偏低，不可直接比較</td>
+        </tr>
+        <tr class="warn">
+          <td>113年12月</td><td class="nowrap">蘆竹</td><td>水尾段1022-1地號</td>
+          <td class="num">1,485</td><td class="num">35.01萬</td>
+          <td><span class="b by">含公設地</span> 備注：「包含公共設施保留地用地」——混合地目，單價虛高，不可直接比較</td>
+        </tr>
+        <tr class="warn">
+          <td>114年6月</td><td class="nowrap">蘆竹</td><td>長安路一段80號</td>
+          <td class="num">1,924</td><td class="num">49.37萬</td>
+          <td><span class="b by">含稅</span> 備注：「買賣總價款含建物加值型營業稅」——含稅總價，土地實際單價低於顯示值，不可直接比較</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+</div>
+
+<!-- 四、定價分析 -->
+<div class="sec">
+  <div class="sec-hd"><h2>四、行情分析與物件評估</h2></div>
+  <div class="sec-bd">
+    <div style="font-size:13px;font-weight:700;color:var(--forest);margin:0 0 9px;">物件特性</div>
+    <div class="factors">
+      <div class="factor fp"><div class="ft">大面寬 80 米</div>板車可直達，物流效率高，北桃園稀有。</div>
+      <div class="factor fp"><div class="ft">方正地形 1,992 坪</div>整體可規劃，大坪數稀有，適合設廠或整體開發。</div>
+      <div class="factor fp"><div class="ft">三照齊備（工廠登記+使用執照）</div>可立即使用，降低買方取得成本。</div>
+      <div class="factor fp"><div class="ft">距大園交流道約 3km</div>國道一號便利，北上南下快速。</div>
+      <div class="factor fm"><div class="ft">屋齡最高 46.3 年</div>屋齡結構與高屋齡辦公廠接近，現況不符危化倉儲防火構造要求，規劃全數拆除重建。</div>
+      <div class="factor fm"><div class="ft">地上抵押 3 組（台灣中小企銀）</div>確認清償時程，建議全款履約保證機制。</div>
+      <div class="factor fm"><div class="ft">染整廠歷史 + 大坪數折讓</div>建議土壤污染調查；1,992 坪大坪數，買方議價慣性擴大。</div>
+    </div>
+  
+    <div style="height:16px;"></div>
+    <div class="verdict">
+      <h3>行情錨點：觀音工業廠 114 年 26–27 萬/坪，本案掛牌溢價 12–16%</h3>
+      <ul>
+        <li>鄰區觀音 114 年最新成交 26–27 萬/坪，為現行最具參考性的市場錨點。本案掛牌 30.07 萬，溢價 12–16%，面寬 80 米、三照齊備、規模稀有具一定支撐。</li>
+        <li>大園區 114 年無新案，以觀音 114 年行情推估大園現行合理水準約 27–29 萬。</li>
+        <li>本案建物屋齡 43–46 年，不符危化倉儲防火構造要求，規劃全數拆除重建。</li>
+      </ul>
+    </div>
+
+    <div class="alert-box">
+      <div class="alt">交易注意事項</div>
+      <ul>
+        <li>地上抵押 3 組（台灣中小企銀），確認清償時程與塗銷條件。</li>
+        <li>現址染整廠歷史污染紀錄，建議委託環境顧問進行土壤調查。</li>
+        <li>建物屋齡 46.3 年，規劃全數拆除，拆除費用確認後計入出價。</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+</div><!-- /body -->
+<div class="footer">
+  <strong>資料來源：</strong>內政部不動產實價登錄開放資料，桃園市 112Q3–115Q1 全量 XLS 直接查詢（22季）。篩選：大園/蘆竹/觀音 × 非都市工業區 × 800坪+ × 有效成交。<br>
+  <strong>已排除：</strong>國際路一段66號（航空城特殊）、山鼻段696（特殊關係交易）、含公設保留地案（長興316、水尾1022-1）、含稅案（蘆竹長安路80號）。<br>
+  
+  瑞禾不動產經紀股份有限公司　|　張現傑　04-23803560　|　115 年 6 月
+</div>
+</div>
+</body>
+</html>

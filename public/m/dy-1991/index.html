@@ -1,0 +1,1870 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="危化倉儲選址前期評估 | 瑞禾開發 張現傑">
+<meta property="og:title" content="危化倉儲選址前期評估 | 瑞禾開發 張現傑">
+<meta property="og:description" content="危化倉儲選址前期評估 | 瑞禾開發 張現傑">
+<meta name="robots" content="noindex, nofollow">
+<title>危化倉儲選址前期評估｜瑞禾開發 張現傑</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ruihe-green: #4B872F;
+  --ruihe-forest: #2B5937;
+  --ruihe-gold: #C0A434;
+  --ruihe-cream: #F5F3EE;
+  --ruihe-text: #2A2A2A;
+  --ruihe-text-light: #666666;
+  --ruihe-text-muted: #999999;
+  --ruihe-border: #E8E6E1;
+  --ruihe-border-light: #F0EEE9;
+  --ruihe-bg: #FAFAF7;
+  --ruihe-bg-card: #FFFFFF;
+  --ruihe-shadow: 0 1px 3px rgba(43, 89, 55, 0.04), 0 1px 2px rgba(43, 89, 55, 0.06);
+  --ruihe-shadow-hover: 0 4px 12px rgba(43, 89, 55, 0.08), 0 2px 4px rgba(43, 89, 55, 0.06);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+
+body {
+  font-family: 'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
+  font-weight: 400;
+  color: var(--ruihe-text);
+  background: var(--ruihe-bg);
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===== Header ===== */
+.site-header {
+  background: var(--ruihe-forest);
+  color: white;
+  padding: 16px 0 0;
+  border-bottom: 4px solid var(--ruihe-gold);
+  position: relative;
+}
+
+.site-header::after {
+  content: '';
+  position: absolute; left: 0; right: 0; bottom: -4px; height: 4px;
+  background: linear-gradient(90deg, var(--ruihe-gold) 0%, var(--ruihe-green) 100%);
+}
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 16px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.brand-logo {
+  height: 48px;
+  width: auto;
+  display: block;
+}
+
+.brand-text { line-height: 1.4; }
+.brand-name { font-size: 20px; font-weight: 600; letter-spacing: 1px; }
+.brand-tagline { font-size: 13px; color: rgba(255,255,255,0.75); letter-spacing: 0.5px; }
+
+.header-meta { text-align: right; font-size: 13px; color: rgba(255,255,255,0.85); }
+.header-meta strong { color: var(--ruihe-gold); font-weight: 600; }
+
+.header-title {
+  padding: 18px 0 24px;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 13px;
+  letter-spacing: 3px;
+  color: var(--ruihe-gold);
+  font-weight: 500;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.header-title h1 {
+  font-size: 38px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: white;
+  margin-bottom: 8px;
+}
+
+.header-title .subtitle {
+  font-size: 17px;
+  color: rgba(255,255,255,0.85);
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.header-title .recipient {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(192, 164, 52, 0.3);
+  font-size: 14px;
+  color: rgba(255,255,255,0.8);
+}
+
+.header-title .recipient strong {
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  margin-left: 8px;
+  letter-spacing: 1px;
+}
+
+/* ===== 進度條（sticky） ===== */
+.progress-sticky {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: white;
+  border-bottom: 1px solid var(--ruihe-border);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.progress-inner {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 14px 0;
+}
+
+.progress-bar-wrap {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.progress-label {
+  font-size: 13px;
+  color: var(--ruihe-text-light);
+  white-space: nowrap;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 8px;
+  background: var(--ruihe-cream);
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--ruihe-green) 0%, var(--ruihe-gold) 100%);
+  transition: width 0.4s ease;
+  width: 0%;
+}
+
+.progress-text {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ruihe-forest);
+  font-family: 'Inter', sans-serif;
+  white-space: nowrap;
+}
+
+.progress-text .pct { font-size: 22px; color: var(--ruihe-green); }
+
+.toolbar {
+  display: flex;
+  gap: 8px;
+}
+
+.btn {
+  padding: 8px 16px;
+  border: 1px solid var(--ruihe-border);
+  background: white;
+  color: var(--ruihe-text);
+  font-size: 13px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn:hover {
+  border-color: var(--ruihe-green);
+  color: var(--ruihe-green);
+  background: var(--ruihe-cream);
+}
+
+.btn-primary {
+  background: var(--ruihe-green);
+  color: white;
+  border-color: var(--ruihe-green);
+}
+
+.btn-primary:hover {
+  background: var(--ruihe-forest);
+  color: white;
+  border-color: var(--ruihe-forest);
+}
+
+.btn-icon { font-size: 14px; }
+
+/* ===== Main content ===== */
+main { padding: 48px 0 80px; }
+
+/* 致詞區 */
+.greeting {
+  background: white;
+  border: 1px solid var(--ruihe-border);
+  border-left: 4px solid var(--ruihe-green);
+  padding: 32px 40px;
+  margin-bottom: 40px;
+  font-size: 15px;
+  line-height: 2;
+  color: var(--ruihe-text);
+  box-shadow: var(--ruihe-shadow);
+}
+
+.greeting p { margin-bottom: 12px; }
+.greeting p:last-child { margin-bottom: 0; }
+.greeting .signature {
+  text-align: right;
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px dashed var(--ruihe-border);
+  color: var(--ruihe-forest);
+  font-weight: 600;
+}
+
+/* Section */
+.section {
+  background: white;
+  border: 1px solid var(--ruihe-border);
+  border-radius: 6px;
+  margin-bottom: 32px;
+  overflow: hidden;
+  box-shadow: var(--ruihe-shadow);
+}
+
+.section-header {
+  background: linear-gradient(to right, var(--ruihe-forest), var(--ruihe-green));
+  color: white;
+  padding: 20px 32px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.section-num {
+  width: 40px;
+  height: 40px;
+  background: var(--ruihe-gold);
+  color: var(--ruihe-forest);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 18px;
+  font-family: 'Inter', sans-serif;
+  flex-shrink: 0;
+}
+
+.section-title {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.section-subtitle {
+  font-size: 13px;
+  color: rgba(255,255,255,0.75);
+  margin-top: 2px;
+  letter-spacing: 0.5px;
+}
+
+.section-body { padding: 32px; }
+.section-intro {
+  font-size: 14px;
+  color: var(--ruihe-text-light);
+  margin-bottom: 24px;
+  line-height: 1.9;
+}
+
+/* Block header（A/B/C/D/E） */
+.block-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 32px 0 16px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--ruihe-cream);
+}
+
+.block-header:first-child { margin-top: 0; }
+
+.block-label {
+  width: 32px;
+  height: 32px;
+  background: var(--ruihe-green);
+  color: white;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  flex-shrink: 0;
+}
+
+.block-title {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--ruihe-forest);
+  flex: 1;
+}
+
+.block-count {
+  font-size: 12px;
+  color: var(--ruihe-text-muted);
+  font-family: 'Inter', sans-serif;
+}
+
+.block-count .done { color: var(--ruihe-green); font-weight: 600; }
+
+/* ===== Checklist item ===== */
+.check-item {
+  border: 1px solid var(--ruihe-border-light);
+  border-radius: 6px;
+  margin-bottom: 10px;
+  transition: all 0.2s;
+  background: white;
+}
+
+.check-item:hover {
+  border-color: var(--ruihe-green);
+  box-shadow: var(--ruihe-shadow-hover);
+}
+
+.check-item.checked {
+  background: linear-gradient(to right, rgba(75, 135, 47, 0.04), transparent);
+  border-color: rgba(75, 135, 47, 0.2);
+}
+
+.check-item.has-note {
+  border-color: var(--ruihe-gold);
+  background: linear-gradient(to right, rgba(192, 164, 52, 0.04), transparent);
+}
+
+.check-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 14px 18px;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* 自製 checkbox */
+.check-row input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 22px;
+  height: 22px;
+  border: 2px solid var(--ruihe-border);
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+  flex-shrink: 0;
+  margin-top: 2px;
+  transition: all 0.2s;
+  background: white;
+}
+
+.check-row input[type="checkbox"]:hover { border-color: var(--ruihe-green); }
+
+.check-row input[type="checkbox"]:checked {
+  background: var(--ruihe-green);
+  border-color: var(--ruihe-green);
+}
+
+.check-row input[type="checkbox"]:checked::after {
+  content: '';
+  position: absolute;
+  left: 6px; top: 2px;
+  width: 6px; height: 11px;
+  border: solid white;
+  border-width: 0 2.5px 2.5px 0;
+  transform: rotate(45deg);
+}
+
+.check-content { flex: 1; min-width: 0; }
+
+.check-title {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--ruihe-text);
+  line-height: 1.6;
+  margin-bottom: 2px;
+}
+
+.check-item.checked .check-title { color: var(--ruihe-forest); }
+
+.check-detail {
+  font-size: 13px;
+  color: var(--ruihe-text-muted);
+  line-height: 1.7;
+}
+
+.check-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.note-toggle {
+  background: transparent;
+  border: 1px solid var(--ruihe-border);
+  color: var(--ruihe-text-light);
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.note-toggle:hover {
+  border-color: var(--ruihe-gold);
+  color: var(--ruihe-gold);
+  background: rgba(192, 164, 52, 0.05);
+}
+
+.note-toggle.active {
+  background: var(--ruihe-gold);
+  color: white;
+  border-color: var(--ruihe-gold);
+}
+
+.check-item.has-note .note-toggle::before { content: '✎ '; }
+.check-item:not(.has-note) .note-toggle::before { content: '+ '; }
+
+/* Note area */
+.note-area {
+  padding: 0 18px 16px 54px;
+  display: none;
+}
+
+.note-area.expanded { display: block; }
+
+.note-area textarea {
+  width: 100%;
+  min-height: 70px;
+  padding: 10px 14px;
+  border: 1px solid var(--ruihe-border);
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 14px;
+  color: var(--ruihe-text);
+  line-height: 1.7;
+  resize: vertical;
+  background: var(--ruihe-bg);
+  transition: all 0.2s;
+}
+
+.note-area textarea:focus {
+  outline: none;
+  border-color: var(--ruihe-gold);
+  background: white;
+  box-shadow: 0 0 0 3px rgba(192, 164, 52, 0.1);
+}
+
+.note-area .note-hint {
+  font-size: 12px;
+  color: var(--ruihe-text-muted);
+  margin-top: 6px;
+}
+
+.note-area .note-hint .saved { color: var(--ruihe-green); }
+
+/* ===== 表格 ===== */
+table.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  font-size: 14px;
+}
+
+table.data-table th {
+  background: var(--ruihe-forest);
+  color: white;
+  padding: 12px 16px;
+  text-align: left;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
+table.data-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--ruihe-border-light);
+  vertical-align: top;
+}
+
+table.data-table tr:nth-child(even) td { background: var(--ruihe-bg); }
+table.data-table tr:hover td { background: var(--ruihe-cream); }
+
+table.data-table td.label {
+  font-weight: 600;
+  color: var(--ruihe-forest);
+  background: var(--ruihe-cream) !important;
+  width: 25%;
+}
+
+/* ===== 候選方案卡 ===== */
+.plan-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.plan-card {
+  border: 1px solid var(--ruihe-border);
+  border-left: 4px solid var(--ruihe-green);
+  border-radius: 4px;
+  padding: 20px 24px;
+  background: white;
+  transition: all 0.2s;
+}
+
+.plan-card:hover {
+  box-shadow: var(--ruihe-shadow-hover);
+  transform: translateY(-1px);
+}
+
+.plan-card.recommended { border-left-color: var(--ruihe-gold); background: linear-gradient(to right, rgba(192, 164, 52, 0.03), white); }
+
+.plan-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.plan-name {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.plan-badge {
+  background: var(--ruihe-green);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  font-family: 'Inter', sans-serif;
+}
+
+.plan-card.recommended .plan-badge { background: var(--ruihe-gold); color: var(--ruihe-forest); }
+
+.plan-title {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--ruihe-forest);
+}
+
+.plan-stars {
+  color: var(--ruihe-gold);
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+.plan-desc {
+  font-size: 14px;
+  color: var(--ruihe-text-light);
+  line-height: 1.8;
+  margin-bottom: 12px;
+}
+
+.plan-meta {
+  display: flex;
+  gap: 24px;
+  font-size: 13px;
+  color: var(--ruihe-text-light);
+  border-top: 1px solid var(--ruihe-border-light);
+  padding-top: 12px;
+  flex-wrap: wrap;
+}
+
+.plan-meta span strong { color: var(--ruihe-forest); }
+
+/* ===== 強調框 ===== */
+.callout {
+  background: var(--ruihe-cream);
+  border-left: 4px solid var(--ruihe-gold);
+  padding: 16px 20px;
+  border-radius: 0 4px 4px 0;
+  margin: 16px 0;
+  font-size: 14px;
+  line-height: 1.9;
+  color: var(--ruihe-text);
+}
+
+.callout-title {
+  font-weight: 600;
+  color: var(--ruihe-forest);
+  margin-bottom: 6px;
+  font-size: 15px;
+}
+
+.callout.success { background: rgba(75, 135, 47, 0.06); border-left-color: var(--ruihe-green); }
+.callout.success .callout-title { color: var(--ruihe-green); }
+
+/* ===== Footer ===== */
+.site-footer {
+  background: var(--ruihe-forest);
+  color: rgba(255,255,255,0.85);
+  padding: 48px 0 32px;
+  margin-top: 80px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 32px;
+}
+
+.footer-block h4 {
+  color: var(--ruihe-gold);
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.footer-block p { font-size: 14px; line-height: 2; }
+.footer-block strong { color: white; font-weight: 600; }
+
+.footer-bottom {
+  border-top: 1px solid rgba(192, 164, 52, 0.2);
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: rgba(255,255,255,0.5);
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* ===== Modal ===== */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(43, 89, 55, 0.6);
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal-backdrop.show { display: flex; }
+
+.modal {
+  background: white;
+  border-radius: 8px;
+  max-width: 560px;
+  width: 100%;
+  max-height: 85vh;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-header {
+  background: var(--ruihe-forest);
+  color: white;
+  padding: 20px 28px;
+  border-bottom: 3px solid var(--ruihe-gold);
+}
+
+.modal-header h2 {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.modal-body {
+  padding: 28px;
+  overflow-y: auto;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.modal-footer {
+  padding: 16px 28px;
+  border-top: 1px solid var(--ruihe-border);
+  background: var(--ruihe-bg);
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.modal-body pre {
+  background: var(--ruihe-bg);
+  border: 1px solid var(--ruihe-border);
+  padding: 16px;
+  border-radius: 4px;
+  font-size: 12px;
+  overflow-x: auto;
+  max-height: 300px;
+  font-family: 'Inter', 'Consolas', monospace;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* ===== Print ===== */
+@media print {
+  body { background: white; }
+  .progress-sticky, .toolbar, .note-toggle, .site-footer { display: none !important; }
+  .site-header { background: white !important; color: var(--ruihe-text) !important; border-bottom: 3px solid var(--ruihe-green); padding: 20px 0; }
+  .site-header .brand-logo { background: var(--ruihe-green); color: white; }
+  .site-header .brand-name, .site-header .brand-tagline { color: var(--ruihe-text) !important; }
+  .header-title h1 { color: var(--ruihe-forest) !important; }
+  .header-title .eyebrow, .header-title .subtitle, .header-title .recipient { color: var(--ruihe-text) !important; }
+  .header-meta { color: var(--ruihe-text-light) !important; }
+  .section { break-inside: avoid; box-shadow: none; border: 1px solid var(--ruihe-border); }
+  .section-header { background: var(--ruihe-forest) !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .check-item, .plan-card, .callout { break-inside: avoid; }
+  .note-area.expanded { display: block !important; }
+  .note-area textarea { border: none; background: transparent; resize: none; }
+  a[href]::after { content: ''; }
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .container { padding: 0 16px; }
+  .header-title h1 { font-size: 24px; letter-spacing: 1px; }
+  .header-title .subtitle { font-size: 13px; }
+  .header-top { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .header-meta { text-align: left; font-size: 12px; }
+  .brand-logo { height: 36px; }
+  .brand-name { font-size: 17px; }
+  .brand-tagline { font-size: 12px; }
+  .progress-inner { flex-wrap: wrap; gap: 12px; }
+  .progress-bar-wrap { width: 100%; order: 2; }
+  .toolbar { order: 1; width: 100%; flex-wrap: wrap; }
+  .btn { font-size: 12px; padding: 6px 12px; }
+  .section-body { padding: 16px; }
+  .section-header { padding: 14px 16px; }
+  .section-title { font-size: 16px; }
+  .check-row { flex-wrap: wrap; }
+  .check-actions { margin-left: auto; }
+  .footer-grid { grid-template-columns: 1fr; gap: 24px; }
+  .plan-grid { grid-template-columns: 1fr !important; }
+  .plan-meta { flex-direction: column; gap: 6px; }
+  .greeting { padding: 16px; }
+  /* 評估卡片 2欄→1欄 */
+  .section-body > div[style*="grid-template-columns:1fr 1fr"] { grid-template-columns: 1fr !important; }
+  /* 表格橫向捲動 */
+  .data-table { font-size: 13px; }
+  table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  /* recipient 字縮小 */
+  .header-title .recipient strong { font-size: 15px; }
+}
+
+@media (max-width: 480px) {
+  .container { padding: 0 12px; }
+  .header-title h1 { font-size: 20px; }
+  .eyebrow { font-size: 10px; letter-spacing: 2px; }
+  main { padding: 24px 0 60px; }
+  .section-body { padding: 14px; }
+}
+
+/* 動畫 */
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.note-area.expanded { animation: slideDown 0.2s ease; }
+
+.toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: var(--ruihe-forest);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  font-size: 14px;
+  z-index: 999;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.toast.show { transform: translateY(0); opacity: 1; }
+.toast.success { background: var(--ruihe-green); }
+
+/* ===== Part Banner（三大區塊分隔） ===== */
+.part-banner {
+  margin: 56px 0 28px;
+  padding: 32px 40px;
+  background: linear-gradient(135deg, var(--ruihe-forest) 0%, var(--ruihe-green) 100%);
+  color: white;
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  box-shadow: 0 4px 16px rgba(43, 89, 55, 0.15);
+}
+
+.part-banner:first-of-type { margin-top: 32px; }
+
+.part-banner::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0; width: 5px;
+  background: var(--ruihe-gold);
+}
+
+.part-banner::after {
+  content: '';
+  position: absolute;
+  right: -60px; top: -40px;
+  width: 200px; height: 200px;
+  background: rgba(192, 164, 52, 0.08);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.part-number {
+  font-family: 'Inter', sans-serif;
+  font-size: 64px;
+  font-weight: 800;
+  color: var(--ruihe-gold);
+  line-height: 1;
+  flex-shrink: 0;
+  letter-spacing: -3px;
+  opacity: 0.95;
+}
+
+.part-content {
+  flex: 1;
+  position: relative;
+  z-index: 1;
+  min-width: 0;
+}
+
+.part-label {
+  font-size: 12px;
+  letter-spacing: 4px;
+  color: var(--ruihe-gold);
+  font-weight: 600;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.part-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.part-desc {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.8;
+  max-width: 680px;
+  letter-spacing: 0.3px;
+}
+
+.part-meta {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 3px 10px;
+  background: rgba(192, 164, 52, 0.2);
+  border: 1px solid rgba(192, 164, 52, 0.4);
+  color: var(--ruihe-gold);
+  font-size: 11px;
+  letter-spacing: 1px;
+  border-radius: 3px;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .part-banner { padding: 20px 24px; gap: 16px; flex-direction: column; align-items: flex-start; }
+  .part-number { font-size: 48px; }
+  .part-title { font-size: 22px; letter-spacing: 1px; }
+}
+
+@media print {
+  .part-banner { break-inside: avoid; background: var(--ruihe-cream) !important; color: var(--ruihe-text) !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .part-banner .part-title { color: var(--ruihe-forest) !important; }
+  .part-banner .part-desc { color: var(--ruihe-text) !important; }
+  .part-banner::before { background: var(--ruihe-gold); }
+}
+</style>
+</head>
+<body>
+
+<!-- ============== Header ============== -->
+<header class="site-header">
+  <div class="container">
+    <div class="header-top">
+      <div class="brand">
+        <img class="brand-logo" src="./logo-ruihe.png" alt="瑞禾開發">
+        <div class="brand-text">
+          <div class="brand-name">瑞禾開發</div>
+          <div class="brand-tagline">RUEI.HE  ｜  建築、房產整合團隊</div>
+        </div>
+      </div>
+      <div class="header-meta">
+        <div>製作日期　2026 年 6 月</div>
+      </div>
+    </div>
+    <div class="header-title">
+      <div class="eyebrow">P R E - E V A L U A T I O N   M E M O</div>
+      <h1>危化倉儲選址前期評估</h1>
+      <div class="subtitle">桃園大園工業區　｜　評估備忘錄</div>
+      <div class="recipient">謹致<strong>昶昕實業股份有限公司</strong></div>
+    </div>
+  </div>
+</header>
+
+<!-- 列印按鈕（固定頂部，簡化版） -->
+<div style="position:sticky;top:0;z-index:100;background:white;border-bottom:1px solid var(--ruihe-border);box-shadow:0 2px 8px rgba(0,0,0,0.04);">
+  <div class="container">
+    <div style="display:flex;justify-content:flex-end;padding:12px 0;">
+      <button class="btn" onclick="window.print()"><span class="btn-icon">⎙</span>列印 / 存成 PDF</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============== Main ============== -->
+<main>
+  <div class="container">
+
+    <!-- 致詞 -->
+    <div class="greeting">
+      <p>董事長您好：</p>
+      <p>依據前次接洽所確認之需求，現傑就大園工業區進行了前期評估，本備忘錄整理了評估結果，供您參閱。</p>
+      <p>文件分三個部分：<strong style="color:var(--ruihe-forest);">需求確認與前期作業</strong>、<strong style="color:var(--ruihe-forest);">當前評估標的（民族街廠房）</strong>、<strong style="color:var(--ruihe-forest);">候選區域比較</strong>。所有資訊均以完整揭露為原則；涉及正式決策部分，建議另行委請相關專業單位確認。</p>
+      <div class="signature">瑞禾不動產經紀股份有限公司　張現傑　敬上</div>
+    </div>
+
+    <!-- =========== Section 1：需求理解 =========== -->
+    <section class="section" id="sec1">
+      <div class="section-header">
+        <div class="section-num">1</div>
+        <div>
+          <div class="section-title">我們對　貴司需求的理解</div>
+          <div class="section-subtitle">REQUIREMENT  UNDERSTANDING</div>
+        </div>
+      </div>
+      <div class="section-body">
+        <p class="section-intro">依　貴司於前次接洽時所傳達之選址構想，瑞禾理解之需求重點如下。</p>
+        <table class="data-table">
+          <tbody>
+            <tr><td class="label">設施用途</td><td>興建危險物品儲存倉庫（建築組別 I 類組）</td></tr>
+            <tr><td class="label">用地需求</td><td>丁種建築用地（工業區）</td></tr>
+            <tr><td class="label">鎖定區位</td><td>桃園大園工業區</td></tr>
+            <tr><td class="label">物料類別</td><td>屬公共危險物品範疇之化學物料</td></tr>
+            <tr><td class="label">決策節奏</td><td>依　貴司之決策時程配合</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- =========== Section 2：已完成前期評估 =========== -->
+    <section class="section" id="sec2">
+      <div class="section-header">
+        <div class="section-num">2</div>
+        <div>
+          <div class="section-title">已完成之前期評估項目</div>
+          <div class="section-subtitle">PRE-EVALUATION  SUMMARY</div>
+        </div>
+      </div>
+      <div class="section-body">
+        <p class="section-intro">為協助　貴司於最短決策時間內取得完整資訊，瑞禾於正式提案前已先行完成下列四大類評估作業，合計 25 項。</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:8px;">
+
+          <div style="border:1px solid var(--ruihe-border-light);border-radius:6px;padding:20px 24px;background:white;">
+            <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
+              <div style="width:28px;height:28px;background:var(--ruihe-green);color:white;border-radius:4px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;flex-shrink:0;">A</div>
+              <div style="font-weight:600;color:var(--ruihe-forest);">法規架構研究</div>
+              <div style="margin-left:auto;font-size:12px;color:var(--ruihe-text-muted);">7 項</div>
+            </div>
+            <div style="font-size:13px;color:var(--ruihe-text-light);line-height:1.9;">
+              建築組別 I 類組設置法源、公危辦法六類分類與管制量、室內儲存場所構造規格、保留空地計算、丁建容許使用、危險物品申報義務、環評觸發條件
+            </div>
+          </div>
+
+          <div style="border:1px solid var(--ruihe-border-light);border-radius:6px;padding:20px 24px;background:white;">
+            <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
+              <div style="width:28px;height:28px;background:var(--ruihe-green);color:white;border-radius:4px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;flex-shrink:0;">B</div>
+              <div style="font-weight:600;color:var(--ruihe-forest);">目標標的具體評估</div>
+              <div style="margin-left:auto;font-size:12px;color:var(--ruihe-text-muted);">9 項</div>
+            </div>
+            <div style="font-size:13px;color:var(--ruihe-text-light);line-height:1.9;">
+              地號權屬查詢、使用分區確認、套繪圖比對、容積試算、保留空地可行性、面寬動線確認、行情比對、地上負擔狀況、周邊敏感設施
+            </div>
+          </div>
+
+          <div style="border:1px solid var(--ruihe-border-light);border-radius:6px;padding:20px 24px;background:white;">
+            <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
+              <div style="width:28px;height:28px;background:var(--ruihe-green);color:white;border-radius:4px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;flex-shrink:0;">C</div>
+              <div style="font-weight:600;color:var(--ruihe-forest);">區位研究與替代方案</div>
+              <div style="margin-left:auto;font-size:12px;color:var(--ruihe-text-muted);">6 項</div>
+            </div>
+            <div style="font-size:13px;color:var(--ruihe-text-light);line-height:1.9;">
+              大園工業區引進事業類別、現有售案行情掃描、半徑 15 分鐘車程替代區位盤點、各備援方案引進事業類別比對、危化倉許可可行性確認、替代區位行情區間掌握
+            </div>
+          </div>
+
+          <div style="border:1px solid var(--ruihe-border-light);border-radius:6px;padding:20px 24px;background:white;">
+            <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
+              <div style="width:28px;height:28px;background:var(--ruihe-green);color:white;border-radius:4px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;flex-shrink:0;">D</div>
+              <div style="font-weight:600;color:var(--ruihe-forest);">專業夥伴對接準備</div>
+              <div style="margin-left:auto;font-size:12px;color:var(--ruihe-text-muted);">3 項</div>
+            </div>
+            <div style="font-size:13px;color:var(--ruihe-text-light);line-height:1.9;">
+              特約地政士　陳元宏（27 年實務資歷，勝浤地政士事務所）　｜　常年法律顧問　亞細亞國際法律事務所（陳頂新律師）　｜　全聯會履約保證機制
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========== Section 3：關鍵法規參考（Part 1 結尾） =========== -->
+    <section class="section" id="sec3">
+      <div class="section-header">
+        <div class="section-num">3</div>
+        <div>
+          <div class="section-title">關鍵法規參考</div>
+          <div class="section-subtitle">KEY  REGULATIONS</div>
+        </div>
+      </div>
+      <div class="section-body">
+        <p class="section-intro">本案規劃之危化倉儲設施所適用之核心法規為《公共危險物品及可燃性高壓氣體製造儲存處理場所設置標準暨安全管理辦法》（簡稱「公危辦法」）。其中第 23 條規定之保留空地寬度，直接影響基地有效利用率，為選址評估之關鍵依據之一。</p>
+
+        <h3 style="font-size:17px;color:var(--ruihe-forest);margin:24px 0 12px;">3.1　保留空地寬度（依管制量倍數）</h3>
+
+        <p style="font-size:13.5px;color:var(--ruihe-text-light);margin-bottom:16px;">管制量倍數 ＝ 實際儲存量 ÷ 各類物品法定管制量。倍數越高，所需保留空地越寬。</p>
+
+        <div style="border:1px solid var(--ruihe-border);border-radius:6px;overflow:hidden;margin:16px 0;">
+          <table style="width:100%;border-collapse:collapse;font-size:14px;">
+            <thead>
+              <tr style="background:var(--ruihe-green);color:white;">
+                <th style="padding:12px 16px;text-align:center;font-weight:500;letter-spacing:0.5px;">管制量倍數</th>
+                <th style="padding:12px 16px;text-align:center;font-weight:500;letter-spacing:0.5px;">防火構造</th>
+                <th style="padding:12px 16px;text-align:center;font-weight:500;letter-spacing:0.5px;">非防火構造</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td style="padding:10px 16px;border-bottom:1px solid var(--ruihe-border-light);text-align:center;">未達 5 倍</td><td style="padding:10px 16px;border-bottom:1px solid var(--ruihe-border-light);text-align:center;color:var(--ruihe-text-light);">免設</td><td style="padding:10px 16px;border-bottom:1px solid var(--ruihe-border-light);text-align:center;">0.5 m 以上</td></tr>
+              <tr style="background:var(--ruihe-bg);"><td style="padding:10px 16px;border-bottom:1px solid var(--ruihe-border-light);text-align:center;">5–10 倍</td><td style="padding:10px 16px;border-bottom:1px solid var(--ruihe-border-light);text-align:center;">1 m 以上</td><td style="padding:10px 16px;border-bottom:1px solid var(--ruihe-border-light);text-align:center;">1.5 m 以上</td></tr>
+              <tr><td style="padding:10px 16px;border-bottom:1px solid var(--ruihe-border-light);text-align:center;">10–20 倍</td><td style="padding:10px 16px;border-bottom:1px solid var(--ruihe-border-light);text-align:center;">2 m 以上</td><td style="padding:10px 16px;border-bottom:1px solid var(--ruihe-border-light);text-align:center;">3 m 以上</td></tr>
+              <tr style="background:var(--ruihe-bg);"><td style="padding:10px 16px;border-bottom:1px solid var(--ruihe-border-light);text-align:center;">20–50 倍</td><td style="padding:10px 16px;border-bottom:1px solid var(--ruihe-border-light);text-align:center;">3 m 以上</td><td style="padding:10px 16px;border-bottom:1px solid var(--ruihe-border-light);text-align:center;">5 m 以上</td></tr>
+              <tr><td style="padding:10px 16px;border-bottom:1px solid var(--ruihe-border-light);text-align:center;">50–200 倍</td><td style="padding:10px 16px;border-bottom:1px solid var(--ruihe-border-light);text-align:center;">5 m 以上</td><td style="padding:10px 16px;border-bottom:1px solid var(--ruihe-border-light);text-align:center;">10 m 以上</td></tr>
+              <tr style="background:rgba(192,164,52,0.08);">
+                <td style="padding:12px 16px;text-align:center;color:var(--ruihe-gold);font-weight:700;">200 倍以上</td>
+                <td style="padding:12px 16px;text-align:center;color:var(--ruihe-gold);font-weight:700;">累加</td>
+                <td style="padding:12px 16px;text-align:center;color:var(--ruihe-gold);font-weight:700;">累加</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout">
+          <div class="callout-title">選址評估意涵</div>
+          <strong>管制量倍數越高，所需保留空地越寬，淨可用基地面積越小。</strong>因此在評估候選物件時，「基地面寬」與「總面積」是兩個關鍵指標 —— 面寬不足將大幅壓縮分區操作空間；總面積不足則無法容納所需之保留空地。瑞禾於評估各候選物件時，均會就最高分級情境預作試算，確保所推介之標的具備充分操作彈性。
+        </div>
+
+        <h3 style="font-size:17px;color:var(--ruihe-forest);margin:32px 0 12px;">3.2　其他關鍵法規架構</h3>
+        <p class="section-intro">本案亦涉及下列相關法規，瑞禾於前期評估中均已對照確認（詳見前述 Part 1 第 2 章「前期評估完成項目」A 區塊）：</p>
+        <ul style="font-size:14px;line-height:2;padding-left:20px;color:var(--ruihe-text);">
+          <li>建築技術規則使用組別 I 類組（危險物品類）設置法源</li>
+          <li>公共危險物品六類分類與管制量倍數計算原則</li>
+          <li>非都市土地使用管制規則附表一 —— 丁種建築用地容許使用項目</li>
+          <li>工廠管理輔導法第 21 條與工廠危險物品申報辦法</li>
+          <li>環境影響評估法 —— 觸發條件對照</li>
+        </ul>
+      </div>
+    </section>
+
+
+    <!-- 變動資訊分隔線 -->
+    <div style="margin:40px 0 32px;display:flex;align-items:center;gap:16px;">
+      <div style="flex:1;height:1px;background:var(--ruihe-border);"></div>
+      <div style="font-size:12px;color:var(--ruihe-text-muted);letter-spacing:2px;white-space:nowrap;">以下為本案評估標的</div>
+      <div style="flex:1;height:1px;background:var(--ruihe-border);"></div>
+    </div>
+
+    <!-- =========== Section 4：民族街廠房評估摘要 =========== -->
+    <section class="section" id="sec-property">
+      <div class="section-header">
+        <div class="section-num">4</div>
+        <div>
+          <div class="section-title">民族街廠房　評估摘要</div>
+          <div class="section-subtitle">PROPERTY  EVALUATION  ·  大園工業區民族街 8 / 8-1 / 10 號</div>
+        </div>
+      </div>
+      <div class="section-body">
+        <h3 style="font-size:17px;color:var(--ruihe-forest);margin-bottom:12px;">4.1　標的概覽</h3>
+        <p class="section-intro">桃園大園工業區民族街 8、8-1、10 號廠房（詳細物件資料另見《銷售提案報告》）。重點摘要：</p>
+        <table class="data-table">
+          <tbody>
+            <tr><td class="label">土地面積</td><td>1,991.66 坪（3 筆地號合併）</td></tr>
+            <tr><td class="label">使用分區</td><td>丁種建築用地（工業區）　｜　建蔽率 70%、容積率 300%</td></tr>
+            <tr><td class="label">地形面寬</td><td>臨民族街面寬約 80 米</td></tr>
+            <tr><td class="label">參考總價</td><td><strong style="color:var(--ruihe-forest);">NT$ 59,888 萬元（土地單價 30.07 萬／坪）</strong></td></tr>
+            <tr><td class="label">現況建物</td><td>5 棟、5 建號，合計 1,109 坪｜屋齡 43–46 年（民國 69–71 年建）｜不符合使用且不堪使用，規劃全數拆除</td></tr>
+            <tr><td class="label">法定可建容積</td><td>約 5,975 坪（1,991.66 坪 × 容積率 300%）</td></tr>
+          </tbody>
+        </table>
+
+        <!-- 建物現況說明 -->
+        <div style="margin:20px 0;border:1px solid var(--ruihe-border);border-radius:6px;overflow:hidden;">
+          <div style="background:var(--ruihe-cream);padding:12px 20px;border-bottom:1px solid var(--ruihe-border);font-weight:600;color:var(--ruihe-forest);font-size:14px;">建物登記資料摘要（5 建號）</div>
+          <div style="overflow-x:auto;">
+          <table style="width:100%;border-collapse:collapse;font-size:13px;">
+            <thead>
+              <tr style="background:var(--ruihe-forest);color:white;">
+                <th style="padding:10px 14px;text-align:left;font-weight:500;">門牌</th>
+                <th style="padding:10px 14px;text-align:left;font-weight:500;">建號</th>
+                <th style="padding:10px 14px;text-align:left;font-weight:500;">主要構造</th>
+                <th style="padding:10px 14px;text-align:center;font-weight:500;">層數</th>
+                <th style="padding:10px 14px;text-align:right;font-weight:500;">面積（坪）</th>
+                <th style="padding:10px 14px;text-align:center;font-weight:500;">建築完成</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td style="padding:9px 14px;border-bottom:1px solid var(--ruihe-border-light);">民族街 10 號</td><td style="padding:9px 14px;border-bottom:1px solid var(--ruihe-border-light);color:var(--ruihe-text-muted);">00221</td><td style="padding:9px 14px;border-bottom:1px solid var(--ruihe-border-light);">鋼筋混凝土造</td><td style="padding:9px 14px;border-bottom:1px solid var(--ruihe-border-light);text-align:center;">1F＋B1</td><td style="padding:9px 14px;border-bottom:1px solid var(--ruihe-border-light);text-align:right;">224.9</td><td style="padding:9px 14px;border-bottom:1px solid var(--ruihe-border-light);text-align:center;">民國 69 年</td></tr>
+              <tr style="background:var(--ruihe-bg);"><td style="padding:9px 14px;border-bottom:1px solid var(--ruihe-border-light);">民族街 8 號</td><td style="padding:9px 14px;border-bottom:1px solid var(--ruihe-border-light);color:var(--ruihe-text-muted);">00109</td><td style="padding:9px 14px;border-bottom:1px solid var(--ruihe-border-light);">鋼架造＋加強磚造</td><td style="padding:9px 14px;border-bottom:1px solid var(--ruihe-border-light);text-align:center;">3F＋B1</td><td style="padding:9px 14px;border-bottom:1px solid var(--ruihe-border-light);text-align:right;">571.0</td><td style="padding:9px 14px;border-bottom:1px solid var(--ruihe-border-light);text-align:center;">民國 69 年</td></tr>
+              <tr><td style="padding:9px 14px;border-bottom:1px solid var(--ruihe-border-light);">民族街 8-1 號</td><td style="padding:9px 14px;border-bottom:1px solid var(--ruihe-border-light);color:var(--ruihe-text-muted);">00238</td><td style="padding:9px 14px;border-bottom:1px solid var(--ruihe-border-light);">鋼架造＋加強磚造</td><td style="padding:9px 14px;border-bottom:1px solid var(--ruihe-border-light);text-align:center;">1F</td><td style="padding:9px 14px;border-bottom:1px solid var(--ruihe-border-light);text-align:right;">175.3</td><td style="padding:9px 14px;border-bottom:1px solid var(--ruihe-border-light);text-align:center;">民國 71 年</td></tr>
+              <tr style="background:var(--ruihe-bg);"><td style="padding:9px 14px;border-bottom:1px solid var(--ruihe-border-light);">民族街 8-1 號</td><td style="padding:9px 14px;border-bottom:1px solid var(--ruihe-border-light);color:var(--ruihe-text-muted);">00224</td><td style="padding:9px 14px;border-bottom:1px solid var(--ruihe-border-light);">加強磚造＋鋼架造</td><td style="padding:9px 14px;border-bottom:1px solid var(--ruihe-border-light);text-align:center;">1F＋B1</td><td style="padding:9px 14px;border-bottom:1px solid var(--ruihe-border-light);text-align:right;">134.2</td><td style="padding:9px 14px;border-bottom:1px solid var(--ruihe-border-light);text-align:center;">民國 69 年</td></tr>
+              <tr><td style="padding:9px 14px;border-bottom:1px solid var(--ruihe-border-light);">民族街 8 號</td><td style="padding:9px 14px;border-bottom:1px solid var(--ruihe-border-light);color:var(--ruihe-text-muted);">00242</td><td style="padding:9px 14px;border-bottom:1px solid var(--ruihe-border-light);">加強磚造（變電室）</td><td style="padding:9px 14px;border-bottom:1px solid var(--ruihe-border-light);text-align:center;">1F</td><td style="padding:9px 14px;border-bottom:1px solid var(--ruihe-border-light);text-align:right;">3.7</td><td style="padding:9px 14px;border-bottom:1px solid var(--ruihe-border-light);text-align:center;">民國 71 年</td></tr>
+              <tr style="background:var(--ruihe-cream);font-weight:600;"><td style="padding:10px 14px;" colspan="4">合計</td><td style="padding:10px 14px;text-align:right;color:var(--ruihe-forest);">1,109.1</td><td style="padding:10px 14px;"></td></tr>
+            </tbody>
+          </table>
+          </div>
+        </div>
+
+        <div class="callout" style="margin-bottom:8px;">
+          <div class="callout-title">建物現況評估</div>
+          現況建物屋齡 43–46 年，主要結構為鋼架造及加強磚造，不符合 I 類危化倉儲設施之防火構造要求，且現況不堪使用，規劃全數拆除重建。瑞禾目前正洽詢拆除廠商進行費用粗估，確認後將另行告知。
+        </div>
+
+        <!-- 行情分析摘要 -->
+        <h3 style="font-size:17px;color:var(--ruihe-forest);margin:32px 0 12px;">4.2　實價登錄行情分析摘要</h3>
+        <p class="section-intro" style="margin-bottom:16px;">以下為瑞禾依內政部實價登錄資料（桃園市 112Q3–115Q1，共 22 季）所作之市場行情分析重點摘要。</p>
+
+        <table class="data-table" style="margin-bottom:16px;">
+          <tbody>
+            <tr><td class="label">掛牌單價</td><td><strong style="color:#C0533A;">30.07 萬／坪</strong>（總價 59,888 萬元）</td></tr>
+            <tr><td class="label">市場錨點</td><td>觀音工業廠 114 年　<strong>26.00–26.78 萬／坪</strong>（鄰區最新成交，現行最具參考性）</td></tr>
+          </tbody>
+        </table>
+
+        <div class="callout" style="margin-bottom:16px;">
+          <div class="callout-title">行情說明</div>
+          大園廠房 112→113 年漲幅約 15%，114 年大園無新案；以鄰區觀音 114 年成交定錨，推估大園現行合理水準約 27–29 萬／坪。本案掛牌 30.07 萬，溢價具一定合理性（80 米稀有面寬、三照齊備、規模稀缺），惟建物屋齡 43–46 年規劃全數拆除，拆除重建成本應列入出價計算。
+        </div>
+
+        <div style="text-align:right;margin-bottom:32px;">
+          <a href="./market.html" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:var(--ruihe-forest);color:white;padding:10px 20px;border-radius:4px;font-size:13px;font-weight:600;text-decoration:none;letter-spacing:0.5px;">
+            完整行情分析報告　→
+          </a>
+        </div>
+
+        <!-- 同地段比較物件 -->
+        <h3 style="font-size:17px;color:var(--ruihe-forest);margin:32px 0 12px;">4.3　同地段比較物件（不符合需求）</h3>
+        <p class="section-intro" style="margin-bottom:16px;">同地段現有一筆工業用地正在市場流通，供參考比較。</p>
+
+        <table class="data-table" style="margin-bottom:12px;">
+          <tbody>
+            <tr><td class="label">地號</td><td>內海墘段特工區小段 <strong>41-4</strong> 地號（本案評估標的鄰地）</td></tr>
+            <tr><td class="label">面積</td><td>1,060 坪（丁建 852 坪 + 道路用地 207 坪）</td></tr>
+            <tr><td class="label">掛牌</td><td><strong>28,600 萬元（26.98 萬／坪）</strong>　※ 含道路用地之混合均價</td></tr>
+            <tr><td class="label">路寬 × 面寬</td><td>路寬 10 米　｜　面寬 35 米 × 縱深 76 米</td></tr>
+            <tr><td class="label">現況</td><td>空地</td></tr>
+          </tbody>
+        </table>
+
+        <div class="callout" style="border-left-color:#C0533A;background:rgba(192,83,58,0.04);margin-bottom:8px;">
+          <div class="callout-title" style="color:#C0533A;">不符合需求原因</div>
+          面積 1,060 坪不足以配置 I 類危化倉儲設施所需之保留空地與操作動線；面寬僅 35 米（本案 80 米），空間規劃彈性大幅受限；臨路路寬 10 米，聯結車進出條件較差。
+        </div>
+
+        <div class="callout" style="margin-bottom:0;">
+          <div class="callout-title">⚠️ 實價登錄注意</div>
+          此物件（41-4 地號）與實價登錄成交案（41-5 地號，2024 年 11 月，21.24 萬／坪）為<strong>同地段相鄰地號，地目組成完全相同</strong>（丁建 + 道路用地）。41-5 地號已成交後，41-4 地號現以 26.98 萬／坪重新掛牌，較已知實際成交價溢價約 <strong>27%</strong>。
+        </div>
+
+        <h3 style="font-size:17px;color:var(--ruihe-forest);margin:32px 0 12px;">4.4　四大契合面向</h3>
+
+        <div class="callout success">
+          <div class="callout-title">① 用地編定完全符合需求</div>
+          本標的編定為丁種建築用地（工業區），與　貴司所指示之用地需求完全相符。依《非都市土地使用管制規則》附表一，丁種建築用地容許使用項目明文涵蓋「公共危險物品、液化石油氣及其他可燃性高壓氣體之容器儲存設施」。
+        </div>
+        <div class="callout success">
+          <div class="callout-title">② 引進事業類別相符性高</div>
+          本標的位於大園工業區內，園區引進事業類別涵蓋化學原料、紡織、金屬製品等多元類別。依　貴司所述之產業屬性，於園區引進事業審查上具備充分相容性。
+        </div>
+        <div class="callout success">
+          <div class="callout-title">③ 基地條件具備危化倉設置彈性</div>
+          1,991 坪基地搭配 80 米臨路面寬，於 I 類儲存場所設計上具備充分操作空間。即使儲存規模觸發較高之保留空地寬度要求（詳見前述 3.1 法規參考），仍可保有合理基地利用率。
+        </div>
+        <div class="callout success">
+          <div class="callout-title">④ 重建容積充裕，具長期擴充彈性</div>
+          基地面積近 2,000 坪，容積率 300%，法定可建容積約 5,975 坪。現況建物全數拆除後，可依實際儲存規模重新規劃配置，法定容積遠未飽和，未來若有擴充需求仍有充分空間，免除二次選址成本。
+        </div>
+
+        <!-- ===== 4.3 現址使用者及環保評估 ===== -->
+        <h3 style="font-size:17px;color:var(--ruihe-forest);margin:32px 0 4px;">4.5　現址使用者及環保評估</h3>
+        <p class="section-intro" style="margin-bottom:20px;">依環保署公開資料及透明足跡資料庫，整理現址使用者基本資料、歷史環保紀錄及基地周邊水域概況，供　貴司進行盡職調查時參考。</p>
+
+        <!-- 4.3.1 吉發染整基本資料 -->
+        <h4 style="font-size:14px;color:var(--ruihe-text-light);letter-spacing:1px;margin:0 0 12px;text-transform:uppercase;">4.5.1　現址使用者基本資料</h4>
+        <table class="data-table" style="margin-bottom:20px;">
+          <tbody>
+            <tr><td class="label">事業名稱</td><td><strong>吉發染整股份有限公司</strong></td></tr>
+            <tr><td class="label">企業統編</td><td>23495948</td></tr>
+            <tr><td class="label">環保管制編號</td><td>H4700592</td></tr>
+            <tr><td class="label">事業地址</td><td>桃園市大園區內海里民族路八、八之一、一○號（即本標的）</td></tr>
+            <tr><td class="label">所在工業區</td><td>大園工業區</td></tr>
+            <tr><td class="label">產業類型</td><td>染整業　｜　排放申報類型：空氣污染、水污染、廢棄物、毒性化學物質</td></tr>
+          </tbody>
+        </table>
+
+        <!-- 解除列管日期 -->
+        <div class="callout success" style="margin-bottom:20px;">
+          <div class="callout-title">✓ 各類污染列管均已解除（環保署資料）</div>
+          <table style="width:100%;font-size:13px;border-collapse:collapse;margin-top:8px;">
+            <thead><tr style="color:var(--ruihe-text-muted);font-size:12px;">
+              <th style="padding:4px 0;text-align:left;font-weight:500;">污染類別</th>
+              <th style="padding:4px 0;text-align:left;font-weight:500;">解除列管日期</th>
+            </tr></thead>
+            <tbody>
+              <tr><td style="padding:6px 0;border-bottom:1px solid var(--ruihe-border-light);">毒性化學物質污染</td><td style="padding:6px 0;border-bottom:1px solid var(--ruihe-border-light);">2021-02-20</td></tr>
+              <tr><td style="padding:6px 0;border-bottom:1px solid var(--ruihe-border-light);">空氣污染</td><td style="padding:6px 0;border-bottom:1px solid var(--ruihe-border-light);">2022-08-04</td></tr>
+              <tr><td style="padding:6px 0;border-bottom:1px solid var(--ruihe-border-light);">水污染</td><td style="padding:6px 0;border-bottom:1px solid var(--ruihe-border-light);">2024-09-18</td></tr>
+              <tr><td style="padding:6px 0;">廢棄物</td><td style="padding:6px 0;">2025-08-12</td></tr>
+            </tbody>
+          </table>
+          <div style="font-size:12px;color:var(--ruihe-text-muted);margin-top:8px;">資料來源：環保署管制編號 H4700592，資料日期 2026-01-11</div>
+        </div>
+
+        <!-- 4.3.2 歷史環保裁罰紀錄 -->
+        <h4 style="font-size:14px;color:var(--ruihe-text-light);letter-spacing:1px;margin:24px 0 12px;text-transform:uppercase;">4.5.2　歷史環保裁罰紀錄（透明足跡 · 共 13 筆）</h4>
+        <div class="callout" style="border-left-color:#C0533A;background:rgba(192,83,58,0.04);margin-bottom:12px;">
+          染整業為台灣土壤及地下水污染高風險前 5 大產業。依《土壤及地下水污染整治法》第 7 條，買方若被認定為污染土地關係人，整治責任將一併繼受，屬本案盡職調查之優先查證項目。
+        </div>
+        <div style="overflow-x:auto;margin-bottom:20px;">
+        <table class="data-table" style="font-size:13px;">
+          <thead>
+            <tr>
+              <th style="width:105px;">裁罰日期</th>
+              <th>違規法條</th>
+              <th style="width:80px;text-align:center;">裁罰金額</th>
+              <th>違規事項</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>2018-01-09</td><td>空氣污染防制法 第 24 條第 2 項</td><td style="text-align:center;">20 萬</td><td>洗滌塔壓降值未達許可範圍</td></tr>
+            <tr><td>2017-07-24</td><td>空氣污染防制法 第 24 條第 2 項</td><td style="text-align:center;">10 萬</td><td>鍋爐操作與許可不符</td></tr>
+            <tr><td>2017-07-24</td><td>空氣污染防制法 第 56 條第 2 項</td><td style="text-align:center;">10 萬</td><td>限期改善未完成</td></tr>
+            <tr><td>2014-01-15</td><td>空氣污染防制法 第 24 條第 2 項</td><td style="text-align:center;">10 萬</td><td>空污違規</td></tr>
+            <tr><td>2014-01-08</td><td>水污染防治法 第 7 條第 1 項</td><td style="text-align:center;">222 萬</td><td>水污染違規</td></tr>
+            <tr><td>2014-01-08</td><td>水污染防治法 第 14、20 條</td><td style="text-align:center;">5 萬</td><td>水污違規</td></tr>
+            <tr><td>2014-01-02</td><td>空氣污染防制法 第 23 條第 1 項</td><td style="text-align:center;">10 萬</td><td>空污違規</td></tr>
+            <tr><td>2013-01-19</td><td>廢棄物清理法 第 31 條第 1 項第 1 款</td><td style="text-align:center;">0.6 萬</td><td>廢棄物管理違規</td></tr>
+            <tr><td>2012-10-13</td><td>水污染防治法 第 7 條第 1 項</td><td style="text-align:center;">13 萬</td><td>水污違規</td></tr>
+            <tr><td>2011-11-25</td><td>水污染防治法 第 18 條</td><td style="text-align:center;">15 萬</td><td>污水檢測申報違規</td></tr>
+            <tr><td>2010-04-01</td><td>空氣污染防制法 第 24 條第 2 項</td><td style="text-align:center;">10 萬</td><td>空污違規</td></tr>
+          </tbody>
+        </table>
+        <div style="font-size:12px;color:var(--ruihe-text-muted);padding:8px 0;">資料來源：透明足跡 H4700592（地球公民基金會）</div>
+        </div>
+
+        <!-- 4.3.3 大庄埤 -->
+        <h4 style="font-size:14px;color:var(--ruihe-text-light);letter-spacing:1px;margin:24px 0 12px;text-transform:uppercase;">4.5.3　基地周邊水域：大庄埤</h4>
+        <div class="callout" style="margin-bottom:12px;">
+          <div class="callout-title">基地東南側緊鄰大庄埤（大型農業灌溉埤塘）</div>
+          大庄埤為桃園農田水利會管轄之大型灌溉埤塘，由地籍圖資顯示與本標的基地邊界相鄰。
+        </div>
+
+        <div style="background:rgba(192,164,52,0.06);border:1px solid rgba(192,164,52,0.3);border-radius:4px;padding:16px 20px;margin-bottom:12px;font-size:14px;">
+          <div style="font-weight:600;color:var(--ruihe-forest);margin-bottom:10px;font-size:15px;">公共危險物品辦法 第 8 條第 5 款</div>
+          <div style="background:white;border-left:3px solid var(--ruihe-gold);padding:10px 16px;border-radius:0 4px 4px 0;margin-bottom:12px;line-height:1.9;color:var(--ruihe-text);">
+            「依本辦法應設置超過三公尺保留空地寬度之場所，其保留空地面臨<strong>海洋、湖泊、水堰或河川</strong>者，得縮減為三公尺。」
+          </div>
+          <strong>條文意涵：</strong>危化倉保留空地若面對湖泊或河川，最低僅需設置 3 公尺保留空地，屬<strong>縮減優惠條款</strong>（非禁建規定）。<br><br>
+          <strong>本案適用性：</strong>大庄埤若被主管機關認定為上述「湖泊」，則面向埤塘側之保留空地可縮減至 3 公尺，對基地有效利用率反而有利。惟須注意：
+          <ul style="margin:10px 0 0 20px;line-height:2;">
+            <li>大庄埤是否符合本條「湖泊」定義，需消防主管機關認定 ── <span style="color:#9A7020;font-weight:600;">待確認</span></li>
+            <li>基地邊界至埤塘實際距離，需地籍圖資套疊量測 ── <span style="color:#9A7020;font-weight:600;">待確認</span></li>
+            <li>水利法及農田水利會對埤塘周邊是否另有禁限建規定 ── <span style="color:#9A7020;font-weight:600;">待確認</span></li>
+          </ul>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px;">
+          <div style="grid-column:1/3;">
+            <img src="./大庄埤3.png" alt="大庄埤區位圖" style="width:100%;border-radius:4px;border:1px solid var(--ruihe-border);display:block;">
+            <div style="font-size:12px;color:var(--ruihe-text-muted);margin-top:4px;text-align:center;">大庄埤區位圖 — 民族街物件（紅點）與大庄埤相對位置</div>
+          </div>
+          <div>
+            <img src="./大庄埤1.png" alt="地籍圖套疊" style="width:100%;border-radius:4px;border:1px solid var(--ruihe-border);display:block;">
+            <div style="font-size:12px;color:var(--ruihe-text-muted);margin-top:4px;text-align:center;">地籍圖套疊 — 基地範圍與埤塘邊界</div>
+          </div>
+          <div>
+            <img src="./大庄埤2.png" alt="衛星圖" style="width:100%;border-radius:4px;border:1px solid var(--ruihe-border);display:block;">
+            <div style="font-size:12px;color:var(--ruihe-text-muted);margin-top:4px;text-align:center;">衛星圖 — 基地（橘色）與大庄埤水域</div>
+          </div>
+        </div>
+
+        <!-- 4.3.4 大園區列管場址 -->
+        <h4 style="font-size:14px;color:var(--ruihe-text-light);letter-spacing:1px;margin:24px 0 12px;text-transform:uppercase;">4.5.4　大園區公告列管場址（環保署 2026-02）</h4>
+        <div class="callout success" style="margin-bottom:16px;">
+          <div class="callout-title">✓ 吉發染整股份有限公司　目前不在列管狀態</div>
+          依環保署 2026 年 2 月公告資訊，吉發染整股份有限公司目前並未列入大園區控制場址或整治場址，本資料亦非顯示歷史紀錄，而是反映目前現況。以下為大園區同期公告之其他場址供參考。
+        </div>
+        <div class="callout" style="border-left-color:#C0533A;background:rgba(192,83,58,0.05);margin-bottom:12px;">
+          <div class="callout-title" style="color:#C0533A;">控制場址（整治進行中）</div>
+          <table style="width:100%;font-size:13px;border-collapse:collapse;margin-top:8px;">
+            <tr><td style="padding:5px 0;width:50%;">• 虹冠實業股份有限公司</td><td style="padding:5px 0;">• 原億碩實業有限公司大園廠</td></tr>
+            <tr><td style="padding:5px 0;">• 原耀元電子股份有限公司大園廠</td><td style="padding:5px 0;">• 全峰工業股份有限公司（桃園廠）</td></tr>
+          </table>
+        </div>
+        <div class="callout" style="margin-bottom:12px;">
+          <div class="callout-title">地下水受污染使用限制地區</div>
+          桃園市大園區北港里 17-3 號土地
+        </div>
+        <div class="callout success" style="margin-bottom:0;">
+          <div class="callout-title">✓ 已解除控制場址</div>
+          <table style="width:100%;font-size:13px;border-collapse:collapse;margin-top:8px;">
+            <tr><td style="padding:5px 0;width:50%;">• 三府實業有限公司</td><td style="padding:5px 0;">• 昶昕實業股份有限公司大園廠　✓ 已解除</td></tr>
+            <tr><td style="padding:5px 0;">• 大園鄉埔心段海豐坡小段 1009 地號</td><td style="padding:5px 0;">• 大園區埔心段三塊厝小段 290（部分）地號</td></tr>
+            <tr><td style="padding:5px 0;">• 大園區照鏡段 197-2（部分）地號</td><td style="padding:5px 0;">• 大園區照鏡段 199（部分）地號</td></tr>
+          </table>
+        </div>
+
+        <h3 style="font-size:17px;color:var(--ruihe-forest);margin:32px 0 12px;">4.6　盡職調查建議事項</h3>
+        <p class="section-intro">下列六項屬正式議價前之建議查證事項，瑞禾將協同相關專業單位逐項落實。</p>
+        <div data-block="DD"></div>
+      </div>
+    </section>
+
+
+    <!-- =========== Section 5：候選區域方案 =========== -->
+    <section class="section" id="sec4">
+      <div class="section-header">
+        <div class="section-num">5</div>
+        <div>
+          <div class="section-title">候選區域方案</div>
+          <div class="section-subtitle">ALTERNATIVE  ZONE  OPTIONS</div>
+        </div>
+      </div>
+      <div class="section-body">
+        <p class="section-intro">除目前評估中之大園區位外，瑞禾另就半徑 15 分鐘車程內之工業區進行同步盤點，提供　貴司於決策時之區位比較參考。</p>
+
+        <div class="plan-grid">
+          <div class="plan-card recommended">
+            <div class="plan-head">
+              <div class="plan-name">
+                <span class="plan-badge">Plan A</span>
+                <span class="plan-title">大園工業區　（目標標的所在）</span>
+              </div>
+              <div class="plan-stars">★★★★★</div>
+            </div>
+            <div class="plan-desc">已有具體標的可立即推進；引進事業類別、區位條件、產業聚落皆完整。與　貴司於本區既有之營運基礎銜接順暢。</div>
+            <div class="plan-meta">
+              <span>車程　<strong>0–5 分鐘</strong></span>
+              <span>用地編定　<strong>丁種建築用地</strong></span>
+              <span>狀態　<strong style="color:var(--ruihe-gold);">已有具體標的</strong></span>
+            </div>
+          </div>
+
+          <div class="plan-card">
+            <div class="plan-head">
+              <div class="plan-name">
+                <span class="plan-badge">Plan B</span>
+                <span class="plan-title">觀音工業區</span>
+              </div>
+              <div class="plan-stars">★★★★★</div>
+            </div>
+            <div class="plan-desc">632 公頃北台灣最大編定工業區，產業聚落最完整，桃科 — 環科 — 大潭工業區聯合廠商區域聯防體系成熟，臺 15 線、臺 61 線雙快速道路聯外。</div>
+            <div class="plan-meta">
+              <span>車程　<strong>12–15 分鐘</strong></span>
+              <span>用地編定　<strong>丁種建築用地</strong></span>
+              <span>行情區間　<strong>每坪 18–25 萬</strong></span>
+            </div>
+          </div>
+
+          <div class="plan-card">
+            <div class="plan-head">
+              <div class="plan-name">
+                <span class="plan-badge">Plan C</span>
+                <span class="plan-title">蘆竹／南崁工業區帶</span>
+              </div>
+              <div class="plan-stars">★★★★</div>
+            </div>
+            <div class="plan-desc">北台灣 PCB 製造重鎮，產業上下游配套最完整；國道 2 號南崁交流道便利。標的多為散落型工業地，整塊大基地較難取得。</div>
+            <div class="plan-meta">
+              <span>車程　<strong>15 分鐘（邊緣）</strong></span>
+              <span>用地編定　<strong>都市計畫工業區 + 散落丁建</strong></span>
+              <span>行情區間　<strong>每坪 35–50 萬</strong></span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+  </div>
+</main>
+
+<!-- ============== Footer ============== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-block">
+        <h4>SERVICE  TEAM</h4>
+        <p>
+          <strong>瑞禾不動產經紀股份有限公司</strong><br>
+          專案窗口　<strong>業務總監　張現傑</strong><br>
+          不動產經紀人證號　108 中市經紀字第 01847 號<br>
+          臺中市南屯區益豐路四段 91 號<br>
+          TEL　04-2380-3560　｜　FAX　04-2380-3160
+        </p>
+      </div>
+      <div class="footer-block">
+        <h4>PROFESSIONAL  ENDORSEMENT</h4>
+        <p>
+          ◆ 經濟部產業園區管理局　115 年度委託專業仲介媒合案<br>
+          ◆ 常年法律顧問　亞細亞國際法律事務所<br>
+          ◆ 特約地政士　陳元宏（27 年實務資歷）
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Ruei.He Real Estate Brokerage Co., Ltd.　專營產業用地的策略夥伴</div>
+      <div>本文件內容均依現有資訊善意整理，最終以實際查證為準</div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============== Toast ============== -->
+<div class="toast" id="toast"></div>
+
+<!-- ============== Export Modal ============== -->
+<div class="modal-backdrop" id="modal">
+  <div class="modal">
+    <div class="modal-header">
+      <h2 id="modalTitle">回應摘要</h2>
+    </div>
+    <div class="modal-body" id="modalBody"></div>
+    <div class="modal-footer">
+      <button class="btn" onclick="closeModal()">關閉</button>
+      <button class="btn btn-primary" id="modalAction">複製到剪貼簿</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ============== 資料定義 ==============
+const CHECKLIST_DATA = {
+  A: [
+    ['A1', '建築組別 I 類組之設置法源與審查機關確認', '建築技術規則使用組別、內政部營建署相關解釋函釋'],
+    ['A2', '公共危險物品設置標準暨安全管理辦法（公危辦法）對照', '六類物品分類、管制量倍數計算原則'],
+    ['A3', '室內儲存場所構造規格', '獨立／一層／高度限制、防火構造要件、避雷設備規定'],
+    ['A4', '儲存倉庫四周保留空地寬度計算', '依管制量倍數對照表預估基地有效利用率'],
+    ['A5', '不同類儲存物併存禁忌彙整', '依公危辦法第 46-2 條評估分區儲存或分棟配置之必要性'],
+    ['A6', '丁種建築用地容許使用查詢', '非都市土地使用管制規則附表一容許項目確認'],
+    ['A7', '工廠危險物品申報義務概要', '工輔法第 21 條及申報辦法之申報時機與內容'],
+    ['A8', '環境影響評估觸發條件初評', '依儲存規模對照環評認定標準'],
+  ],
+  B: [
+    ['B1', '大園工業區基本資料與引進事業類別彙整', '園區歷史、面積、廠商組成、引進產業類別清單'],
+    ['B2', '桃園航空城徵收範圍套疊確認', '排除徵收區風險，確保所推介標的非屬區段徵收範圍'],
+    ['B3', '園區內既有同類產業聚落盤點', '上下游配套、產業 know-how 環境完整性'],
+    ['B4', '區內危險物品管理與消防防災體系研究', '地方廠協會聯防機制、消防分隊救災量能'],
+    ['B5', '對外運輸動線評估', '聯外快速道路、國道交流道、機場便利性'],
+    ['B6', '同園區現有可售待出標的初步掃描', '比對行情、面積、編定，建立候選池'],
+  ],
+  C: [
+    ['C1', '地號權屬基本查詢（3 筆地號）', '所有權人、面積、編定、登記日期'],
+    ['C2', '土地使用分區圖資調閱與確認', '丁種建築用地、建蔽率 70%、容積率 300%'],
+    ['C3', '套繪圖與既有建物配置比對', '使用執照建號、現況建物坐落範圍'],
+    ['C4', '容積率使用情況試算', '既有 1,109 坪 vs 法定可建 2,954.82 坪，剩餘容積評估'],
+    ['C5', 'I 類儲存場所保留空地可行性試算', '依預估管制量倍數推算基地有效利用率'],
+    ['C6', '對外動線與面寬實地確認', '臨民族街面寬 80 米、路寬 12 米，運輸車輛通行可行性'],
+    ['C7', '公告現值與近期成交行情比對', '建立議價談判參考基準'],
+    ['C8', '地上負擔（抵押權）狀況查詢', '中小企銀 3 組設定，塗銷可行性追蹤'],
+    ['C9', '周邊敏感設施盤點', '住宅、學校、河川等鄰避設施距離初評'],
+  ],
+  D: [
+    ['D1', '半徑 15 分鐘車程內替代區位盤點', '識別 3 個合適替代工業區，作為備援方案'],
+    ['D2', '替代區位之引進事業類別比對', '確保各備援方案均符合　貴司產業類型'],
+    ['D3', '替代區位之危化倉許可可行性確認', '對照各園區管理規範與容許使用清單'],
+    ['D4', '替代區位現有售案行情區間掌握', '建立比較基準，協助　貴司評估議價空間'],
+  ],
+  E: [
+    ['E1', '特約地政士｜陳元宏（27 年實務資歷）已就位', '勝浤地政士事務所'],
+    ['E2', '常年法律顧問｜亞細亞國際法律事務所（陳頂新律師）已就位', ''],
+    ['E3', '履約保證機制｜全聯會 25 萬保證金 + 履保專戶 已就位', ''],
+    ['E4', '建議建築師事務所名單（具產業園區實務經驗者）', '可依　貴司指示提供推薦名單'],
+    ['E5', '建議消防／環評顧問名單', '可依　貴司指示提供推薦名單'],
+  ],
+};
+
+// 待　貴司決定之事項（預設未勾選）
+const DD_ITEMS = [
+  ['DD1', '土壤及地下水污染潛勢初步評估（Phase I 盡職調查）'],
+  ['DD2', '既有建物結構與　貴司規劃用途之相容性評估'],
+  ['DD3', '保留空地與分區設計之具體規劃'],
+  ['DD4', '抵押權塗銷流程與時程確認'],
+];
+
+const STORAGE_KEY = 'ruihe-changhsin-memo-v1';
+
+// ============== 狀態 ==============
+let state = loadState() || {
+  checks: {},   // { itemId: true/false }
+  notes: {},    // { itemId: 'note text' }
+  global: '',   // 整體回饋
+};
+
+// 預設：A-E 全部已完成（瑞禾準備好的）
+function initDefaults() {
+  ['A','B','C','D','E'].forEach(block => {
+    CHECKLIST_DATA[block].forEach(([id]) => {
+      if (state.checks[id] === undefined) state.checks[id] = true;
+    });
+  });
+  DD_ITEMS.forEach(([id]) => {
+    if (state.checks[id] === undefined) state.checks[id] = false;
+  });
+}
+initDefaults();
+
+// ============== 渲染 ==============
+function renderChecklist() {
+  // A-E
+  ['A','B','C','D','E'].forEach(block => {
+    const container = document.querySelector(`[data-block="${block}"]`);
+    if (!container || container.classList.contains('block-count')) return;
+    container.innerHTML = CHECKLIST_DATA[block].map(([id, title, detail]) =>
+      renderItem(id, title, detail)
+    ).join('');
+  });
+  // DD（待客戶決定）
+  const ddContainer = document.querySelector('[data-block="DD"]');
+  if (ddContainer) {
+    ddContainer.innerHTML = DD_ITEMS.map(([id, title]) =>
+      renderPendingItem(id, title)
+    ).join('');
+  }
+  attachListeners();
+  updateProgress();
+}
+
+function renderItem(id, title, detail) {
+  return `
+    <div class="check-item checked" data-id="${id}" style="pointer-events:none;">
+      <div class="check-row" style="cursor:default;">
+        <div style="width:22px;height:22px;background:var(--ruihe-green);border-radius:4px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;">
+          <svg width="13" height="10" viewBox="0 0 13 10" fill="none"><path d="M1 5L5 9L12 1" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="check-content">
+          <div class="check-title">${title}</div>
+          ${detail ? `<div class="check-detail">${detail}</div>` : ''}
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+function renderPendingItem(id, title) {
+  return `
+    <div class="check-item" data-id="${id}" style="pointer-events:none;">
+      <div class="check-row" style="cursor:default;">
+        <div style="width:22px;height:22px;border:2px solid var(--ruihe-border);border-radius:4px;flex-shrink:0;margin-top:2px;background:white;"></div>
+        <div class="check-content">
+          <div class="check-title">${title}</div>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+// ============== 互動 ==============
+function toggleCheck(id, e) {
+  if (e && e.target.tagName === 'BUTTON') return;
+  if (e && e.target.tagName === 'INPUT') {
+    state.checks[id] = e.target.checked;
+  } else {
+    state.checks[id] = !state.checks[id];
+  }
+  const item = document.querySelector(`[data-id="${id}"]`);
+  if (item) {
+    item.classList.toggle('checked', state.checks[id]);
+    const cb = item.querySelector('input[type="checkbox"]');
+    if (cb) cb.checked = state.checks[id];
+  }
+  saveState();
+  updateProgress();
+}
+
+function toggleNote(id) {
+  const area = document.getElementById(`note-${id}`);
+  if (!area) return;
+  const willOpen = !area.classList.contains('expanded');
+  area.classList.toggle('expanded', willOpen);
+  if (willOpen) {
+    setTimeout(() => area.querySelector('textarea')?.focus(), 50);
+  }
+}
+
+let saveTimer = null;
+function saveNote(id, value) {
+  state.notes[id] = value;
+  const item = document.querySelector(`[data-id="${id}"]`);
+  if (item) {
+    item.classList.toggle('has-note', !!value.trim());
+    const toggle = item.querySelector('.note-toggle');
+    if (toggle) toggle.textContent = value.trim() ? '查看註記' : '加註';
+  }
+  const hint = document.getElementById(`hint-${id}`);
+  if (hint) hint.innerHTML = '<span class="saved">✓ 已暫存</span>';
+
+  clearTimeout(saveTimer);
+  saveTimer = setTimeout(() => {
+    saveState();
+    if (hint) setTimeout(() => { hint.innerHTML = '輸入後自動暫存於本機'; }, 2000);
+  }, 400);
+}
+
+// 整體回饋
+function setupGlobalNote() {
+  const ta = document.getElementById('globalNote');
+  if (!ta) return;
+  ta.value = state.global || '';
+  ta.addEventListener('input', () => {
+    state.global = ta.value;
+    clearTimeout(saveTimer);
+    saveTimer = setTimeout(saveState, 400);
+  });
+}
+
+// ============== 儲存 ==============
+function saveState() {
+  try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); }
+  catch (e) { console.warn('Storage failed', e); }
+}
+
+function loadState() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    return raw ? JSON.parse(raw) : null;
+  } catch (e) { return null; }
+}
+
+// ============== 進度 ==============
+function updateProgress() {
+  const allIds = [];
+  ['A','B','C','D','E'].forEach(b => CHECKLIST_DATA[b].forEach(([id]) => allIds.push(id)));
+  DD_ITEMS.forEach(([id]) => allIds.push(id));
+
+  const total = allIds.length;
+  const done = allIds.filter(id => state.checks[id]).length;
+  const pct = total > 0 ? Math.round(done / total * 100) : 0;
+
+  document.getElementById('progressFill').style.width = pct + '%';
+  document.getElementById('progressPct').textContent = pct;
+  document.getElementById('progressCount').textContent = `${done} / ${total}`;
+
+  // 各 block 數量
+  ['A','B','C','D','E'].forEach(b => {
+    const ids = CHECKLIST_DATA[b].map(([id]) => id);
+    const blockDone = ids.filter(id => state.checks[id]).length;
+    const counter = document.querySelector(`.block-count[data-block="${b}"] .done`);
+    if (counter) counter.textContent = blockDone;
+  });
+}
+
+// ============== 攻關功能 ==============
+function attachListeners() {
+  // 自動展開已有筆記的項目
+  Object.keys(state.notes).forEach(id => {
+    if (state.notes[id] && state.notes[id].trim()) {
+      const area = document.getElementById(`note-${id}`);
+      if (area) area.classList.add('expanded');
+    }
+  });
+}
+
+// ============== 匯出 ==============
+function generateSummary() {
+  const allIds = [];
+  ['A','B','C','D','E'].forEach(b => CHECKLIST_DATA[b].forEach(item => allIds.push({block:b, ...{id:item[0], title:item[1]}})));
+  DD_ITEMS.forEach(([id, title]) => allIds.push({block:'DD', id, title}));
+
+  const done = allIds.filter(x => state.checks[x.id]).length;
+  const total = allIds.length;
+  const notes = Object.keys(state.notes).filter(id => state.notes[id]?.trim()).map(id => {
+    const found = allIds.find(x => x.id === id);
+    return found ? { id, title: found.title, note: state.notes[id] } : null;
+  }).filter(Boolean);
+
+  const date = new Date().toLocaleString('zh-TW');
+
+  let summary = `━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n`;
+  summary += `　危化倉儲選址前期評估　回應摘要\n`;
+  summary += `　謹致　昶昕實業股份有限公司\n`;
+  summary += `━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n`;
+  summary += `回應時間：${date}\n`;
+  summary += `總進度：${done} / ${total}　（${Math.round(done/total*100)}%）\n\n`;
+
+  if (notes.length > 0) {
+    summary += `── 各項註記（共 ${notes.length} 則）──────────\n\n`;
+    notes.forEach((n, i) => {
+      summary += `【${n.id}】${n.title}\n`;
+      summary += `回應：${n.note}\n\n`;
+    });
+  }
+
+  if (state.global?.trim()) {
+    summary += `── 整體回饋與後續方向指示 ──────────\n\n`;
+    summary += `${state.global}\n\n`;
+  }
+
+  summary += `━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n`;
+  summary += `本回應由 昶昕實業 經由瑞禾開發互動式備忘錄產生\n`;
+  summary += `回應請寄回：張現傑　業務總監\n`;
+  summary += `瑞禾不動產經紀股份有限公司　TEL 04-2380-3560\n`;
+
+  return summary;
+}
+
+function exportData() {
+  const summary = generateSummary();
+  const payload = {
+    summary,
+    state,
+    exportedAt: new Date().toISOString(),
+    version: 'v1.0',
+  };
+  const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `昶昕回應_${new Date().toISOString().slice(0,10)}.json`;
+  a.click();
+  URL.revokeObjectURL(url);
+  showToast('已下載回應檔', 'success');
+}
+
+function sendToBroker() {
+  const summary = generateSummary();
+  showModal('寄回瑞禾窗口', summary, () => {
+    // 嘗試開啟 mailto
+    const subject = encodeURIComponent('【回應】危化倉儲選址前期評估備忘錄');
+    const body = encodeURIComponent(summary);
+    // 將內容也複製到剪貼簿備用
+    navigator.clipboard?.writeText(summary).then(() => {
+      showToast('內容已複製到剪貼簿', 'success');
+    });
+    // 開啟 email
+    setTimeout(() => {
+      window.location.href = `mailto:?subject=${subject}&body=${body}`;
+    }, 300);
+  }, '開啟郵件並複製內容');
+}
+
+function resetData() {
+  if (!confirm('確定要清除所有勾選與註記、回到初始狀態嗎？')) return;
+  localStorage.removeItem(STORAGE_KEY);
+  state = { checks: {}, notes: {}, global: '' };
+  initDefaults();
+  renderChecklist();
+  setupGlobalNote();
+  showToast('已重置', 'success');
+}
+
+function showModal(title, content, action, actionLabel) {
+  document.getElementById('modalTitle').textContent = title;
+  document.getElementById('modalBody').innerHTML = '<pre>' + content.replace(/</g,'&lt;') + '</pre>';
+  const btn = document.getElementById('modalAction');
+  btn.textContent = actionLabel || '複製';
+  btn.onclick = () => { action(); closeModal(); };
+  document.getElementById('modal').classList.add('show');
+}
+
+function closeModal() {
+  document.getElementById('modal').classList.remove('show');
+}
+
+document.getElementById('modal').addEventListener('click', (e) => {
+  if (e.target.id === 'modal') closeModal();
+});
+
+function showToast(msg, type) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.className = 'toast show' + (type ? ' ' + type : '');
+  setTimeout(() => t.classList.remove('show'), 2400);
+}
+
+// ============== Init ==============
+document.addEventListener('DOMContentLoaded', () => {
+  renderChecklist();
+  setupGlobalNote();
+  updateProgress();
+});
+</script>
+
+</body>
+</html>
