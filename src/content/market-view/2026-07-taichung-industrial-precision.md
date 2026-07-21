@@ -18,7 +18,7 @@ draft: false
 
 ## 一、台中工業區（西屯）：量縮，地價守穩
 
-<div style="display:flex;gap:12px;flex-wrap:wrap;margin:18px 0;">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin:18px 0;">
   <div style="flex:1;min-width:150px;border:1px solid #E2E8F0;border-radius:10px;padding:16px;background:#fff;">
     <div style="font-size:12px;letter-spacing:1px;color:#94A3B8;">成交量（全年）</div>
     <div style="font-size:26px;font-weight:700;color:#2B5A8C;margin-top:4px;">130 → 50 筆</div>
@@ -67,7 +67,7 @@ draft: false
 
 ## 二、精密機械園區（南屯・精科）：釋出稀少，一出手就是整棟
 
-<div style="display:flex;gap:12px;flex-wrap:wrap;margin:18px 0;">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin:18px 0;">
   <div style="flex:1;min-width:150px;border:1px solid #E2E8F0;border-radius:10px;padding:16px;background:#fff;">
     <div style="font-size:12px;letter-spacing:1px;color:#94A3B8;">2024–2026 實價登錄</div>
     <div style="font-size:26px;font-weight:700;color:#2B5A8C;margin-top:4px;">3 筆</div>
