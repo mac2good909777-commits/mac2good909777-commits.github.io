@@ -48,20 +48,20 @@ draft: false
 
 **台中工業區成交明細（2024–2026，土地單價）**
 
-| 交易年月 | 類型 | 地址（點看街景） | 土地(坪) | 總價(萬) | 土地單價(萬/坪) |
-|---|---|---|---:|---:|---:|
-| 2025/08 | 廠房 | [工業區四十二路49號](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E8%A5%BF%E5%B1%AF%E5%8D%80%E5%B7%A5%E6%A5%AD%E5%8D%80%E5%9B%9B%E5%8D%81%E4%BA%8C%E8%B7%AF49%E8%99%9F) | 171.4 | 8,188 | 47.8 |
-| 2025/07 | 廠房 | [工業區四十二路53號](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E8%A5%BF%E5%B1%AF%E5%8D%80%E5%B7%A5%E6%A5%AD%E5%8D%80%E5%9B%9B%E5%8D%81%E4%BA%8C%E8%B7%AF53%E8%99%9F) | 100.6 | 5,150 | 51.2 |
-| 2025/02 | 廠房 | [工業區四十路32之1號](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E8%A5%BF%E5%B1%AF%E5%8D%80%E5%B7%A5%E6%A5%AD%E5%8D%80%E5%9B%9B%E5%8D%81%E8%B7%AF32%E4%B9%8B1%E8%99%9F) | 341.5 | 14,300 | 41.9 |
-| 2024/12 | 廠房 | [工業區三十八路159號](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E8%A5%BF%E5%B1%AF%E5%8D%80%E5%B7%A5%E6%A5%AD%E5%8D%80%E4%B8%89%E5%8D%81%E5%85%AB%E8%B7%AF159%E8%99%9F) | 172.4 | 7,498 | 43.5 |
-| 2024/12 | 廠房 | [工業區三十五路50號](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E8%A5%BF%E5%B1%AF%E5%8D%80%E5%B7%A5%E6%A5%AD%E5%8D%80%E4%B8%89%E5%8D%81%E4%BA%94%E8%B7%AF50%E8%99%9F) | 1,600.8 | 64,000 | 40.0 |
-| 2024/11 | 廠房 | [工業區三十四路4號](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E8%A5%BF%E5%B1%AF%E5%8D%80%E5%B7%A5%E6%A5%AD%E5%8D%80%E4%B8%89%E5%8D%81%E5%9B%9B%E8%B7%AF4%E8%99%9F) | 427.1 | 18,995 | 44.5 |
-| 2024/10 | 廠房 | [工業區四十路63號](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E8%A5%BF%E5%B1%AF%E5%8D%80%E5%B7%A5%E6%A5%AD%E5%8D%80%E5%9B%9B%E5%8D%81%E8%B7%AF63%E8%99%9F) | 93.0 | 5,000 | 53.8 |
-| 2024/09 | 廠房 | [工業區三十四路40號](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E8%A5%BF%E5%B1%AF%E5%8D%80%E5%B7%A5%E6%A5%AD%E5%8D%80%E4%B8%89%E5%8D%81%E5%9B%9B%E8%B7%AF40%E8%99%9F) | 648.0 | 27,000 | 41.7 |
-| 2024/09 | 廠房 | [工業區四十路25號](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E8%A5%BF%E5%B1%AF%E5%8D%80%E5%B7%A5%E6%A5%AD%E5%8D%80%E5%9B%9B%E5%8D%81%E8%B7%AF25%E8%99%9F) | 140.8 | 6,500 | 46.2 |
-| 2024/09 | 廠房 | [工業區三十七路22號](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E8%A5%BF%E5%B1%AF%E5%8D%80%E5%B7%A5%E6%A5%AD%E5%8D%80%E4%B8%89%E5%8D%81%E4%B8%83%E8%B7%AF22%E8%99%9F) | 686.5 | 27,461 | 40.0 |
-| 2024/08 | 廠房 | [工業區十路11之1號](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E8%A5%BF%E5%B1%AF%E5%8D%80%E5%B7%A5%E6%A5%AD%E5%8D%80%E5%8D%81%E8%B7%AF11%E4%B9%8B1%E8%99%9F) | 901.4 | 38,456 | 42.7 |
-| 2024/08 | 廠房 | [工業區三十一路18之1號](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E8%A5%BF%E5%B1%AF%E5%8D%80%E5%B7%A5%E6%A5%AD%E5%8D%80%E4%B8%89%E5%8D%81%E4%B8%80%E8%B7%AF18%E4%B9%8B1%E8%99%9F) | 243.5 | 11,000 | 45.2 |
+| 交易年月 | 類型 | 地址（點看街景） | 土地(坪) | 建物(坪) | 屋齡 | 建材 | 總價(萬) | 土地單價(萬/坪) |
+|---|---|---|---:|---:|---:|---|---:|---:|
+| 2025/08 | 廠房 | [工業區四十二路49號](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E8%A5%BF%E5%B1%AF%E5%8D%80%E5%B7%A5%E6%A5%AD%E5%8D%80%E5%9B%9B%E5%8D%81%E4%BA%8C%E8%B7%AF49%E8%99%9F) | 171.4 | 74.1 | 32 | SRC | 8,188 | 47.8 |
+| 2025/07 | 廠房 | [工業區四十二路53號](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E8%A5%BF%E5%B1%AF%E5%8D%80%E5%B7%A5%E6%A5%AD%E5%8D%80%E5%9B%9B%E5%8D%81%E4%BA%8C%E8%B7%AF53%E8%99%9F) | 100.6 | 49.9 | 33 | SRC | 5,150 | 51.2 |
+| 2025/02 | 廠房 | [工業區四十路32之1號](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E8%A5%BF%E5%B1%AF%E5%8D%80%E5%B7%A5%E6%A5%AD%E5%8D%80%E5%9B%9B%E5%8D%81%E8%B7%AF32%E4%B9%8B1%E8%99%9F) | 341.5 | 285.9 | 32 | RC | 14,300 | 41.9 |
+| 2024/12 | 廠房 | [工業區三十八路159號](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E8%A5%BF%E5%B1%AF%E5%8D%80%E5%B7%A5%E6%A5%AD%E5%8D%80%E4%B8%89%E5%8D%81%E5%85%AB%E8%B7%AF159%E8%99%9F) | 172.4 | 122.4 | 24 | RC | 7,498 | 43.5 |
+| 2024/12 | 廠房 | [工業區三十五路50號](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E8%A5%BF%E5%B1%AF%E5%8D%80%E5%B7%A5%E6%A5%AD%E5%8D%80%E4%B8%89%E5%8D%81%E4%BA%94%E8%B7%AF50%E8%99%9F) | 1600.8 | 1567.0 | 34 | SRC | 64,000 | 40.0 |
+| 2024/11 | 廠房 | [工業區三十四路4號](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E8%A5%BF%E5%B1%AF%E5%8D%80%E5%B7%A5%E6%A5%AD%E5%8D%80%E4%B8%89%E5%8D%81%E5%9B%9B%E8%B7%AF4%E8%99%9F) | 427.1 | 640.7 | 34 | RC | 18,994 | 44.5 |
+| 2024/10 | 廠房 | [工業區四十路63號](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E8%A5%BF%E5%B1%AF%E5%8D%80%E5%B7%A5%E6%A5%AD%E5%8D%80%E5%9B%9B%E5%8D%81%E8%B7%AF63%E8%99%9F) | 93.0 | 76.6 | 32 | 鋼構 | 5,000 | 53.8 |
+| 2024/09 | 廠房 | [工業區三十四路40號](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E8%A5%BF%E5%B1%AF%E5%8D%80%E5%B7%A5%E6%A5%AD%E5%8D%80%E4%B8%89%E5%8D%81%E5%9B%9B%E8%B7%AF40%E8%99%9F) | 648.0 | 802.9 | 31 | SRC | 27,000 | 41.7 |
+| 2024/09 | 廠房 | [工業區四十路25號](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E8%A5%BF%E5%B1%AF%E5%8D%80%E5%B7%A5%E6%A5%AD%E5%8D%80%E5%9B%9B%E5%8D%81%E8%B7%AF25%E8%99%9F) | 140.8 | 74.0 | 33 | 鋼構 | 6,500 | 46.2 |
+| 2024/09 | 廠房 | [工業區三十七路22號](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E8%A5%BF%E5%B1%AF%E5%8D%80%E5%B7%A5%E6%A5%AD%E5%8D%80%E4%B8%89%E5%8D%81%E4%B8%83%E8%B7%AF22%E8%99%9F) | 686.5 | 456.6 | 31 | 鋼構 | 27,460 | 40.0 |
+| 2024/08 | 廠房 | [工業區十路11之1號](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E8%A5%BF%E5%B1%AF%E5%8D%80%E5%B7%A5%E6%A5%AD%E5%8D%80%E5%8D%81%E8%B7%AF11%E4%B9%8B1%E8%99%9F) | 901.4 | 740.0 | 36 | 鋼構 | 38,455 | 42.7 |
+| 2024/08 | 廠房 | [工業區三十一路18之1號](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E8%A5%BF%E5%B1%AF%E5%8D%80%E5%B7%A5%E6%A5%AD%E5%8D%80%E4%B8%89%E5%8D%81%E4%B8%80%E8%B7%AF18%E4%B9%8B1%E8%99%9F) | 243.5 | 455.2 | 31 | RC | 11,000 | 45.2 |
 
 > 本表「單價」為土地單價（總價÷土地坪），非實價登錄含建物公告單價；已排除廠辦大樓分戶以免灌高，非全部成交。點地址可開啟 Google 地圖並切換街景。
 
@@ -95,11 +95,11 @@ draft: false
 
 **精密機械園區成交明細（2024–2026，土地單價）**
 
-| 交易年月 | 類型 | 地址（點看街景） | 土地(坪) | 總價(萬) | 土地單價(萬/坪) |
-|---|---|---|---:|---:|---:|
-| 2025/02 | 廠房 | [精科七路20號](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E5%8D%97%E5%B1%AF%E5%8D%80%E7%B2%BE%E7%A7%91%E4%B8%83%E8%B7%AF20%E8%99%9F) | 822.1 | 57,000 | 69.3 |
-| 2025/01 | 廠房 | [精科七路11號](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E5%8D%97%E5%B1%AF%E5%8D%80%E7%B2%BE%E7%A7%91%E4%B8%83%E8%B7%AF11%E8%99%9F) | 370.1 | 19,500 | 52.7 |
-| 2024/12 | 廠房 | [精科二路10號](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E5%8D%97%E5%B1%AF%E5%8D%80%E7%B2%BE%E7%A7%91%E4%BA%8C%E8%B7%AF10%E8%99%9F) | 1,851.8 | 115,000 | 62.1 |
+| 交易年月 | 類型 | 地址（點看街景） | 土地(坪) | 建物(坪) | 屋齡 | 建材 | 總價(萬) | 土地單價(萬/坪) |
+|---|---|---|---:|---:|---:|---|---:|---:|
+| 2025/02 | 廠房 | [精科七路20號](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E5%8D%97%E5%B1%AF%E5%8D%80%E7%B2%BE%E7%A7%91%E4%B8%83%E8%B7%AF20%E8%99%9F) | 822.1 | 2485.2 | 17 | RC | 57,000 | 69.3 |
+| 2025/01 | 廠房 | [精科七路11號](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E5%8D%97%E5%B1%AF%E5%8D%80%E7%B2%BE%E7%A7%91%E4%B8%83%E8%B7%AF11%E8%99%9F) | 370.1 | 326.7 | 11 | SRC | 19,500 | 52.7 |
+| 2024/12 | 廠房 | [精科二路10號](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E5%8D%97%E5%B1%AF%E5%8D%80%E7%B2%BE%E7%A7%91%E4%BA%8C%E8%B7%AF10%E8%99%9F) | 1851.8 | 2978.8 | 11 | SRC | 115,000 | 62.1 |
 
 > 本表「單價」為土地單價（總價÷土地坪）；精科案多為整棟大廠房、建物含量高，屬「連廠房每坪土地」概念；樣本僅 3 筆、代表性有限。點地址可開啟 Google 地圖並切換街景。
 
