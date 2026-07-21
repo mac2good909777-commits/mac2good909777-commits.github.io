@@ -4,7 +4,7 @@ date: 2026-07-21
 tags: ["大里", "廠房行情", "工業地產市場", "實價登錄", "台中"]
 excerpt: "「大里的地是不是漲到頂了？」與其憑印象，不如攤開近兩年實價登錄。大里工業地與廠房比較貼近「高檔整理、量縮價穩」：2024 年約 38 筆、2025 年降到約 16 筆，成交量接近腰斬，但價格仍在高檔、屋主降價意願有限。成交單價中位約每坪 37.5 萬元，多數落在 30～50 萬。對自用設廠者，這反而是相對從容的評估時機。文末附 2024–2025 大里 26 筆實價登錄成交明細。"
 author: "張現傑"
-sourceNote: "資料來源：內政部不動產交易實價查詢服務網（2024/1–2025/12 大里區工業地／廠房登錄）；統計截至 2026/07。本文同步刊載於睦聚工業地產專欄，內容僅供市場參考，非正式估價與投資建議。"
+sourceNote: "資料來源：內政部不動產交易實價查詢服務網（2024/1–2025/12 大里區工業地／廠房登錄）；統計截至 2026/07。單價一律為土地單價（總價÷土地坪）。本文同步刊載於睦聚工業地產專欄，內容僅供市場參考，非正式估價與投資建議。"
 draft: false
 ---
 
@@ -69,40 +69,40 @@ draft: false
 
 以下為 2024–2025 年（民國113–114）大里區工業地與廠房實價登錄成交，篩除持分、畸零與極端案例後之代表樣本，依交易時間排序。
 
-| 交易年月 | 類型 | 地址／地段 | 土地(坪) | 總價(萬) | 單價(萬/坪) | 街景/地圖 |
-|---|---|---|---:|---:|---:|:---:|
-| 2025/10 | 廠房 | 東南路73巷7號 | 128.4 | 5,500 | 40.9 | [開啟](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E5%A4%A7%E9%87%8C%E5%8D%80%E6%9D%B1%E5%8D%97%E8%B7%AF73%E5%B7%B77%E8%99%9F) |
-| 2025/07 | 廠房 | 環中東路七段42巷18號 | 147.8 | 3,500 | 58.8 | [開啟](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E5%A4%A7%E9%87%8C%E5%8D%80%E7%92%B0%E4%B8%AD%E6%9D%B1%E8%B7%AF%E4%B8%83%E6%AE%B542%E5%B7%B718%E8%99%9F) |
-| 2025/07 | 廠房 | 國光路一段159巷6弄16號 | 150.9 | 6,300 | 21.6 | [開啟](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E5%A4%A7%E9%87%8C%E5%8D%80%E5%9C%8B%E5%85%89%E8%B7%AF%E4%B8%80%E6%AE%B5159%E5%B7%B76%E5%BC%8416%E8%99%9F) |
-| 2025/06 | 廠房 | 中興路一段90之2號 | 44.0 | 1,720 | 36.7 | [開啟](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E5%A4%A7%E9%87%8C%E5%8D%80%E4%B8%AD%E8%88%88%E8%B7%AF%E4%B8%80%E6%AE%B590%E4%B9%8B2%E8%99%9F) |
-| 2025/04 | 土地 | 大元段1041地號 | 1,105.5 | 38,300 | 34.6 | [開啟](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E5%A4%A7%E9%87%8C%E5%8D%80%E5%A4%A7%E5%85%83%E6%AE%B51041%E5%9C%B0%E8%99%9F) |
-| 2025/02 | 廠房 | 仁慈街12巷8號 | 44.2 | 1,038 | 39.2 | [開啟](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E5%A4%A7%E9%87%8C%E5%8D%80%E4%BB%81%E6%85%88%E8%A1%9712%E5%B7%B78%E8%99%9F) |
-| 2024/11 | 廠房 | 國中路176巷12號 | 137.0 | 4,900 | 41.6 | [開啟](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E5%A4%A7%E9%87%8C%E5%8D%80%E5%9C%8B%E4%B8%AD%E8%B7%AF176%E5%B7%B712%E8%99%9F) |
-| 2024/11 | 廠房 | 至善路205號 | 30.0 | 1,600 | 49.0 | [開啟](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E5%A4%A7%E9%87%8C%E5%8D%80%E8%87%B3%E5%96%84%E8%B7%AF205%E8%99%9F) |
-| 2024/09 | 廠房 | 四育街15號 | 37.0 | 2,100 | 34.2 | [開啟](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E5%A4%A7%E9%87%8C%E5%8D%80%E5%9B%9B%E8%82%B2%E8%A1%9715%E8%99%9F) |
-| 2024/09 | 廠房 | 中興路一段2巷25弄8號 | 338.9 | 11,800 | 62.7 | [開啟](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E5%A4%A7%E9%87%8C%E5%8D%80%E4%B8%AD%E8%88%88%E8%B7%AF%E4%B8%80%E6%AE%B52%E5%B7%B725%E5%BC%848%E8%99%9F) |
-| 2024/08 | 土地 | 仁化段175地號 | 47.9 | 1,460 | 30.5 | [開啟](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E5%A4%A7%E9%87%8C%E5%8D%80%E4%BB%81%E5%8C%96%E6%AE%B5175%E5%9C%B0%E8%99%9F) |
-| 2024/08 | 廠房 | 大衛路50巷5號 | 83.3 | 3,998 | 39.2 | [開啟](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E5%A4%A7%E9%87%8C%E5%8D%80%E5%A4%A7%E8%A1%9B%E8%B7%AF50%E5%B7%B75%E8%99%9F) |
-| 2024/08 | 土地 | 大元段1505地號 | 52.6 | 1,315 | 25.0 | [開啟](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E5%A4%A7%E9%87%8C%E5%8D%80%E5%A4%A7%E5%85%83%E6%AE%B51505%E5%9C%B0%E8%99%9F) |
-| 2024/08 | 廠房 | 仁義路112號 | 39.5 | 1,600 | 68.6 | [開啟](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E5%A4%A7%E9%87%8C%E5%8D%80%E4%BB%81%E7%BE%A9%E8%B7%AF112%E8%99%9F) |
-| 2024/08 | 廠房 | 慈德路35號 | 232.4 | 9,500 | 27.0 | [開啟](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E5%A4%A7%E9%87%8C%E5%8D%80%E6%85%88%E5%BE%B7%E8%B7%AF35%E8%99%9F) |
-| 2024/07 | 廠房 | 國中路130號 | 104.9 | 2,500 | 26.5 | [開啟](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E5%A4%A7%E9%87%8C%E5%8D%80%E5%9C%8B%E4%B8%AD%E8%B7%AF130%E8%99%9F) |
-| 2024/06 | 土地 | 大元段1226地號 | 126.3 | 5,050 | 40.0 | [開啟](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E5%A4%A7%E9%87%8C%E5%8D%80%E5%A4%A7%E5%85%83%E6%AE%B51226%E5%9C%B0%E8%99%9F) |
-| 2024/06 | 廠房 | 中興路二段73號 | 124.0 | 7,950 | 38.3 | [開啟](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E5%A4%A7%E9%87%8C%E5%8D%80%E4%B8%AD%E8%88%88%E8%B7%AF%E4%BA%8C%E6%AE%B573%E8%99%9F) |
-| 2024/04 | 廠房 | 中興路一段2巷15號 | 142.8 | 5,725 | 60.6 | [開啟](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E5%A4%A7%E9%87%8C%E5%8D%80%E4%B8%AD%E8%88%88%E8%B7%AF%E4%B8%80%E6%AE%B52%E5%B7%B715%E8%99%9F) |
-| 2024/04 | 廠房 | 塗城路763巷2號 | 80.4 | 4,100 | 25.7 | [開啟](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E5%A4%A7%E9%87%8C%E5%8D%80%E5%A1%97%E5%9F%8E%E8%B7%AF763%E5%B7%B72%E8%99%9F) |
-| 2024/04 | 廠房 | 至善路260號 | 72.9 | 5,380 | 32.5 | [開啟](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E5%A4%A7%E9%87%8C%E5%8D%80%E8%87%B3%E5%96%84%E8%B7%AF260%E8%99%9F) |
-| 2024/04 | 廠房 | 國中一路25巷11弄13號 | 88.7 | 3,800 | 49.8 | [開啟](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E5%A4%A7%E9%87%8C%E5%8D%80%E5%9C%8B%E4%B8%AD%E4%B8%80%E8%B7%AF25%E5%B7%B711%E5%BC%8413%E8%99%9F) |
-| 2024/03 | 廠房 | 仁福二街25號 | 112.0 | 3,850 | 61.7 | [開啟](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E5%A4%A7%E9%87%8C%E5%8D%80%E4%BB%81%E7%A6%8F%E4%BA%8C%E8%A1%9725%E8%99%9F) |
-| 2024/02 | 廠房 | 吉隆路26巷11號 | 34.1 | 650 | 19.2 | [開啟](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E5%A4%A7%E9%87%8C%E5%8D%80%E5%90%89%E9%9A%86%E8%B7%AF26%E5%B7%B711%E8%99%9F) |
-| 2024/02 | 廠房 | 中興路二段65巷16弄7號 | 44.8 | 1,306 | 31.8 | [開啟](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E5%A4%A7%E9%87%8C%E5%8D%80%E4%B8%AD%E8%88%88%E8%B7%AF%E4%BA%8C%E6%AE%B565%E5%B7%B716%E5%BC%847%E8%99%9F) |
-| 2024/01 | 廠房 | 中興路一段90之1號 | 38.5 | 1,300 | 21.8 | [開啟](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E5%A4%A7%E9%87%8C%E5%8D%80%E4%B8%AD%E8%88%88%E8%B7%AF%E4%B8%80%E6%AE%B590%E4%B9%8B1%E8%99%9F) |
+| 交易年月 | 類型 | 地址／地段（點看街景） | 土地(坪) | 總價(萬) | 土地單價(萬/坪) |
+|---|---|---|---:|---:|---:|
+| 2025/10 | 廠房 | [東南路73巷7號](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E5%A4%A7%E9%87%8C%E5%8D%80%E6%9D%B1%E5%8D%97%E8%B7%AF73%E5%B7%B77%E8%99%9F) | 128.4 | 5,500 | 42.8 |
+| 2025/07 | 廠房 | [環中東路七段42巷18號](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E5%A4%A7%E9%87%8C%E5%8D%80%E7%92%B0%E4%B8%AD%E6%9D%B1%E8%B7%AF%E4%B8%83%E6%AE%B542%E5%B7%B718%E8%99%9F) | 147.8 | 3,500 | 23.7 |
+| 2025/07 | 廠房 | [國光路一段159巷6弄16號](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E5%A4%A7%E9%87%8C%E5%8D%80%E5%9C%8B%E5%85%89%E8%B7%AF%E4%B8%80%E6%AE%B5159%E5%B7%B76%E5%BC%8416%E8%99%9F) | 150.9 | 6,300 | 41.7 |
+| 2025/06 | 廠房 | [中興路一段90之2號](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E5%A4%A7%E9%87%8C%E5%8D%80%E4%B8%AD%E8%88%88%E8%B7%AF%E4%B8%80%E6%AE%B590%E4%B9%8B2%E8%99%9F) | 44.0 | 1,720 | 39.1 |
+| 2025/04 | 土地 | [大元段1041地號](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E5%A4%A7%E9%87%8C%E5%8D%80%E5%A4%A7%E5%85%83%E6%AE%B51041%E5%9C%B0%E8%99%9F) | 1105.5 | 38,300 | 34.6 |
+| 2025/02 | 廠房 | [仁慈街12巷8號](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E5%A4%A7%E9%87%8C%E5%8D%80%E4%BB%81%E6%85%88%E8%A1%9712%E5%B7%B78%E8%99%9F) | 44.2 | 1,038 | 23.5 |
+| 2024/11 | 廠房 | [國中路176巷12號](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E5%A4%A7%E9%87%8C%E5%8D%80%E5%9C%8B%E4%B8%AD%E8%B7%AF176%E5%B7%B712%E8%99%9F) | 137.0 | 4,900 | 35.8 |
+| 2024/11 | 廠房 | [至善路205號](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E5%A4%A7%E9%87%8C%E5%8D%80%E8%87%B3%E5%96%84%E8%B7%AF205%E8%99%9F) | 30.0 | 1,600 | 53.3 |
+| 2024/09 | 廠房 | [四育街15號](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E5%A4%A7%E9%87%8C%E5%8D%80%E5%9B%9B%E8%82%B2%E8%A1%9715%E8%99%9F) | 37.0 | 2,100 | 56.7 |
+| 2024/09 | 廠房 | [中興路一段2巷25弄8號](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E5%A4%A7%E9%87%8C%E5%8D%80%E4%B8%AD%E8%88%88%E8%B7%AF%E4%B8%80%E6%AE%B52%E5%B7%B725%E5%BC%848%E8%99%9F) | 338.9 | 11,800 | 34.8 |
+| 2024/08 | 土地 | [仁化段175地號](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E5%A4%A7%E9%87%8C%E5%8D%80%E4%BB%81%E5%8C%96%E6%AE%B5175%E5%9C%B0%E8%99%9F) | 47.9 | 1,460 | 30.5 |
+| 2024/08 | 廠房 | [大衛路50巷5號](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E5%A4%A7%E9%87%8C%E5%8D%80%E5%A4%A7%E8%A1%9B%E8%B7%AF50%E5%B7%B75%E8%99%9F) | 83.3 | 3,998 | 48.0 |
+| 2024/08 | 土地 | [大元段1505地號](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E5%A4%A7%E9%87%8C%E5%8D%80%E5%A4%A7%E5%85%83%E6%AE%B51505%E5%9C%B0%E8%99%9F) | 52.6 | 1,315 | 25.0 |
+| 2024/08 | 廠房 | [仁義路112號](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E5%A4%A7%E9%87%8C%E5%8D%80%E4%BB%81%E7%BE%A9%E8%B7%AF112%E8%99%9F) | 39.5 | 1,600 | 40.5 |
+| 2024/08 | 廠房 | [慈德路35號](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E5%A4%A7%E9%87%8C%E5%8D%80%E6%85%88%E5%BE%B7%E8%B7%AF35%E8%99%9F) | 232.4 | 9,500 | 40.9 |
+| 2024/07 | 廠房 | [國中路130號](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E5%A4%A7%E9%87%8C%E5%8D%80%E5%9C%8B%E4%B8%AD%E8%B7%AF130%E8%99%9F) | 104.9 | 2,500 | 23.8 |
+| 2024/06 | 土地 | [大元段1226地號](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E5%A4%A7%E9%87%8C%E5%8D%80%E5%A4%A7%E5%85%83%E6%AE%B51226%E5%9C%B0%E8%99%9F) | 126.3 | 5,050 | 40.0 |
+| 2024/06 | 廠房 | [中興路二段73號](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E5%A4%A7%E9%87%8C%E5%8D%80%E4%B8%AD%E8%88%88%E8%B7%AF%E4%BA%8C%E6%AE%B573%E8%99%9F) | 124.0 | 7,950 | 64.1 |
+| 2024/04 | 廠房 | [中興路一段2巷15號](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E5%A4%A7%E9%87%8C%E5%8D%80%E4%B8%AD%E8%88%88%E8%B7%AF%E4%B8%80%E6%AE%B52%E5%B7%B715%E8%99%9F) | 142.8 | 5,725 | 40.1 |
+| 2024/04 | 廠房 | [塗城路763巷2號](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E5%A4%A7%E9%87%8C%E5%8D%80%E5%A1%97%E5%9F%8E%E8%B7%AF763%E5%B7%B72%E8%99%9F) | 80.4 | 4,100 | 51.0 |
+| 2024/04 | 廠房 | [國中一路25巷11弄13號](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E5%A4%A7%E9%87%8C%E5%8D%80%E5%9C%8B%E4%B8%AD%E4%B8%80%E8%B7%AF25%E5%B7%B711%E5%BC%8413%E8%99%9F) | 88.7 | 3,800 | 42.8 |
+| 2024/04 | 廠房 | [中興路一段2巷5號](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E5%A4%A7%E9%87%8C%E5%8D%80%E4%B8%AD%E8%88%88%E8%B7%AF%E4%B8%80%E6%AE%B52%E5%B7%B75%E8%99%9F) | 287.4 | 10,000 | 34.8 |
+| 2024/03 | 廠房 | [仁福二街25號](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E5%A4%A7%E9%87%8C%E5%8D%80%E4%BB%81%E7%A6%8F%E4%BA%8C%E8%A1%9725%E8%99%9F) | 112.0 | 3,850 | 34.4 |
+| 2024/02 | 廠房 | [吉隆路26巷11號](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E5%A4%A7%E9%87%8C%E5%8D%80%E5%90%89%E9%9A%86%E8%B7%AF26%E5%B7%B711%E8%99%9F) | 34.1 | 650 | 19.0 |
+| 2024/02 | 廠房 | [中興路二段65巷16弄7號](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E5%A4%A7%E9%87%8C%E5%8D%80%E4%B8%AD%E8%88%88%E8%B7%AF%E4%BA%8C%E6%AE%B565%E5%B7%B716%E5%BC%847%E8%99%9F) | 44.8 | 1,306 | 29.1 |
+| 2024/01 | 廠房 | [中興路一段90之1號](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E5%A4%A7%E9%87%8C%E5%8D%80%E4%B8%AD%E8%88%88%E8%B7%AF%E4%B8%80%E6%AE%B590%E4%B9%8B1%E8%99%9F) | 38.5 | 1,300 | 33.7 |
 
-> 說明：點「街景／地圖」可開啟 Google 地圖並切換街景查看現場；土地類以「地段地號」定位，位置為概略參考。「單價」為內政部實價登錄公告單價，房地類含建物、土地類為土地單價；總價、坪數四捨五入。本表為篩選後之代表案例，非全部成交；完整明細與各筆產權、分區條件可另行索取。本資料僅供市場參考，非正式估價，實際交易條件仍需個案查證。
+> 說明：本表「單價」一律為**土地單價（總價÷土地坪）**，非實價登錄含建物公告單價；土地類以「地段地號」定位，位置為概略參考；總價、坪數四捨五入。已排除持分、畸零與廠辦大樓等極端案例，非全部成交；完整明細與各筆產權、分區條件可另行索取。本資料僅供市場參考，非正式估價，實際交易條件仍需個案查證。
 
 ---
 
-以上是市場面的整體觀察。若您正在評估特定物件，或想要完整的實價登錄比對資料，我們可以協助整理 2024～2025 年大里工業地與廠房的成交明細（含單價、坪數與產權條件），陪您用數據做判斷，而不急著推特定物件。
+以上是市場面的整體觀察。若您正在評估特定物件，或想要完整的實價登錄比對資料，我們可以協助整理 2024～2025 年大里工業地與廠房的成交明細（含土地單價、坪數與產權條件），陪您用數據做判斷，而不急著推特定物件。
 
 **睦聚工業地產**｜專注工業地產，助您精準佈局
 電話 0953-909777｜LINE｜官網 [industry.prosgroup.info](https://industry.prosgroup.info)
