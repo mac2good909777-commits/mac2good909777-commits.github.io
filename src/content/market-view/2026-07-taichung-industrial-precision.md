@@ -2,7 +2,7 @@
 title: "台中工業區量縮、地價守穩；精密機械園區釋出稀少、地價更高——近兩年實價登錄"
 date: 2026-07-21
 tags: ["台中工業區", "精密機械園區", "廠房行情", "工業地產市場", "實價登錄", "西屯", "南屯"]
-excerpt: "同樣是台中代表性的工業聚落，台中工業區與精密機械園區近兩年走出兩種節奏。台中工業區（西屯）量縮明顯——成交量從 2024 年約 130 筆降到 2025 年約 50 筆、2026 前 5 月僅個位數，但土地單價守穩、中位約每坪 44 萬元。精密機械園區（南屯精科）則釋出極少、近兩年僅 3 筆，但都是整棟大案、土地單價中位約 62 萬更高。單價一律以土地單價（總價÷土地坪）計算。文末附兩區實價登錄成交明細，可點地址看街景。"
+excerpt: "同樣是台中代表性的工業聚落，台中工業區與精密機械園區近兩年走出兩種節奏。台中工業區（西屯）量縮明顯——整棟廠房/工業地成交從 2024 年約 9 筆降到 2025 年約 3 筆、2026 前 5 月掛零，但土地單價守穩、中位約每坪 44 萬元。精密機械園區（南屯精科）則釋出極少、近兩年僅 3 筆，但都是整棟大案、土地單價中位約 62 萬更高。單價一律以土地單價（總價÷土地坪）計算。文末附兩區實價登錄成交明細，可點地址看街景。"
 author: "張現傑"
 sourceNote: "資料來源：內政部實價登錄（2024/1–2026/5 台中工業區、精密機械園區成交；2026 為部分年度資料）。單價一律為土地單價（總價÷土地坪），非含建物公告單價。本文同步刊載於睦聚工業地產專欄，僅供市場參考，非正式估價與投資建議。"
 draft: false
@@ -12,7 +12,7 @@ draft: false
 
 ## 先講結論
 
-**台中工業區（西屯）**是「量縮價堅」：成交量從 2024 年約 130 筆、降到 2025 年約 50 筆，2026 年前 5 月更僅見個位數，但地價不跌反穩，代表案例土地單價中位約每坪 44 萬元。**精密機械園區（南屯精科）**則是「稀缺大額」：近兩年僅約 3 筆登錄、釋出極少，但每筆都是數百至上千坪的整棟大案、單筆金額動輒上億，土地單價中位約 62 萬元、比台中工業區更高。兩者共同指向同一件事——好的、可整棟自用的工業資產，越來越不容易用一般行情去接。
+**台中工業區（西屯）**是「量縮價堅」：整棟廠房／工業地成交從 2024 年約 9 筆、降到 2025 年約 3 筆，2026 年前 5 月掛零，但地價不跌反穩，代表案例土地單價中位約每坪 44 萬元。**精密機械園區（南屯精科）**則是「稀缺大額」：近兩年僅約 3 筆登錄、釋出極少，但每筆都是數百至上千坪的整棟大案、單筆金額動輒上億，土地單價中位約 62 萬元、比台中工業區更高。兩者共同指向同一件事——好的、可整棟自用的工業資產，越來越不容易用一般行情去接。
 
 （觀察期間：2024–2026，民國113–115，115 年資料至 5 月；資料來源：內政部實價登錄。）
 
@@ -20,9 +20,9 @@ draft: false
 
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin:18px 0;">
   <div style="flex:1;min-width:150px;border:1px solid #E2E8F0;border-radius:10px;padding:16px;background:#fff;">
-    <div style="font-size:12px;letter-spacing:1px;color:#94A3B8;">成交量（全年）</div>
-    <div style="font-size:26px;font-weight:700;color:#2B5A8C;margin-top:4px;">130 → 50 筆</div>
-    <div style="font-size:12px;color:#6B7280;margin-top:4px;"><span style="color:#DC2626;font-weight:700;">▼ 約 62%</span>　2026 至5月僅個位數</div>
+    <div style="font-size:12px;letter-spacing:1px;color:#94A3B8;">整棟成交量（全年）</div>
+    <div style="font-size:26px;font-weight:700;color:#2B5A8C;margin-top:4px;">9 → 3 筆</div>
+    <div style="font-size:12px;color:#6B7280;margin-top:4px;"><span style="color:#DC2626;font-weight:700;">▼ 約 67%</span>　2026 至5月掛零</div>
   </div>
   <div style="flex:1;min-width:150px;border:1px solid #E2E8F0;border-radius:10px;padding:16px;background:#fff;">
     <div style="font-size:12px;letter-spacing:1px;color:#94A3B8;">土地單價中位數</div>
@@ -30,13 +30,13 @@ draft: false
     <div style="font-size:12px;color:#6B7280;margin-top:4px;">多數落在 40～54 萬/坪</div>
   </div>
   <div style="flex:1;min-width:150px;border:1px solid #E2E8F0;border-radius:10px;padding:16px;background:#fff;">
-    <div style="font-size:12px;letter-spacing:1px;color:#94A3B8;">代表成交樣本</div>
-    <div style="font-size:26px;font-weight:700;color:#2B5A8C;margin-top:4px;">12 筆</div>
-    <div style="font-size:12px;color:#6B7280;margin-top:4px;">2024–2026，篩除廠辦分戶</div>
+    <div style="font-size:12px;letter-spacing:1px;color:#94A3B8;">成交規模</div>
+    <div style="font-size:26px;font-weight:700;color:#2B5A8C;margin-top:4px;">億元級整棟</div>
+    <div style="font-size:12px;color:#6B7280;margin-top:4px;">60～1,600 坪、最高約 6.4 億</div>
   </div>
 </div>
 
-台中工業區近兩年最明顯的變化是量縮：2024 年約 130 筆、2025 年降到約 50 筆，接近腰斬，2026 年前 5 月更僅見個位數（2026 為部分年度資料）。但地價並沒有跟著鬆動——篩除廠辦分戶持分後，代表案例的土地單價（總價÷土地坪）中位約每坪 **44 萬元**，且相當集中在 40～54 萬。
+台中工業區近兩年最明顯的變化是量縮：整棟廠房／工業地成交 2024 年約 9 筆、2025 年降到約 3 筆，2026 年前 5 月掛零（2026 為部分年度資料）。若把廠辦大樓「每一分戶」都算進去，2024 年逾 130 筆、2025 年約 50 筆，但那多為小坪數辦公單位，並非廠房／工業地成交。但地價並沒有跟著鬆動——篩除廠辦分戶持分後，代表案例的土地單價（總價÷土地坪）中位約每坪 **44 萬元**，且相當集中在 40～54 萬。
 
 同時，大坪數、可整棟自用的物件仍有承接力，土地單價也落在同一帶：
 
