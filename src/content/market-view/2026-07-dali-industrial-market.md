@@ -16,6 +16,24 @@ draft: false
 
 （觀察期間：2024–2025，民國113–114；資料來源：內政部實價登錄，統計截至 2026/07。）
 
+<div style="display:flex;gap:12px;flex-wrap:wrap;margin:18px 0;">
+  <div style="flex:1;min-width:150px;border:1px solid #E2E8F0;border-radius:10px;padding:16px;background:#fff;">
+    <div style="font-size:12px;letter-spacing:1px;color:#94A3B8;">成交量 2024 → 2025</div>
+    <div style="font-size:26px;font-weight:700;color:#2B5A8C;margin-top:4px;">38 → 16 筆</div>
+    <div style="font-size:12px;color:#6B7280;margin-top:4px;"><span style="color:#DC2626;font-weight:700;">▼ 約 58%</span>　工業地／廠房登錄筆數</div>
+  </div>
+  <div style="flex:1;min-width:150px;border:1px solid #E2E8F0;border-radius:10px;padding:16px;background:#fff;">
+    <div style="font-size:12px;letter-spacing:1px;color:#94A3B8;">土地單價中位數</div>
+    <div style="font-size:26px;font-weight:700;color:#2B5A8C;margin-top:4px;">37.5 萬/坪</div>
+    <div style="font-size:12px;color:#6B7280;margin-top:4px;">多數落在 30～50 萬/坪</div>
+  </div>
+  <div style="flex:1;min-width:150px;border:1px solid #E2E8F0;border-radius:10px;padding:16px;background:#fff;">
+    <div style="font-size:12px;letter-spacing:1px;color:#94A3B8;">代表成交樣本</div>
+    <div style="font-size:26px;font-weight:700;color:#2B5A8C;margin-top:4px;">26 筆</div>
+    <div style="font-size:12px;color:#6B7280;margin-top:4px;">2024–2025 大里實價登錄</div>
+  </div>
+</div>
+
 ## 一、量縮，是這兩年的主旋律
 
 把大里區工業地與廠房的實價登錄攤開，最明顯的訊號不是價格，而是量：2024 年全年約 38 筆，2025 年降到約 16 筆，接近腰斬。這和市場上的體感一致——看屋組數並沒有變少，但真正走到成交的比例下降，成交週期拉長。
