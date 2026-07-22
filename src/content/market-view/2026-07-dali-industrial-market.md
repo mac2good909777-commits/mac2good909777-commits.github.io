@@ -29,8 +29,8 @@ draft: false
   </div>
   <div style="border:1px solid #E2E8F0;border-radius:10px;padding:16px;background:#fff;">
     <div style="font-size:12px;letter-spacing:1px;color:#94A3B8;">成交規模</div>
-    <div style="font-size:26px;font-weight:700;color:#2B5A8C;margin-top:4px;">億元級整棟</div>
-    <div style="font-size:12px;color:#6B7280;margin-top:4px;">391～538 坪、單筆 1.6～2.3 億</div>
+    <div style="font-size:26px;font-weight:700;color:#2B5A8C;margin-top:4px;">391–538 坪</div>
+    <div style="font-size:12px;color:#6B7280;margin-top:4px;">大坪數整棟為主</div>
   </div>
 </div>
 
