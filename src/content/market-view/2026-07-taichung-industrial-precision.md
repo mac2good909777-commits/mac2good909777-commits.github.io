@@ -2,7 +2,7 @@
 title: "台中工業區量縮、地價守穩；精密機械園區釋出稀少、地價更高——近兩年實價登錄"
 date: 2026-07-21
 tags: ["台中工業區", "精密機械園區", "廠房行情", "工業地產市場", "實價登錄", "西屯", "南屯"]
-excerpt: "同樣是台中代表性的工業聚落，台中工業區與精密機械園區近兩年走出兩種節奏。台中工業區（西屯）量縮明顯——整棟廠房/工業地成交從 2024 年約 9 筆降到 2025 年約 3 筆，實登有時間落差、近期已見大立光等上市櫃重訊大額進場，土地單價守穩、中位約每坪 44 萬元。精密機械園區（南屯精科）則釋出極少、近兩年僅 3 筆，都是整棟大案、土地單價中位約 62 萬更高。單價一律以土地單價（總價÷土地坪）計算。文末附兩區實價登錄成交明細，可點地址看街景。"
+excerpt: "同樣是台中代表性的工業聚落，台中工業區與精密機械園區近兩年走出兩種節奏。台中工業區（西屯）量縮明顯——整棟廠房/工業地成交從 2024 年約 12 筆降到 2025 年約 3 筆，實登有時間落差、近期已見大立光等上市櫃重訊大額進場，土地單價守穩、中位約每坪 43.5 萬元。精密機械園區（南屯精科）則釋出極少、近兩年僅 3 筆，都是整棟大案、土地單價中位約 62 萬更高。單價一律以土地單價（總價÷土地坪）計算。文末附兩區實價登錄成交明細，可點地址看街景。"
 author: "張現傑"
 sourceNote: "資料來源：內政部實價登錄（2024/1–2026/5 台中工業區、精密機械園區成交；2026 為部分年度資料）。單價一律為土地單價（總價÷土地坪），非含建物公告單價。本文同步刊載於睦聚工業地產專欄，僅供市場參考，非正式估價與投資建議。"
 draft: false
@@ -12,22 +12,22 @@ draft: false
 
 ## 先講結論
 
-台中工業區（西屯）是「量縮價堅」：整棟廠房／工業地成交從 2024 年約 9 筆、降到 2025 年約 3 筆，2026 前 5 月實登暫無，但近期已有大立光等重訊大額進場、地價不跌反穩，代表案例土地單價中位約每坪 44 萬元。精密機械園區（南屯精科）則是「稀缺大額」：近兩年僅約 3 筆登錄、釋出極少，但每筆都是數百至上千坪的整棟大案，土地單價中位約 62 萬元、比台中工業區更高。兩者共同指向同一件事——好的、可整棟自用的工業資產，越來越不容易用一般行情去接。
+台中工業區（西屯・南屯）是「量縮價堅」：整棟廠房／工業地成交從 2024 年約 12 筆、降到 2025 年約 3 筆，2026 前 5 月實登暫無，但近期已有大立光等重訊大額進場、地價不跌反穩，代表案例土地單價中位約每坪 43.5 萬元。精密機械園區（南屯精科）則是「稀缺大額」：近兩年僅約 3 筆登錄、釋出極少，但每筆都是數百至上千坪的整棟大案，土地單價中位約 62 萬元、比台中工業區更高。兩者共同指向同一件事——好的、可整棟自用的工業資產，越來越不容易用一般行情去接。
 
 （觀察期間：2024–2026，民國113–115，115 年資料至 5 月；資料來源：內政部實價登錄。）
 
-## 一、台中工業區（西屯）：量縮，地價守穩
+## 一、台中工業區（西屯・南屯）：量縮，地價守穩
 
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin:18px 0;">
   <div style="flex:1;min-width:150px;border:1px solid #E2E8F0;border-radius:10px;padding:16px;background:#fff;">
     <div style="font-size:12px;letter-spacing:1px;color:#94A3B8;">整棟成交量（全年）</div>
-    <div style="font-size:26px;font-weight:700;color:#2B5A8C;margin-top:4px;">9 → 3 筆</div>
+    <div style="font-size:26px;font-weight:700;color:#2B5A8C;margin-top:4px;">12 → 3 筆</div>
     <div style="font-size:12px;color:#6B7280;margin-top:4px;"><span style="color:#DC2626;font-weight:700;">▼ 約 67%</span>　實登量縮，近期重訊回溫</div>
   </div>
   <div style="flex:1;min-width:150px;border:1px solid #E2E8F0;border-radius:10px;padding:16px;background:#fff;">
     <div style="font-size:12px;letter-spacing:1px;color:#94A3B8;">土地單價中位數</div>
-    <div style="font-size:26px;font-weight:700;color:#2B5A8C;margin-top:4px;">44.0 萬/坪</div>
-    <div style="font-size:12px;color:#6B7280;margin-top:4px;">多數落在 40～54 萬/坪</div>
+    <div style="font-size:26px;font-weight:700;color:#2B5A8C;margin-top:4px;">43.5 萬/坪</div>
+    <div style="font-size:12px;color:#6B7280;margin-top:4px;">多數落在 40～50 萬/坪</div>
   </div>
   <div style="flex:1;min-width:150px;border:1px solid #E2E8F0;border-radius:10px;padding:16px;background:#fff;">
     <div style="font-size:12px;letter-spacing:1px;color:#94A3B8;">成交規模</div>
@@ -36,7 +36,7 @@ draft: false
   </div>
 </div>
 
-台中工業區近兩年最明顯的變化是量縮：整棟廠房／工業地成交 2024 年約 9 筆、2025 年降到約 3 筆，2026 前 5 月實登暫無（實登有時間落差，近期已見重訊大額進場，詳見下方）。若把廠辦大樓「每一分戶」都算進去，2024 年逾 130 筆、2025 年約 50 筆，但那多為小坪數辦公單位，並非廠房／工業地成交。但地價並沒有跟著鬆動——篩除廠辦分戶持分後，代表案例的土地單價（總價÷土地坪）中位約每坪 44 萬元，且相當集中在 40～54 萬。
+台中工業區近兩年最明顯的變化是量縮：整棟廠房／工業地成交 2024 年約 12 筆、2025 年降到約 3 筆，2026 前 5 月實登暫無（實登有時間落差，近期已見重訊大額進場，詳見下方）。若把廠辦大樓「每一分戶」都算進去，2024 年逾 130 筆、2025 年約 50 筆，但那多為小坪數辦公單位，並非廠房／工業地成交。但地價並沒有跟著鬆動——篩除廠辦分戶持分後，代表案例的土地單價（總價÷土地坪）中位約每坪 43.5 萬元，且多落在 40～50 萬。
 
 同時，大坪數、可整棟自用的物件仍有承接力，土地單價也落在同一帶：
 
@@ -55,10 +55,13 @@ draft: false
 | 2025/02 | 廠房 | [工業區四十路32之1號](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E8%A5%BF%E5%B1%AF%E5%8D%80%E5%B7%A5%E6%A5%AD%E5%8D%80%E5%9B%9B%E5%8D%81%E8%B7%AF32%E4%B9%8B1%E8%99%9F) | 341.5 | 285.9 | 32 | RC | 14,300 | 41.9 |
 | 2024/12 | 廠房 | [工業區三十八路159號](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E8%A5%BF%E5%B1%AF%E5%8D%80%E5%B7%A5%E6%A5%AD%E5%8D%80%E4%B8%89%E5%8D%81%E5%85%AB%E8%B7%AF159%E8%99%9F) | 172.4 | 122.4 | 24 | RC | 7,498 | 43.5 |
 | 2024/12 | 廠房 | [工業區三十五路50號](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E8%A5%BF%E5%B1%AF%E5%8D%80%E5%B7%A5%E6%A5%AD%E5%8D%80%E4%B8%89%E5%8D%81%E4%BA%94%E8%B7%AF50%E8%99%9F) | 1600.8 | 1567.0 | 34 | SRC | 64,000 | 40.0 |
+| 2024/11 | 廠房 | [南屯·工業區二十四路13號](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E5%8D%97%E5%B1%AF%E5%8D%80%E5%B7%A5%E6%A5%AD%E5%8D%80%E4%BA%8C%E5%8D%81%E5%9B%9B%E8%B7%AF13%E8%99%9F) | 649.2 | 280.8 | 38 | 加強磚造 | 31,600 | 48.7 |
 | 2024/11 | 廠房 | [工業區三十四路4號](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E8%A5%BF%E5%B1%AF%E5%8D%80%E5%B7%A5%E6%A5%AD%E5%8D%80%E4%B8%89%E5%8D%81%E5%9B%9B%E8%B7%AF4%E8%99%9F) | 427.1 | 640.7 | 34 | RC | 18,994 | 44.5 |
-| 2024/10 | 廠房 | [工業區四十路63號](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E8%A5%BF%E5%B1%AF%E5%8D%80%E5%B7%A5%E6%A5%AD%E5%8D%80%E5%9B%9B%E5%8D%81%E8%B7%AF63%E8%99%9F) | 93.0 | 76.6 | 32 | 鋼構 | 5,000 | 53.8 |
+| 2024/10 | 廠房 | [南屯·工業區十八路27號](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E5%8D%97%E5%B1%AF%E5%8D%80%E5%B7%A5%E6%A5%AD%E5%8D%80%E5%8D%81%E5%85%AB%E8%B7%AF27%E8%99%9F) | 507.3 | 424.9 | 34 | RC | 25,400 | 50.1 |
+| 2024/10 | 廠房 | [南屯·工業區二十路21號](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E5%8D%97%E5%B1%AF%E5%8D%80%E5%B7%A5%E6%A5%AD%E5%8D%80%E4%BA%8C%E5%8D%81%E8%B7%AF21%E8%99%9F) | 1217.0 | 340.5 | 44 | RC | 47,217 | 38.8 |
 | 2024/09 | 廠房 | [工業區三十四路40號](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E8%A5%BF%E5%B1%AF%E5%8D%80%E5%B7%A5%E6%A5%AD%E5%8D%80%E4%B8%89%E5%8D%81%E5%9B%9B%E8%B7%AF40%E8%99%9F) | 648.0 | 802.9 | 31 | SRC | 27,000 | 41.7 |
 | 2024/09 | 廠房 | [工業區四十路25號](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E8%A5%BF%E5%B1%AF%E5%8D%80%E5%B7%A5%E6%A5%AD%E5%8D%80%E5%9B%9B%E5%8D%81%E8%B7%AF25%E8%99%9F) | 140.8 | 74.0 | 33 | 鋼構 | 6,500 | 46.2 |
+| 2024/09 | 廠房 | [南屯·工業區二十路36號](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E5%8D%97%E5%B1%AF%E5%8D%80%E5%B7%A5%E6%A5%AD%E5%8D%80%E4%BA%8C%E5%8D%81%E8%B7%AF36%E8%99%9F) | 991.0 | 1103.5 | 41 | SRC | 35,000 | 35.3 |
 | 2024/09 | 廠房 | [工業區三十七路22號](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E8%A5%BF%E5%B1%AF%E5%8D%80%E5%B7%A5%E6%A5%AD%E5%8D%80%E4%B8%89%E5%8D%81%E4%B8%83%E8%B7%AF22%E8%99%9F) | 686.5 | 456.6 | 31 | 鋼構 | 27,460 | 40.0 |
 | 2024/08 | 廠房 | [工業區十路11之1號](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E8%A5%BF%E5%B1%AF%E5%8D%80%E5%B7%A5%E6%A5%AD%E5%8D%80%E5%8D%81%E8%B7%AF11%E4%B9%8B1%E8%99%9F) | 901.4 | 740.0 | 36 | 鋼構 | 38,455 | 42.7 |
 | 2024/08 | 廠房 | [工業區三十一路18之1號](https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E4%B8%AD%E5%B8%82%E8%A5%BF%E5%B1%AF%E5%8D%80%E5%B7%A5%E6%A5%AD%E5%8D%80%E4%B8%89%E5%8D%81%E4%B8%80%E8%B7%AF18%E4%B9%8B1%E8%99%9F) | 243.5 | 455.2 | 31 | RC | 11,000 | 45.2 |
