@@ -17,12 +17,26 @@ interface Props {
 const { title, date, tags, category, excerpt, coverImage, sourceNote, slug } = Astro.props;
 const cat = CATEGORIES[category];
 const dateStr = date.toISOString().slice(0, 10).replace(/-/g, '.');
+const SITE = 'https://mac2good909777-commits.github.io';
+const jsonLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: excerpt,
+  datePublished: date.toISOString(),
+  dateModified: date.toISOString(),
+  author: { '@type': 'Person', name: '張現傑' },
+  publisher: { '@type': 'Organization', name: '睦聚工業地產' },
+  ...(coverImage ? { image: [SITE + coverImage] } : {}),
+  mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE}/${category}/${slug}/` },
+});
 
 const related = (await getCollection(category as any, ({ data, slug: s }: any) => !data.draft && s !== slug))
   .sort((a: any, b: any) => b.data.date.valueOf() - a.data.date.valueOf())
   .slice(0, 3);
 ---
 <V4Base title={`${title}｜張現傑 × 睦聚地產`} description={excerpt} image={coverImage}>
+  <script type="application/ld+json" set:html={jsonLd} />
   <section class="v2-article-hero">
     <div class="v2-wrap">
       <nav class="v2-article-hero__crumb">
