@@ -9,7 +9,7 @@ sourceNote: "資料來源：內政部實價登錄（2024/1–2026/5 台中產業
 draft: false
 ---
 
-想在台中找一塊能整棟自用的廠房或工業地，這兩年的普遍感受是「看得多、買到少」。每個要擴產、找地的企業，起點也都不一樣——產業別、要的規格、坪數、時程、預算都不同。所以在看行情之前，先跟自己的需求**對齊**，才知道哪些成交跟你有關。以下用實際成交，帶您看台中產業園區與精密機械園區近兩年的行情，以及——是哪些產業在買。
+想在台中找一塊能整棟自用的廠房或工業地，這兩年的普遍感受是「看得多、買到少」。每個要擴產、找地的企業，起點也都不一樣——產業別、要的規格、坪數、時程、預算都不同。所以在看行情之前，先回到自己的實際需求，才知道哪些成交跟你有關。以下用實際成交，帶您看台中產業園區與精密機械園區近兩年的行情，以及——是哪些產業在買。
 
 ## 先講結論
 
@@ -81,7 +81,7 @@ draft: false
 
 把買方攤開看，台中產業園區的買盤幾乎都是自用型實體產業，而且產業別相當分散——金屬加工與金屬製品（振鋒企業、長耕國際、富宸自動）、機械（久旭精密機械）、電子與半導體（萬潤科技、億泰興業）、醫材與生技（康聯生醫）、食品（金安信）、化學與塑膠（頌勝科技材料）、工程與水電（大雅電氣、康淳科技）。這是一個成熟的綜合型園區，買方以擴產、自用為主，少見純投資。
 
-知道「哪個產業、買哪種標的」，才能把對的物件**匹配**給對的需求——這也是我們花力氣整理買方行業別的用意。
+知道「哪個產業、買哪種標的」，才能把條件對得上的物件，找給真正需要的企業——這也是我們花力氣整理買方行業別的用意。
 
 ## 二、精密機械園區（南屯・精科）：過去一案難求，近年才慢慢釋出
 
@@ -118,25 +118,25 @@ draft: false
 
 > 買方與行業別為睦聚整理（[實價登錄](https://lvr.land.moi.gov.tw/)＋[公開資訊觀測站](https://mops.twse.com.tw/)）。點地址可看街景。
 
-## 睦聚怎麼幫你：對齊 → 匹配 → 接住
+## 睦聚怎麼幫你
 
 工業地產交易頻率低、稀缺標的一釋出往往就被接走。我們的做法是三步：
 
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:20px 0;">
   <div style="border:1px solid #E2E8F0;border-top:4px solid #2B5A8C;border-radius:10px;padding:16px;background:#fff;">
     <div style="font-size:12px;letter-spacing:1px;color:#94A3B8;">STEP 1</div>
-    <div style="font-size:20px;font-weight:700;color:#2B5A8C;margin:4px 0;">對齊</div>
-    <div style="font-size:13px;color:#6B7280;">先搞懂你的產業別、規格、坪數、時程與預算，跟你的實際需求對齊。</div>
+    <div style="font-size:20px;font-weight:700;color:#2B5A8C;margin:4px 0;">了解需求</div>
+    <div style="font-size:13px;color:#6B7280;">先搞懂你的產業別、規格、坪數、時程與預算，從你的實際需求出發。</div>
   </div>
   <div style="border:1px solid #E2E8F0;border-top:4px solid #2B5A8C;border-radius:10px;padding:16px;background:#fff;">
     <div style="font-size:12px;letter-spacing:1px;color:#94A3B8;">STEP 2</div>
-    <div style="font-size:20px;font-weight:700;color:#2B5A8C;margin:4px 0;">匹配</div>
-    <div style="font-size:13px;color:#6B7280;">用近兩年行情與買方行業別數據，把對的標的匹配給對的需求。</div>
+    <div style="font-size:20px;font-weight:700;color:#2B5A8C;margin:4px 0;">數據比對</div>
+    <div style="font-size:13px;color:#6B7280;">用近兩年行情與買方行業別數據，找到條件對得上的標的。</div>
   </div>
   <div style="border:1px solid #E2E8F0;border-top:4px solid #2B5A8C;border-radius:10px;padding:16px;background:#fff;">
     <div style="font-size:12px;letter-spacing:1px;color:#94A3B8;">STEP 3</div>
-    <div style="font-size:20px;font-weight:700;color:#2B5A8C;margin:4px 0;">接住</div>
-    <div style="font-size:13px;color:#6B7280;">稀缺標的常在公開市場前就成交；提前布局，在釋出當下替你接住。</div>
+    <div style="font-size:20px;font-weight:700;color:#2B5A8C;margin:4px 0;">即時掌握</div>
+    <div style="font-size:13px;color:#6B7280;">稀缺標的常在公開市場前就成交，幫你提前布局、第一時間掌握。</div>
   </div>
 </div>
 
@@ -159,7 +159,7 @@ draft: false
 
 ---
 
-買廠房、找工業地，關鍵從來不是誰看得多，而是能不能——先跟你的需求**對齊**，再用行情與買方數據把對的標的**匹配**給你，最後在稀缺標的釋出的當下替你**接住**。若您正在評估台中產業園區或精科的廠房、工業地，歡迎讓我們了解您的需求。
+買廠房、找工業地，關鍵不是誰看得多，而是能不能從你的實際需求出發，用行情與買方數據找到條件對得上的標的，並在稀缺物件釋出的第一時間幫你掌握。若您正在評估台中產業園區或精科的廠房、工業地，歡迎讓我們了解您的需求。
 
 睦聚工業地產｜專注工業地產，助您精準佈局
 電話 0953-909777｜LINE
