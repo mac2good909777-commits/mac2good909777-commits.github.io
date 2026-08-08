@@ -1,0 +1,17 @@
+---
+// GA4 — 睦聚 / 張現傑（帳戶 mac2good909777@gmail.com）
+// 只在這裡改一次評估 ID，全站生效
+const GA_ID = 'G-H5VLHW8761';
+const enabled = import.meta.env.PROD && !GA_ID.includes('X');
+---
+{enabled && (
+  <>
+    <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}></script>
+    <script is:inline define:vars={{ GA_ID }}>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', GA_ID);
+    </script>
+  </>
+)}

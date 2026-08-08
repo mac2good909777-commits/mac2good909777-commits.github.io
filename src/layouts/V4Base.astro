@@ -2,6 +2,7 @@
 import '../styles/v2.css';
 import V4Nav from '../components/v4/V4Nav.astro';
 import V4Footer from '../components/v4/V4Footer.astro';
+import Analytics from '../components/Analytics.astro';
 
 export interface Props {
   title?: string;
@@ -41,6 +42,8 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600;700&display=swap" />
+
+    <Analytics />
   </head>
   <body class="v2">
     <V4Nav dark={darkNav} />
