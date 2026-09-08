@@ -128,6 +128,20 @@ ul.v2-list b{color:var(--v2-ink);display:block;margin-bottom:4px}
 .v2-foot{font-size:var(--v2-fs-sm);color:rgba(255,255,255,.55);margin-top:34px;
   padding-top:20px;border-top:1px solid rgba(255,255,255,.18)}
 
+
+/* 折疊附錄 */
+.v2-details{border-top:2px solid var(--v2-navy);margin-top:26px}
+.v2-details__sum{list-style:none;cursor:pointer;padding:16px 2px;
+  display:flex;align-items:center;gap:12px;
+  color:var(--v2-navy);font-weight:600;letter-spacing:.06em;
+  border-bottom:1px solid var(--v2-line)}
+.v2-details__sum::-webkit-details-marker{display:none}
+.v2-details__sum::before{content:'＋';font-size:18px;line-height:1;width:18px;text-align:center}
+.v2-details[open] .v2-details__sum::before{content:'－'}
+.v2-details__sum:hover{background:rgba(0,35,73,.04)}
+.v2-details__body{padding-top:4px}
+.v2-details__body .v2-tablewrap{border-top:none;margin-top:0}
+
 @media(max-width:700px){
   .v2-cat-hero{padding:72px 0 44px}
   .v2-stat{border-right:none}
@@ -238,41 +252,7 @@ ul.v2-list b{color:var(--v2-ink);display:block;margin-bottom:4px}
     <p>規律其實很穩定：<strong>地坪小、建蔽高、屋齡新、辦公比重高的物件，地坪單價就高</strong>；反過來，土地大、單層、建蔽低的廠房，地坪單價自然落在 8～10 萬元／坪。這個單價裡有多少是「地」、多少是「建物」，比單價本身重要得多。</p>
     <p>對正在評估的企業，實務上的建議是：如果您要的是現成可用的生產廠房，重點放在建物規格（樓層、跨距、載重、電力）與屋齡，比較基準要找地坪相近的案子；如果您打算自建，基準應該拉回素地那一層，用鹿海段 6～7 萬、崙海段 5 萬上下的區間去評估，而不是拿含建物的 15 萬去嚇自己。</p>
 
-    <div class="v2-tablewrap"><table class="tbl-factory">
-      <thead><tr><th>交易年月</th><th>地址（點看街景）</th><th>地坪</th><th>建坪</th><th>屋齡</th><th>建材</th><th>總價<br>（萬）</th><th>地坪單價<br>（萬/坪）</th></tr></thead>
-      <tbody>
-<tr><td>2026/05</td><td><a href="https://www.google.com/maps/search/?api=1&query=%E5%BD%B0%E5%8C%96%E7%B8%A3%E7%B7%9A%E8%A5%BF%E9%84%89%E5%BD%B0%E6%BF%B1%E8%A5%BF%E4%B8%80%E8%B7%AF10%E8%99%9F" target="_blank" rel="noopener">線西鄉彰濱西一路10號</a></td><td>1,055</td><td>323</td><td>10</td><td>—</td><td>8,000</td><td><strong>7.6</strong></td></tr>
-<tr><td>2026/04</td><td><a href="https://www.google.com/maps/search/?api=1&query=%E5%BD%B0%E5%8C%96%E7%B8%A3%E9%B9%BF%E6%B8%AF%E9%8E%AE%E9%B9%BF%E5%B7%A5%E5%8D%97%E4%BA%94%E8%B7%AF33%E8%99%9F" target="_blank" rel="noopener">鹿港鎮鹿工南五路33號</a></td><td>338</td><td>181</td><td>21</td><td>—</td><td>4,380</td><td><strong>12.9</strong></td></tr>
-<tr><td>2026/04</td><td><a href="https://www.google.com/maps/search/?api=1&query=%E5%BD%B0%E5%8C%96%E7%B8%A3%E9%B9%BF%E6%B8%AF%E9%8E%AE%E7%92%B0%E5%B7%A5%E4%BA%8C%E8%B7%AF52%E8%99%9F" target="_blank" rel="noopener">鹿港鎮環工二路52號</a></td><td>505</td><td>619</td><td>6</td><td>—</td><td>7,754</td><td><strong>15.4</strong></td></tr>
-<tr><td>2026/04</td><td><a href="https://www.google.com/maps/search/?api=1&query=%E5%BD%B0%E5%8C%96%E7%B8%A3%E9%B9%BF%E6%B8%AF%E9%8E%AE%E7%92%B0%E5%B7%A5%E4%BA%8C%E8%B7%AF52%E8%99%9F" target="_blank" rel="noopener">鹿港鎮環工二路52號</a></td><td>303</td><td>372</td><td>6</td><td>—</td><td>4,655</td><td><strong>15.4</strong></td></tr>
-<tr><td>2026/03</td><td><a href="https://www.google.com/maps/search/?api=1&query=%E5%BD%B0%E5%8C%96%E7%B8%A3%E9%B9%BF%E6%B8%AF%E9%8E%AE%E5%B7%A5%E6%A5%AD%E8%A5%BF%E4%B8%83%E8%B7%AF1%E4%B9%8B32%E8%99%9F" target="_blank" rel="noopener">鹿港鎮工業西七路1之32號</a></td><td>938</td><td>594</td><td>2</td><td>—</td><td>18,000</td><td><strong>19.2</strong></td></tr>
-<tr><td>2026/01</td><td><a href="https://www.google.com/maps/search/?api=1&query=%E5%BD%B0%E5%8C%96%E7%B8%A3%E9%B9%BF%E6%B8%AF%E9%8E%AE%E5%B7%A5%E6%A5%AD%E8%A5%BF%E4%B8%83%E8%B7%AF1%E4%B9%8B39%E8%99%9F" target="_blank" rel="noopener">鹿港鎮工業西七路1之39號</a></td><td>1,010</td><td>716</td><td>1</td><td>—</td><td>15,000</td><td><strong>14.9</strong></td></tr>
-<tr><td>2025/10</td><td><a href="https://www.google.com/maps/search/?api=1&query=%E5%BD%B0%E5%8C%96%E7%B8%A3%E9%B9%BF%E6%B8%AF%E9%8E%AE%E5%B7%A5%E6%A5%AD%E8%A5%BF%E4%B8%80%E8%B7%AF40%E4%B9%8B1%E8%99%9F" target="_blank" rel="noopener">鹿港鎮工業西一路４０之１號</a></td><td>666</td><td>453</td><td>6</td><td>RC</td><td>9,300</td><td><strong>14.0</strong></td></tr>
-<tr><td>2025/09</td><td><a href="https://www.google.com/maps/search/?api=1&query=%E5%BD%B0%E5%8C%96%E7%B8%A3%E9%B9%BF%E6%B8%AF%E9%8E%AE%E9%B9%BF%E5%B7%A5%E5%8D%97%E4%B8%89%E8%B7%AF52%E8%99%9F" target="_blank" rel="noopener">鹿港鎮鹿工南三路５２號</a></td><td>1,497</td><td>852</td><td>24</td><td>SC</td><td>15,500</td><td><strong>10.4</strong></td></tr>
-<tr><td>2025/07</td><td><a href="https://www.google.com/maps/search/?api=1&query=%E5%BD%B0%E5%8C%96%E7%B8%A3%E9%B9%BF%E6%B8%AF%E9%8E%AE%E5%B7%A5%E6%A5%AD%E8%A5%BF%E4%B8%83%E8%B7%AF1%E4%B9%8B42%E8%99%9F" target="_blank" rel="noopener">鹿港鎮工業西七路１之４２號</a></td><td>2,161</td><td>1,197</td><td>5</td><td>RC</td><td>18,800</td><td><strong>8.7</strong></td></tr>
-<tr><td>2025/07</td><td><a href="https://www.google.com/maps/search/?api=1&query=%E5%BD%B0%E5%8C%96%E7%B8%A3%E9%B9%BF%E6%B8%AF%E9%8E%AE%E7%92%B0%E5%B7%A5%E5%8D%81%E4%BA%8C%E8%B7%AF5%E8%99%9F" target="_blank" rel="noopener">鹿港鎮環工十二路５號</a></td><td>1,333</td><td>1,380</td><td>6</td><td>RC</td><td>12,000</td><td><strong>9.0</strong></td></tr>
-<tr><td>2025/05</td><td><a href="https://www.google.com/maps/search/?api=1&query=%E5%BD%B0%E5%8C%96%E7%B8%A3%E9%B9%BF%E6%B8%AF%E9%8E%AE%E7%92%B0%E5%B7%A5%E5%8D%81%E5%85%AD%E8%B7%AF2%E8%99%9F" target="_blank" rel="noopener">鹿港鎮環工十六路２號</a></td><td>707</td><td>232</td><td>7</td><td>RC</td><td>9,118</td><td><strong>12.9</strong></td></tr>
-<tr><td>2025/04</td><td><a href="https://www.google.com/maps/search/?api=1&query=%E5%BD%B0%E5%8C%96%E7%B8%A3%E9%B9%BF%E6%B8%AF%E9%8E%AE%E5%B7%A5%E6%A5%AD%E6%9D%B1%E4%BA%8C%E8%B7%AF3%E8%99%9F" target="_blank" rel="noopener">鹿港鎮工業東二路３號</a></td><td>911</td><td>224</td><td>28</td><td>鋼構</td><td>9,500</td><td><strong>10.4</strong></td></tr>
-<tr><td>2025/02</td><td><a href="https://www.google.com/maps/search/?api=1&query=%E5%BD%B0%E5%8C%96%E7%B8%A3%E7%B7%9A%E8%A5%BF%E9%84%89%E7%B7%9A%E5%B7%A5%E8%B7%AF12%E8%99%9F" target="_blank" rel="noopener">線西鄉線工路１２號</a></td><td>3,678</td><td>2,607</td><td>12</td><td>SC</td><td>30,000</td><td><strong>8.2</strong></td></tr>
-<tr><td>2025/01</td><td><a href="https://www.google.com/maps/search/?api=1&query=%E5%BD%B0%E5%8C%96%E7%B8%A3%E9%B9%BF%E6%B8%AF%E9%8E%AE%E9%B9%BF%E5%B7%A5%E5%8C%97%E4%BA%8C%E8%B7%AF8%E4%B9%8B1%E8%99%9F" target="_blank" rel="noopener">鹿港鎮鹿工北二路８之１號</a></td><td>763</td><td>324</td><td>22</td><td>RC</td><td>10,000</td><td><strong>13.1</strong></td></tr>
-<tr><td>2025/01</td><td><a href="https://www.google.com/maps/search/?api=1&query=%E5%BD%B0%E5%8C%96%E7%B8%A3%E9%B9%BF%E6%B8%AF%E9%8E%AE%E9%B9%BF%E5%B7%A5%E5%8D%97%E4%BA%94%E8%B7%AF15%E8%99%9F" target="_blank" rel="noopener">鹿港鎮鹿工南五路１５號</a></td><td>1,773</td><td>559</td><td>16</td><td>SRC</td><td>15,000</td><td><strong>8.5</strong></td></tr>
-<tr><td>2025/01</td><td><a href="https://www.google.com/maps/search/?api=1&query=%E5%BD%B0%E5%8C%96%E7%B8%A3%E7%B7%9A%E8%A5%BF%E9%84%89%E6%85%B6%E6%BF%B1%E8%B7%AF20%E8%99%9F" target="_blank" rel="noopener">線西鄉慶濱路２０號</a></td><td>354</td><td>247</td><td>5</td><td>SC</td><td>5,899</td><td><strong>16.6</strong></td></tr>
-<tr><td>2024/07</td><td><a href="https://www.google.com/maps/search/?api=1&query=%E5%BD%B0%E5%8C%96%E7%B8%A3%E4%BC%B8%E6%B8%AF%E9%84%89%E7%B7%9A%E5%B7%A5%E5%8C%97%E4%B8%80%E8%B7%AF9%E4%B9%8B1%E8%99%9F" target="_blank" rel="noopener">伸港鄉線工北一路９之１號</a></td><td>1,425</td><td>474</td><td>4</td><td>SC</td><td>16,800</td><td><strong>11.8</strong></td></tr>
-<tr><td>2024/07</td><td><a href="https://www.google.com/maps/search/?api=1&query=%E5%BD%B0%E5%8C%96%E7%B8%A3%E9%B9%BF%E6%B8%AF%E9%8E%AE%E9%B9%BF%E5%B7%A5%E5%8C%97%E4%BA%8C%E8%B7%AF17%E8%99%9F" target="_blank" rel="noopener">鹿港鎮鹿工北二路１７號</a></td><td>495</td><td>344</td><td>9</td><td>SC</td><td>6,000</td><td><strong>12.1</strong></td></tr>
-<tr><td>2024/06</td><td><a href="https://www.google.com/maps/search/?api=1&query=%E5%BD%B0%E5%8C%96%E7%B8%A3%E9%B9%BF%E6%B8%AF%E9%8E%AE%E7%92%B0%E5%B7%A5%E5%8D%81%E4%BA%8C%E8%B7%AF12%E8%99%9F" target="_blank" rel="noopener">鹿港鎮環工十二路１２號</a></td><td>548</td><td>606</td><td>7</td><td>SC</td><td>11,133</td><td><strong>20.3</strong></td></tr>
-<tr><td>2024/05</td><td><a href="https://www.google.com/maps/search/?api=1&query=%E5%BD%B0%E5%8C%96%E7%B8%A3%E9%B9%BF%E6%B8%AF%E9%8E%AE%E5%B7%A5%E6%A5%AD%E8%A5%BF%E4%BA%8C%E8%B7%AF33%E8%99%9F" target="_blank" rel="noopener">鹿港鎮工業西二路３３號</a></td><td>1,342</td><td>171</td><td>10</td><td>SRC</td><td>13,800</td><td><strong>10.3</strong></td></tr>
-<tr><td>2024/05</td><td><a href="https://www.google.com/maps/search/?api=1&query=%E5%BD%B0%E5%8C%96%E7%B8%A3%E9%B9%BF%E6%B8%AF%E9%8E%AE%E7%92%B0%E5%B7%A5%E5%85%AD%E8%B7%AF6%E8%99%9F" target="_blank" rel="noopener">鹿港鎮環工六路６號</a></td><td>575</td><td>470</td><td>6</td><td>RC</td><td>10,000</td><td><strong>17.4</strong></td></tr>
-<tr><td>2024/04</td><td><a href="https://www.google.com/maps/search/?api=1&query=%E5%BD%B0%E5%8C%96%E7%B8%A3%E9%B9%BF%E6%B8%AF%E9%8E%AE%E9%B9%BF%E5%B7%A5%E5%8D%97%E4%BA%94%E8%B7%AF43%E8%99%9F" target="_blank" rel="noopener">鹿港鎮鹿工南五路４３號</a></td><td>265</td><td>87</td><td>21</td><td>SC</td><td>3,400</td><td><strong>12.8</strong></td></tr>
-<tr><td>2024/02</td><td><a href="https://www.google.com/maps/search/?api=1&query=%E5%BD%B0%E5%8C%96%E7%B8%A3%E9%B9%BF%E6%B8%AF%E9%8E%AE%E9%B9%BF%E5%B7%A5%E5%8C%97%E4%BA%8C%E8%B7%AF12%E8%99%9F" target="_blank" rel="noopener">鹿港鎮鹿工北二路１２號</a></td><td>1,617</td><td>2,855</td><td>23</td><td>RC</td><td>28,000</td><td><strong>17.3</strong></td></tr>
-<tr><td>2024/01</td><td><a href="https://www.google.com/maps/search/?api=1&query=%E5%BD%B0%E5%8C%96%E7%B8%A3%E9%B9%BF%E6%B8%AF%E9%8E%AE%E5%B7%A5%E6%A5%AD%E8%A5%BF%E4%BA%8C%E8%B7%AF7%E8%99%9F" target="_blank" rel="noopener">鹿港鎮工業西二路７號</a></td><td>1,402</td><td>579</td><td>13</td><td>RC</td><td>15,000</td><td><strong>10.7</strong></td></tr>
-<tr><td>2024/01</td><td><a href="https://www.google.com/maps/search/?api=1&query=%E5%BD%B0%E5%8C%96%E7%B8%A3%E9%B9%BF%E6%B8%AF%E9%8E%AE%E9%B9%BF%E5%B7%A5%E5%8D%97%E4%B8%89%E8%B7%AF15%E8%99%9F" target="_blank" rel="noopener">鹿港鎮鹿工南三路１５號</a></td><td>965</td><td>164</td><td>21</td><td>RC</td><td>10,000</td><td><strong>10.4</strong></td></tr>
-<tr><td>2024/01</td><td><a href="https://www.google.com/maps/search/?api=1&query=%E5%BD%B0%E5%8C%96%E7%B8%A3%E7%B7%9A%E8%A5%BF%E9%84%89%E5%BD%B0%E6%BF%B1%E8%A5%BF%E5%9B%9B%E8%B7%AF35%E8%99%9F" target="_blank" rel="noopener">線西鄉彰濱西四路３５號</a></td><td>3,000</td><td>2,001</td><td>6</td><td>SC</td><td>40,000</td><td><strong>13.3</strong></td></tr>
-<tr><td>2024/01</td><td><a href="https://www.google.com/maps/search/?api=1&query=%E5%BD%B0%E5%8C%96%E7%B8%A3%E7%B7%9A%E8%A5%BF%E9%84%89%E7%B7%9A%E5%AE%89%E8%B7%AF121%E8%99%9F" target="_blank" rel="noopener">線西鄉線安路１２１號</a></td><td>709</td><td>719</td><td>13</td><td>RC</td><td>7,198</td><td><strong>10.1</strong></td></tr>
-<tr><td>2023/09</td><td><a href="https://www.google.com/maps/search/?api=1&query=%E5%BD%B0%E5%8C%96%E7%B8%A3%E9%B9%BF%E6%B8%AF%E9%8E%AE%E9%B9%BF%E5%B7%A5%E5%8D%97%E4%BA%94%E8%B7%AF43%E8%99%9F" target="_blank" rel="noopener">鹿港鎮鹿工南五路４３號</a></td><td>265</td><td>87</td><td>21</td><td>SC</td><td>3,380</td><td><strong>12.8</strong></td></tr>
-<tr><td>2023/01</td><td><a href="https://www.google.com/maps/search/?api=1&query=%E5%BD%B0%E5%8C%96%E7%B8%A3%E9%B9%BF%E6%B8%AF%E9%8E%AE%E5%B7%A5%E6%A5%AD%E8%A5%BF%E4%B8%80%E8%B7%AF8%E8%99%9F" target="_blank" rel="noopener">鹿港鎮工業西一路８號</a></td><td>2,793</td><td>1,568</td><td>23</td><td>RC</td><td>28,800</td><td><strong>10.3</strong></td></tr>
-      </tbody>
-    </table></div>
-    <p class="v2-note">2023–2025 年資料源為 <a href="https://lvr.land.moi.gov.tw/" target="_blank" rel="noopener">內政部不動產交易實價登錄</a>；2026 年 6 筆實價登錄尚未公告，資料源為睦聚買方研究表，故建材欄以「—」表示。上表為園區內整棟房地交易全數列示，已排除土地坪未達 100 坪者、建坪／地坪大於 2 之廠辦分戶產品，以及備註載明親友或特殊關係之交易。地坪單價＝總價 ÷ 土地坪；屋齡計至 2026 年。2023 年第三季彰化縣原始季報缺漏，該季部分交易由後續季報補登，2023 年筆數可能低估。點地址可看街景。</p>
+    <p style="margin-top:26px;">上述判讀背後是 2023 年以來園區內每一筆整棟房地成交——共 29 筆，含地坪、建坪、屋齡、建材與地坪單價，地址可直接點開街景。筆數不少，為免打斷閱讀，完整明細放在本文最後的<a href="#appendix">附錄：成交明細</a>，需要逐筆比對時再展開即可。</p>
   </div>
 </section>
 
@@ -442,6 +422,55 @@ ul.v2-list b{color:var(--v2-ink);display:block;margin-bottom:4px}
     </div>
 
     <div class="v2-author"><b>關於作者</b>｜張現傑，睦聚工業地產。專注中台灣（台中、彰化、南投、苗栗）產業用地——工業廠房、工業土地與產業用地（建地）的買賣與租賃、選址與在地行情分析。本文數據整理自 <a href="https://lvr.land.moi.gov.tw/" target="_blank" rel="noopener">內政部不動產交易實價登錄</a>、<a href="https://mops.twse.com.tw/" target="_blank" rel="noopener">公開資訊觀測站</a>、經濟部產業園區管理局彰化濱海工業區服務中心公開資料，以及睦聚自行逐筆比對地號、買方公司與登記營業項目後建立的買方研究表，僅供市場參考，非正式估價與投資建議。</div>
+  </div>
+</section>
+
+<section class="v2-section" id="appendix">
+  <div class="v2-wrap--read">
+    <div class="v2-section__kicker">APPENDIX</div>
+    <h2 class="v2-section__title">附錄：彰濱工業區整棟房地成交明細</h2>
+    <p class="v2-section__lede">2023 年 1 月–2026 年 5 月，園區內整棟房地交易 29 筆全數列示。點開後可左右滑動表格，點地址可看街景。</p>
+
+    <details class="v2-details">
+      <summary class="v2-details__sum"><span class="v2-details__label">展開成交明細（29 筆）</span></summary>
+      <div class="v2-details__body">
+    <div class="v2-tablewrap"><table class="tbl-factory">
+      <thead><tr><th>交易年月</th><th>地址（點看街景）</th><th>地坪</th><th>建坪</th><th>屋齡</th><th>建材</th><th>總價<br>（萬）</th><th>地坪單價<br>（萬/坪）</th></tr></thead>
+      <tbody>
+<tr><td>2026/05</td><td><a href="https://www.google.com/maps/search/?api=1&query=%E5%BD%B0%E5%8C%96%E7%B8%A3%E7%B7%9A%E8%A5%BF%E9%84%89%E5%BD%B0%E6%BF%B1%E8%A5%BF%E4%B8%80%E8%B7%AF10%E8%99%9F" target="_blank" rel="noopener">線西鄉彰濱西一路10號</a></td><td>1,055</td><td>323</td><td>10</td><td>—</td><td>8,000</td><td><strong>7.6</strong></td></tr>
+<tr><td>2026/04</td><td><a href="https://www.google.com/maps/search/?api=1&query=%E5%BD%B0%E5%8C%96%E7%B8%A3%E9%B9%BF%E6%B8%AF%E9%8E%AE%E9%B9%BF%E5%B7%A5%E5%8D%97%E4%BA%94%E8%B7%AF33%E8%99%9F" target="_blank" rel="noopener">鹿港鎮鹿工南五路33號</a></td><td>338</td><td>181</td><td>21</td><td>—</td><td>4,380</td><td><strong>12.9</strong></td></tr>
+<tr><td>2026/04</td><td><a href="https://www.google.com/maps/search/?api=1&query=%E5%BD%B0%E5%8C%96%E7%B8%A3%E9%B9%BF%E6%B8%AF%E9%8E%AE%E7%92%B0%E5%B7%A5%E4%BA%8C%E8%B7%AF52%E8%99%9F" target="_blank" rel="noopener">鹿港鎮環工二路52號</a></td><td>505</td><td>619</td><td>6</td><td>—</td><td>7,754</td><td><strong>15.4</strong></td></tr>
+<tr><td>2026/04</td><td><a href="https://www.google.com/maps/search/?api=1&query=%E5%BD%B0%E5%8C%96%E7%B8%A3%E9%B9%BF%E6%B8%AF%E9%8E%AE%E7%92%B0%E5%B7%A5%E4%BA%8C%E8%B7%AF52%E8%99%9F" target="_blank" rel="noopener">鹿港鎮環工二路52號</a></td><td>303</td><td>372</td><td>6</td><td>—</td><td>4,655</td><td><strong>15.4</strong></td></tr>
+<tr><td>2026/03</td><td><a href="https://www.google.com/maps/search/?api=1&query=%E5%BD%B0%E5%8C%96%E7%B8%A3%E9%B9%BF%E6%B8%AF%E9%8E%AE%E5%B7%A5%E6%A5%AD%E8%A5%BF%E4%B8%83%E8%B7%AF1%E4%B9%8B32%E8%99%9F" target="_blank" rel="noopener">鹿港鎮工業西七路1之32號</a></td><td>938</td><td>594</td><td>2</td><td>—</td><td>18,000</td><td><strong>19.2</strong></td></tr>
+<tr><td>2026/01</td><td><a href="https://www.google.com/maps/search/?api=1&query=%E5%BD%B0%E5%8C%96%E7%B8%A3%E9%B9%BF%E6%B8%AF%E9%8E%AE%E5%B7%A5%E6%A5%AD%E8%A5%BF%E4%B8%83%E8%B7%AF1%E4%B9%8B39%E8%99%9F" target="_blank" rel="noopener">鹿港鎮工業西七路1之39號</a></td><td>1,010</td><td>716</td><td>1</td><td>—</td><td>15,000</td><td><strong>14.9</strong></td></tr>
+<tr><td>2025/10</td><td><a href="https://www.google.com/maps/search/?api=1&query=%E5%BD%B0%E5%8C%96%E7%B8%A3%E9%B9%BF%E6%B8%AF%E9%8E%AE%E5%B7%A5%E6%A5%AD%E8%A5%BF%E4%B8%80%E8%B7%AF40%E4%B9%8B1%E8%99%9F" target="_blank" rel="noopener">鹿港鎮工業西一路４０之１號</a></td><td>666</td><td>453</td><td>6</td><td>RC</td><td>9,300</td><td><strong>14.0</strong></td></tr>
+<tr><td>2025/09</td><td><a href="https://www.google.com/maps/search/?api=1&query=%E5%BD%B0%E5%8C%96%E7%B8%A3%E9%B9%BF%E6%B8%AF%E9%8E%AE%E9%B9%BF%E5%B7%A5%E5%8D%97%E4%B8%89%E8%B7%AF52%E8%99%9F" target="_blank" rel="noopener">鹿港鎮鹿工南三路５２號</a></td><td>1,497</td><td>852</td><td>24</td><td>SC</td><td>15,500</td><td><strong>10.4</strong></td></tr>
+<tr><td>2025/07</td><td><a href="https://www.google.com/maps/search/?api=1&query=%E5%BD%B0%E5%8C%96%E7%B8%A3%E9%B9%BF%E6%B8%AF%E9%8E%AE%E5%B7%A5%E6%A5%AD%E8%A5%BF%E4%B8%83%E8%B7%AF1%E4%B9%8B42%E8%99%9F" target="_blank" rel="noopener">鹿港鎮工業西七路１之４２號</a></td><td>2,161</td><td>1,197</td><td>5</td><td>RC</td><td>18,800</td><td><strong>8.7</strong></td></tr>
+<tr><td>2025/07</td><td><a href="https://www.google.com/maps/search/?api=1&query=%E5%BD%B0%E5%8C%96%E7%B8%A3%E9%B9%BF%E6%B8%AF%E9%8E%AE%E7%92%B0%E5%B7%A5%E5%8D%81%E4%BA%8C%E8%B7%AF5%E8%99%9F" target="_blank" rel="noopener">鹿港鎮環工十二路５號</a></td><td>1,333</td><td>1,380</td><td>6</td><td>RC</td><td>12,000</td><td><strong>9.0</strong></td></tr>
+<tr><td>2025/05</td><td><a href="https://www.google.com/maps/search/?api=1&query=%E5%BD%B0%E5%8C%96%E7%B8%A3%E9%B9%BF%E6%B8%AF%E9%8E%AE%E7%92%B0%E5%B7%A5%E5%8D%81%E5%85%AD%E8%B7%AF2%E8%99%9F" target="_blank" rel="noopener">鹿港鎮環工十六路２號</a></td><td>707</td><td>232</td><td>7</td><td>RC</td><td>9,118</td><td><strong>12.9</strong></td></tr>
+<tr><td>2025/04</td><td><a href="https://www.google.com/maps/search/?api=1&query=%E5%BD%B0%E5%8C%96%E7%B8%A3%E9%B9%BF%E6%B8%AF%E9%8E%AE%E5%B7%A5%E6%A5%AD%E6%9D%B1%E4%BA%8C%E8%B7%AF3%E8%99%9F" target="_blank" rel="noopener">鹿港鎮工業東二路３號</a></td><td>911</td><td>224</td><td>28</td><td>鋼構</td><td>9,500</td><td><strong>10.4</strong></td></tr>
+<tr><td>2025/02</td><td><a href="https://www.google.com/maps/search/?api=1&query=%E5%BD%B0%E5%8C%96%E7%B8%A3%E7%B7%9A%E8%A5%BF%E9%84%89%E7%B7%9A%E5%B7%A5%E8%B7%AF12%E8%99%9F" target="_blank" rel="noopener">線西鄉線工路１２號</a></td><td>3,678</td><td>2,607</td><td>12</td><td>SC</td><td>30,000</td><td><strong>8.2</strong></td></tr>
+<tr><td>2025/01</td><td><a href="https://www.google.com/maps/search/?api=1&query=%E5%BD%B0%E5%8C%96%E7%B8%A3%E9%B9%BF%E6%B8%AF%E9%8E%AE%E9%B9%BF%E5%B7%A5%E5%8C%97%E4%BA%8C%E8%B7%AF8%E4%B9%8B1%E8%99%9F" target="_blank" rel="noopener">鹿港鎮鹿工北二路８之１號</a></td><td>763</td><td>324</td><td>22</td><td>RC</td><td>10,000</td><td><strong>13.1</strong></td></tr>
+<tr><td>2025/01</td><td><a href="https://www.google.com/maps/search/?api=1&query=%E5%BD%B0%E5%8C%96%E7%B8%A3%E9%B9%BF%E6%B8%AF%E9%8E%AE%E9%B9%BF%E5%B7%A5%E5%8D%97%E4%BA%94%E8%B7%AF15%E8%99%9F" target="_blank" rel="noopener">鹿港鎮鹿工南五路１５號</a></td><td>1,773</td><td>559</td><td>16</td><td>SRC</td><td>15,000</td><td><strong>8.5</strong></td></tr>
+<tr><td>2025/01</td><td><a href="https://www.google.com/maps/search/?api=1&query=%E5%BD%B0%E5%8C%96%E7%B8%A3%E7%B7%9A%E8%A5%BF%E9%84%89%E6%85%B6%E6%BF%B1%E8%B7%AF20%E8%99%9F" target="_blank" rel="noopener">線西鄉慶濱路２０號</a></td><td>354</td><td>247</td><td>5</td><td>SC</td><td>5,899</td><td><strong>16.6</strong></td></tr>
+<tr><td>2024/07</td><td><a href="https://www.google.com/maps/search/?api=1&query=%E5%BD%B0%E5%8C%96%E7%B8%A3%E4%BC%B8%E6%B8%AF%E9%84%89%E7%B7%9A%E5%B7%A5%E5%8C%97%E4%B8%80%E8%B7%AF9%E4%B9%8B1%E8%99%9F" target="_blank" rel="noopener">伸港鄉線工北一路９之１號</a></td><td>1,425</td><td>474</td><td>4</td><td>SC</td><td>16,800</td><td><strong>11.8</strong></td></tr>
+<tr><td>2024/07</td><td><a href="https://www.google.com/maps/search/?api=1&query=%E5%BD%B0%E5%8C%96%E7%B8%A3%E9%B9%BF%E6%B8%AF%E9%8E%AE%E9%B9%BF%E5%B7%A5%E5%8C%97%E4%BA%8C%E8%B7%AF17%E8%99%9F" target="_blank" rel="noopener">鹿港鎮鹿工北二路１７號</a></td><td>495</td><td>344</td><td>9</td><td>SC</td><td>6,000</td><td><strong>12.1</strong></td></tr>
+<tr><td>2024/06</td><td><a href="https://www.google.com/maps/search/?api=1&query=%E5%BD%B0%E5%8C%96%E7%B8%A3%E9%B9%BF%E6%B8%AF%E9%8E%AE%E7%92%B0%E5%B7%A5%E5%8D%81%E4%BA%8C%E8%B7%AF12%E8%99%9F" target="_blank" rel="noopener">鹿港鎮環工十二路１２號</a></td><td>548</td><td>606</td><td>7</td><td>SC</td><td>11,133</td><td><strong>20.3</strong></td></tr>
+<tr><td>2024/05</td><td><a href="https://www.google.com/maps/search/?api=1&query=%E5%BD%B0%E5%8C%96%E7%B8%A3%E9%B9%BF%E6%B8%AF%E9%8E%AE%E5%B7%A5%E6%A5%AD%E8%A5%BF%E4%BA%8C%E8%B7%AF33%E8%99%9F" target="_blank" rel="noopener">鹿港鎮工業西二路３３號</a></td><td>1,342</td><td>171</td><td>10</td><td>SRC</td><td>13,800</td><td><strong>10.3</strong></td></tr>
+<tr><td>2024/05</td><td><a href="https://www.google.com/maps/search/?api=1&query=%E5%BD%B0%E5%8C%96%E7%B8%A3%E9%B9%BF%E6%B8%AF%E9%8E%AE%E7%92%B0%E5%B7%A5%E5%85%AD%E8%B7%AF6%E8%99%9F" target="_blank" rel="noopener">鹿港鎮環工六路６號</a></td><td>575</td><td>470</td><td>6</td><td>RC</td><td>10,000</td><td><strong>17.4</strong></td></tr>
+<tr><td>2024/04</td><td><a href="https://www.google.com/maps/search/?api=1&query=%E5%BD%B0%E5%8C%96%E7%B8%A3%E9%B9%BF%E6%B8%AF%E9%8E%AE%E9%B9%BF%E5%B7%A5%E5%8D%97%E4%BA%94%E8%B7%AF43%E8%99%9F" target="_blank" rel="noopener">鹿港鎮鹿工南五路４３號</a></td><td>265</td><td>87</td><td>21</td><td>SC</td><td>3,400</td><td><strong>12.8</strong></td></tr>
+<tr><td>2024/02</td><td><a href="https://www.google.com/maps/search/?api=1&query=%E5%BD%B0%E5%8C%96%E7%B8%A3%E9%B9%BF%E6%B8%AF%E9%8E%AE%E9%B9%BF%E5%B7%A5%E5%8C%97%E4%BA%8C%E8%B7%AF12%E8%99%9F" target="_blank" rel="noopener">鹿港鎮鹿工北二路１２號</a></td><td>1,617</td><td>2,855</td><td>23</td><td>RC</td><td>28,000</td><td><strong>17.3</strong></td></tr>
+<tr><td>2024/01</td><td><a href="https://www.google.com/maps/search/?api=1&query=%E5%BD%B0%E5%8C%96%E7%B8%A3%E9%B9%BF%E6%B8%AF%E9%8E%AE%E5%B7%A5%E6%A5%AD%E8%A5%BF%E4%BA%8C%E8%B7%AF7%E8%99%9F" target="_blank" rel="noopener">鹿港鎮工業西二路７號</a></td><td>1,402</td><td>579</td><td>13</td><td>RC</td><td>15,000</td><td><strong>10.7</strong></td></tr>
+<tr><td>2024/01</td><td><a href="https://www.google.com/maps/search/?api=1&query=%E5%BD%B0%E5%8C%96%E7%B8%A3%E9%B9%BF%E6%B8%AF%E9%8E%AE%E9%B9%BF%E5%B7%A5%E5%8D%97%E4%B8%89%E8%B7%AF15%E8%99%9F" target="_blank" rel="noopener">鹿港鎮鹿工南三路１５號</a></td><td>965</td><td>164</td><td>21</td><td>RC</td><td>10,000</td><td><strong>10.4</strong></td></tr>
+<tr><td>2024/01</td><td><a href="https://www.google.com/maps/search/?api=1&query=%E5%BD%B0%E5%8C%96%E7%B8%A3%E7%B7%9A%E8%A5%BF%E9%84%89%E5%BD%B0%E6%BF%B1%E8%A5%BF%E5%9B%9B%E8%B7%AF35%E8%99%9F" target="_blank" rel="noopener">線西鄉彰濱西四路３５號</a></td><td>3,000</td><td>2,001</td><td>6</td><td>SC</td><td>40,000</td><td><strong>13.3</strong></td></tr>
+<tr><td>2024/01</td><td><a href="https://www.google.com/maps/search/?api=1&query=%E5%BD%B0%E5%8C%96%E7%B8%A3%E7%B7%9A%E8%A5%BF%E9%84%89%E7%B7%9A%E5%AE%89%E8%B7%AF121%E8%99%9F" target="_blank" rel="noopener">線西鄉線安路１２１號</a></td><td>709</td><td>719</td><td>13</td><td>RC</td><td>7,198</td><td><strong>10.1</strong></td></tr>
+<tr><td>2023/09</td><td><a href="https://www.google.com/maps/search/?api=1&query=%E5%BD%B0%E5%8C%96%E7%B8%A3%E9%B9%BF%E6%B8%AF%E9%8E%AE%E9%B9%BF%E5%B7%A5%E5%8D%97%E4%BA%94%E8%B7%AF43%E8%99%9F" target="_blank" rel="noopener">鹿港鎮鹿工南五路４３號</a></td><td>265</td><td>87</td><td>21</td><td>SC</td><td>3,380</td><td><strong>12.8</strong></td></tr>
+<tr><td>2023/01</td><td><a href="https://www.google.com/maps/search/?api=1&query=%E5%BD%B0%E5%8C%96%E7%B8%A3%E9%B9%BF%E6%B8%AF%E9%8E%AE%E5%B7%A5%E6%A5%AD%E8%A5%BF%E4%B8%80%E8%B7%AF8%E8%99%9F" target="_blank" rel="noopener">鹿港鎮工業西一路８號</a></td><td>2,793</td><td>1,568</td><td>23</td><td>RC</td><td>28,800</td><td><strong>10.3</strong></td></tr>
+      </tbody>
+    </table></div>
+    <p class="v2-note">2023–2025 年資料源為 <a href="https://lvr.land.moi.gov.tw/" target="_blank" rel="noopener">內政部不動產交易實價登錄</a>；2026 年 6 筆實價登錄尚未公告，資料源為睦聚買方研究表，故建材欄以「—」表示。上表為園區內整棟房地交易全數列示，已排除土地坪未達 100 坪者、建坪／地坪大於 2 之廠辦分戶產品，以及備註載明親友或特殊關係之交易。地坪單價＝總價 ÷ 土地坪；屋齡計至 2026 年。2023 年第三季彰化縣原始季報缺漏，該季部分交易由後續季報補登，2023 年筆數可能低估。點地址可看街景。</p>
+      </div>
+    </details>
   </div>
 </section>
 
