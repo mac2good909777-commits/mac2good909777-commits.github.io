@@ -1,0 +1,612 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="沖繩與北海道渡假房（4–6人）的最低購房預算、年度持有維護費與風險對照評估。">
+<title>沖繩・北海道渡假房評估｜最低購房預算與持有維護費試算</title>
+<link rel="icon" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Noto+Sans+TC:wght@400;500;700&display=swap">
+<style>
+html{color-scheme:light dark}
+body{margin:0}
+img{max-width:100%}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<style>
+:root{
+  --bg:#FFFFFF;
+  --surface:#FFFFFF;
+  --subtle:#F9FAFB;
+  --border:#E5E7EB;
+  --rule:#1F2937;
+  --ink:#1F2937;
+  --ink-2:#374151;
+  --ink-3:#4B5563;
+  --ink-4:#6B7280;
+  --ink-5:#9CA3AF;
+  --accent:#92400E;
+  --accent-2:#B45309;
+  --up:#059669;
+  --down:#DC2626;
+  --thead-bg:#1F2937;
+  --thead-fg:#FFFFFF;
+  --font:"Inter","Noto Sans TC","Microsoft JhengHei",sans-serif;
+  --mono:"JetBrains Mono","Consolas",monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#111827;
+    --surface:#1F2937;
+    --subtle:#1A2333;
+    --border:#374151;
+    --rule:#9CA3AF;
+    --ink:#F3F4F6;
+    --ink-2:#E5E7EB;
+    --ink-3:#D1D5DB;
+    --ink-4:#9CA3AF;
+    --ink-5:#6B7280;
+    --accent:#FBBF24;
+    --accent-2:#FCD34D;
+    --up:#34D399;
+    --down:#F87171;
+    --thead-bg:#374151;
+    --thead-fg:#F9FAFB;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#111827;
+  --surface:#1F2937;
+  --subtle:#1A2333;
+  --border:#374151;
+  --rule:#9CA3AF;
+  --ink:#F3F4F6;
+  --ink-2:#E5E7EB;
+  --ink-3:#D1D5DB;
+  --ink-4:#9CA3AF;
+  --ink-5:#6B7280;
+  --accent:#FBBF24;
+  --accent-2:#FCD34D;
+  --up:#34D399;
+  --down:#F87171;
+  --thead-bg:#374151;
+  --thead-fg:#F9FAFB;
+}
+
+*{box-sizing:border-box}
+body{
+  background:var(--bg);
+  color:var(--ink-3);
+  font-family:var(--font);
+  font-size:15px;
+  line-height:1.8;
+  margin:0;
+  padding:0;
+}
+.wrap{max-width:940px;margin:0 auto;padding-inline:20px;padding-block:0 56px}
+
+/* ---------- header ---------- */
+.masthead{
+  border-bottom:1px solid var(--border);
+  padding-block:28px 20px;
+  margin-bottom:36px;
+  display:flex;
+  flex-wrap:wrap;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:16px;
+}
+.masthead h1{
+  font-size:28px;
+  font-weight:700;
+  letter-spacing:.5px;
+  color:var(--ink);
+  margin:0 0 6px;
+  text-wrap:balance;
+}
+.masthead .sub{font-size:14px;color:var(--ink-4);margin:0}
+.meta{
+  font-family:var(--mono);
+  font-size:12px;
+  color:var(--ink-5);
+  text-align:right;
+  line-height:1.7;
+  white-space:nowrap;
+}
+.eyebrow{
+  font-size:12px;
+  letter-spacing:1.4px;
+  text-transform:uppercase;
+  color:var(--ink-4);
+  font-weight:600;
+  margin:0 0 8px;
+}
+
+/* ---------- sections ---------- */
+section{margin-bottom:40px}
+h2{
+  font-size:21px;
+  font-weight:600;
+  color:var(--ink);
+  margin:0 0 4px;
+  padding-left:12px;
+  border-left:3px solid var(--rule);
+  line-height:1.4;
+  text-wrap:balance;
+}
+h2 .num{font-family:var(--mono);font-size:14px;color:var(--ink-4);margin-right:8px;font-weight:500}
+h3{font-size:16px;font-weight:600;color:var(--ink-2);margin:28px 0 10px}
+.lede{margin:14px 0 20px;max-width:66ch}
+p{margin:0 0 16px;max-width:70ch}
+strong{color:var(--ink);font-weight:600}
+.amber{color:var(--accent);font-weight:600}
+.num,.n{font-family:var(--mono);font-variant-numeric:tabular-nums}
+
+/* ---------- KPI ---------- */
+.kpis{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+  gap:1px;
+  background:var(--border);
+  border:1px solid var(--border);
+  margin-bottom:8px;
+}
+.kpi{background:var(--surface);padding:20px 22px}
+.kpi .label{
+  font-size:11.5px;letter-spacing:1.2px;text-transform:uppercase;
+  color:var(--ink-4);font-weight:600;margin-bottom:10px;
+}
+.kpi .big{
+  font-family:var(--mono);font-variant-numeric:tabular-nums;
+  font-size:30px;font-weight:700;color:var(--ink);line-height:1.15;
+}
+.kpi .unit{font-size:14px;font-weight:500;color:var(--ink-4);margin-left:3px}
+.kpi .foot{font-size:12.5px;color:var(--accent);margin-top:7px;font-weight:500}
+.kpi-note{font-size:12px;color:var(--ink-5);margin:0 0 24px}
+
+/* ---------- tables ---------- */
+.tw{overflow-x:auto;border:1px solid var(--border);margin:18px 0 10px}
+table{border-collapse:collapse;width:100%;min-width:520px;font-size:14px;background:var(--surface)}
+thead th{
+  background:var(--thead-bg);color:var(--thead-fg);
+  font-weight:600;font-size:13px;letter-spacing:.3px;
+  text-align:left;padding:11px 16px;white-space:nowrap;
+}
+tbody td,tbody th{
+  padding:11px 16px;border-top:1px solid var(--border);
+  vertical-align:top;color:var(--ink-3);
+}
+tbody th{text-align:left;font-weight:500;color:var(--ink-2)}
+tbody tr:nth-child(even) td,tbody tr:nth-child(even) th{background:var(--subtle)}
+td.n,th.n{font-family:var(--mono);font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}
+tfoot td,tfoot th{
+  padding:12px 16px;border-top:2px solid var(--rule);
+  font-weight:700;color:var(--ink);background:var(--surface);
+}
+tfoot td.n{font-family:var(--mono);font-variant-numeric:tabular-nums;text-align:right}
+.cap{font-size:12px;color:var(--ink-5);margin:0 0 4px}
+.good{color:var(--up);font-weight:600}
+.bad{color:var(--down);font-weight:600}
+
+/* ---------- callout ---------- */
+.callout{
+  background:var(--subtle);
+  border-left:3px solid var(--ink-4);
+  padding:16px 20px;
+  margin:20px 0;
+  font-size:14.5px;
+}
+.callout.warn{border-left-color:var(--accent)}
+.callout p:last-child{margin-bottom:0}
+.callout .tag{
+  display:block;font-size:11.5px;letter-spacing:1.2px;text-transform:uppercase;
+  color:var(--ink-4);font-weight:600;margin-bottom:6px;
+}
+.callout.warn .tag{color:var(--accent)}
+
+/* ---------- verdict pair ---------- */
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border);margin:20px 0}
+.pair > div{background:var(--surface);padding:20px 22px}
+.pair h4{
+  margin:0 0 4px;font-size:15px;font-weight:700;color:var(--ink);
+  letter-spacing:.5px;
+}
+.pair .best{font-size:13px;color:var(--accent);font-weight:600;margin:0 0 10px}
+.pair p{font-size:14px;margin:0;color:var(--ink-3)}
+
+/* ---------- checklist ---------- */
+ol.check{margin:14px 0 0;padding-left:0;list-style:none;counter-reset:c}
+ol.check li{
+  counter-increment:c;position:relative;padding-left:34px;
+  margin-bottom:12px;font-size:14.5px;
+}
+ol.check li::before{
+  content:counter(c,decimal-leading-zero);
+  position:absolute;left:0;top:1px;
+  font-family:var(--mono);font-size:12px;font-weight:700;
+  color:var(--accent);letter-spacing:.5px;
+}
+ul.plain{margin:12px 0;padding-left:20px}
+ul.plain li{margin-bottom:8px}
+
+/* ---------- footer ---------- */
+footer{
+  border-top:1px solid var(--border);
+  margin-top:48px;padding-top:18px;
+  font-size:12px;color:var(--ink-5);line-height:1.8;
+}
+footer a{color:var(--ink-4)}
+
+@media (max-width:560px){
+  .masthead{flex-direction:column;align-items:flex-start}
+  .meta{text-align:left}
+  .pair{grid-template-columns:1fr}
+  .masthead h1{font-size:23px}
+  h2{font-size:19px}
+}
+</style>
+
+<div class="wrap">
+
+<header class="masthead">
+  <div>
+    <p class="eyebrow">海外不動產持有評估</p>
+    <h1>沖繩・北海道渡假房評估</h1>
+    <p class="sub">4–6 人使用・最低購房預算與年度持有維護費試算</p>
+  </div>
+  <div class="meta">
+    調查日 2026-09-11<br>
+    匯率 1 JPY ≈ 0.20 TWD<br>
+    幣別 日圓（万円）／新台幣
+  </div>
+</header>
+
+<!-- ============ 摘要 ============ -->
+<section>
+  <h2><span class="num">01</span>結論摘要</h2>
+
+  <div class="kpis" style="margin-top:20px">
+    <div class="kpi">
+      <div class="label">沖繩 入手總額</div>
+      <div class="big">140–230<span class="unit">萬 TWD</span></div>
+      <div class="foot">物件 500–900 万円＋諸費用</div>
+    </div>
+    <div class="kpi">
+      <div class="label">沖繩 年持有費</div>
+      <div class="big">13–18<span class="unit">萬 TWD</span></div>
+      <div class="foot">約 65–90 万円／年</div>
+    </div>
+    <div class="kpi">
+      <div class="label">北海道 入手總額</div>
+      <div class="big">140–240<span class="unit">萬 TWD</span></div>
+      <div class="foot">物件 500–900 万円＋諸費用</div>
+    </div>
+    <div class="kpi">
+      <div class="label">北海道 年持有費</div>
+      <div class="big">13–24<span class="unit">萬 TWD</span></div>
+      <div class="foot">約 67–118 万円／年</div>
+    </div>
+  </div>
+  <p class="kpi-note">入手總額含物件本體、購入諸費用（約成交價 12–15%）與家具家電初期整備。</p>
+
+  <div class="callout warn">
+    <span class="tag">核心發現</span>
+    <p><strong>年持有費約等於低價物件本體價的 10%。</strong>買 140 萬台幣的房，每年燒 13–24 萬台幣，五年再燒掉一個房價。這類 200–900 万円級物件不是「便宜的資產」，而是<strong>負現金流的長期負債</strong>。便宜的房子沒有便宜的持有成本。</p>
+  </div>
+
+  <div class="pair">
+    <div>
+      <h4>沖繩</h4>
+      <p class="best">正解：中古一戸建て（獨棟）</p>
+      <p>管理費由自己決定、修繕節奏自主。築古リゾートマンション的管理費是管委會決定的，只漲不跌，且滯納戶會拖垮整個社區財務。</p>
+    </div>
+    <div>
+      <h4>北海道</h4>
+      <p class="best">正解：札幌市內中古マンション</p>
+      <p>結論與沖繩相反。除雪、防凍、屋頂雪載重讓獨棟成為成本黑洞，<strong>雪讓公寓的共同管理從缺點變成優點</strong>。</p>
+    </div>
+  </div>
+
+  <div class="callout">
+    <span class="tag">若一定要二選一</span>
+    <p><strong>選沖繩。</strong>交通成本（直飛 2.5 小時、廉航多）、可用季節長度（全年）、年持有費三項都贏。北海道的優勢（升值性、雪季租金）只在<strong>札幌市區或二世谷</strong>才成立，而那已是 2,400 万円～2 億円的價位帶，脫離「最低預算」命題。</p>
+  </div>
+</section>
+
+<!-- ============ 入手成本 ============ -->
+<section>
+  <h2><span class="num">02</span>入手成本結構</h2>
+  <p class="lede">兩地最低預算檔位的物件本體價位相近，差異出現在初期整備：北海道需額外配置暖房機具與冬季裝備。</p>
+
+  <div class="tw">
+    <table>
+      <thead>
+        <tr>
+          <th>項目</th>
+          <th class="n">沖繩（万円）</th>
+          <th class="n">北海道（万円）</th>
+          <th>說明</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>物件本體</th>
+          <td class="n">500–900</td>
+          <td class="n">500–900</td>
+          <td>沖繩＝恩納村／北谷 築30年リゾマン 3–4LDK；北海道＝定山渓／洞爺 築35年 温泉付 3LDK 75㎡</td>
+        </tr>
+        <tr>
+          <th>購入諸費用</th>
+          <td class="n">80–110</td>
+          <td class="n">80–110</td>
+          <td>約成交價 12–15%（低總價時比例被固定成本墊高）</td>
+        </tr>
+        <tr>
+          <th>家具家電・初期整備</th>
+          <td class="n">80–150</td>
+          <td class="n">100–180</td>
+          <td>北海道須加計暖房機具、除雪道具、6 人份冬季寢具</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>入手總計</td>
+          <td class="n">700–1,150</td>
+          <td class="n">700–1,200</td>
+          <td>台幣約 140–240 萬</td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+
+  <h3>購入諸費用明細（以 700 万円物件試算）</h3>
+  <div class="tw">
+    <table>
+      <thead>
+        <tr><th>費目</th><th class="n">金額（万円）</th><th>備註</th></tr>
+      </thead>
+      <tbody>
+        <tr><th>仲介手數料</th><td class="n">29.7</td><td>（成交價 3%＋6 万円）× 1.1 消費稅</td></tr>
+        <tr><th>登錄免許稅</th><td class="n">約 10</td><td>所有權移轉；非自住無法適用住宅輕減稅率</td></tr>
+        <tr><th>不動產取得稅</th><td class="n">0–12</td><td>中古住宅控除需自住要件，渡假房多半不適用</td></tr>
+        <tr><th>司法書士報酬</th><td class="n">8–15</td><td>登記代理</td></tr>
+        <tr><th>印紙稅</th><td class="n">1</td><td>500 万〜1,000 万円契約級距</td></tr>
+        <tr><th>火災・地震保險</th><td class="n">10–20</td><td>5 年躉繳。沖繩颱風／北海道雪害，費率均偏高</td></tr>
+        <tr><th>固定資產稅・管理費精算</th><td class="n">數万</td><td>依交屋日按比例分攤</td></tr>
+        <tr><th>台灣人專屬費用</th><td class="n">2–5</td><td>宣誓供述書（駐日代表處）、文件譯文、跨境匯款成本</td></tr>
+      </tbody>
+      <tfoot>
+        <tr><td>合計</td><td class="n">80–110</td><td>約成交價 12–15%</td></tr>
+      </tfoot>
+    </table>
+  </div>
+
+  <div class="callout">
+    <span class="tag">外國人持有的兩項法定義務</span>
+    <p>購買本身<strong>無國籍限制</strong>，但非居住者必須：<br>
+    一、指定<strong>納稅管理人</strong>（日本境內稅理士或不動產公司），向所轄稅務署提出屆出；<br>
+    二、取得後 <strong>20 日內</strong>經日本銀行向財務大臣報告。</p>
+  </div>
+</section>
+
+<!-- ============ 沖繩 ============ -->
+<section>
+  <h2><span class="num">03</span>沖繩：年持有費與風險</h2>
+
+  <div class="tw">
+    <table>
+      <thead>
+        <tr><th>年度費目</th><th class="n">A. 中古リゾマン<br>3LDK / 70㎡</th><th class="n">B. 中古一戸建て<br>1,500–2,500 万円</th></tr>
+      </thead>
+      <tbody>
+        <tr><th>管理費＋修繕積立金</th><td class="n">30–50</td><td class="n">—</td></tr>
+        <tr><th>固定資產稅＋都市計畫稅</th><td class="n">6–10</td><td class="n">10–18</td></tr>
+        <tr><th>火災・地震保險</th><td class="n">3–6</td><td class="n">5–8</td></tr>
+        <tr><th>水電基本費（空屋照收）</th><td class="n">3–5</td><td class="n">5</td></tr>
+        <tr><th>管理代行（通風・清掃・颱風後鹽害沖洗）</th><td class="n">8–20</td><td class="n">15–25</td></tr>
+        <tr><th>自提修繕準備金</th><td class="n">—</td><td class="n">20–30</td></tr>
+        <tr><th>除濕防黴・家電汰換攤提</th><td class="n">5–10</td><td class="n">含上列</td></tr>
+        <tr><th>稅務代理・確定申告</th><td class="n">3–10</td><td class="n">3–10</td></tr>
+      </tbody>
+      <tfoot>
+        <tr><td>年合計（万円）</td><td class="n">65–90</td><td class="n">58–96</td></tr>
+        <tr><td>年合計（萬 TWD）</td><td class="n">13–18</td><td class="n">12–19</td></tr>
+      </tfoot>
+    </table>
+  </div>
+  <p class="cap">管理代行單次行情 8,000–10,000 円（交通費另計）。</p>
+
+  <div class="callout warn">
+    <span class="tag">關鍵判讀</span>
+    <p>A 與 B 的年持有費<strong>幾乎相同</strong>，但 B 的資產不會歸零、修繕節奏自己控制、管理費不會被管委會加價。<strong>中古一戸建て優於築古リゾートマンション。</strong></p>
+  </div>
+
+  <h3>低價物件的三個結構性問題</h3>
+  <ul class="plain">
+    <li><strong>泡沫期產物。</strong>200–600 万円級物件幾乎全是 1980s–90s 蓋的リゾートマンション，附泳池、大廳、海景公設，管理費＋修繕積立金合計月 2–5 万円很常見。</li>
+    <li><strong>調漲已成定局。</strong>築 30 年以上者，管理費／修繕積立金的未來調漲多半已決議在案。</li>
+    <li><strong>你在接手別人的欠款。</strong>便宜的真正原因是屋主賣不掉又滯納管理費；社區修繕金缺口可達數千万円。沖繩高濕、鹽害、颱風使外牆與防水修繕週期比本土短，修繕積立金卻普遍低於國交省指引。</li>
+  </ul>
+</section>
+
+<!-- ============ 北海道 ============ -->
+<section>
+  <h2><span class="num">04</span>北海道：年持有費與風險</h2>
+  <p class="lede">北海道多了三個沖繩完全沒有的成本變數：除雪、防凍、溫泉維護。</p>
+
+  <div class="tw">
+    <table>
+      <thead>
+        <tr>
+          <th>年度費目</th>
+          <th class="n">A. 温泉リゾマン<br>定山渓／洞爺</th>
+          <th class="n">B. 中古一戸建て<br>近郊</th>
+          <th class="n">C. 札幌市內マンション<br>約 2,400 万円</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><th>管理費＋修繕＋温泉使用料</th><td class="n">36–60</td><td class="n">—</td><td class="n">24–30</td></tr>
+        <tr><th>温泉権 更新料攤提</th><td class="n">5</td><td class="n">—</td><td class="n">—</td></tr>
+        <tr><th>除雪委託</th><td class="n good">管委會負擔</td><td class="n bad">15–30</td><td class="n good">管委會負擔</td></tr>
+        <tr><th>灯油防凍・冬季光熱</th><td class="n">8–15</td><td class="n">12–26</td><td class="n">6–10</td></tr>
+        <tr><th>固定資產稅＋都市計畫稅</th><td class="n">6–10</td><td class="n">8–15</td><td class="n">12–18</td></tr>
+        <tr><th>火災保險（含雪害）</th><td class="n">3–6</td><td class="n">5–10</td><td class="n">4–7</td></tr>
+        <tr><th>空屋管理代行</th><td class="n">6–12</td><td class="n">6–18</td><td class="n">6–12</td></tr>
+        <tr><th>自提修繕準備（屋頂雪載重・外牆・鍋爐）</th><td class="n">—</td><td class="n">20–30</td><td class="n">—</td></tr>
+        <tr><th>稅務代理</th><td class="n">3–10</td><td class="n">3–10</td><td class="n">3–10</td></tr>
+      </tbody>
+      <tfoot>
+        <tr><td>年合計（万円）</td><td class="n">67–118</td><td class="n">70–140</td><td class="n">55–87</td></tr>
+        <tr><td>年合計（萬 TWD）</td><td class="n">13–24</td><td class="n">14–28</td><td class="n">11–17</td></tr>
+        <tr><td>資產性</td><td class="n bad">趨近零</td><td class="n bad">難脫手</td><td class="n good">保值＋流動性</td></tr>
+      </tfoot>
+    </table>
+  </div>
+
+  <h3>温泉付き＝看起來最划算，實際最貴</h3>
+  <p>定山渓 2LDK 築 1989 掛牌僅 <span class="n">350–400</span> 万円，非常誘人。真實成本如下：</p>
+  <div class="tw">
+    <table>
+      <thead><tr><th>溫泉相關成本</th><th class="n">金額</th><th>週期</th></tr></thead>
+      <tbody>
+        <tr><th>管理費＋修繕積立金＋温泉使用料</th><td class="n">月 3 万円以上起跳</td><td>一般公寓的 1.5–2 倍</td></tr>
+        <tr><th>温泉権 更新料</th><td class="n">約 50 万円</td><td>每 10 年</td></tr>
+        <tr><th>溫泉配管硬化堵塞修繕</th><td class="n">數十万～數百万円</td><td>不定期</td></tr>
+        <tr><th>ボイラー・循環裝置更換</th><td class="n">數十万～100 万円以上</td><td>每 10–15 年</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout warn">
+    <span class="tag">致命變數：總戶數</span>
+    <p>溫泉維護是<strong>固定成本</strong>，20 戶社區的每戶負擔遠高於 50 戶。買前第一個要問的數字就是總戶數，<strong>20 戶以下的溫泉大樓基本是地雷</strong>。</p>
+  </div>
+
+  <h3>冬季支出：不住也要燒錢</h3>
+  <div class="tw">
+    <table>
+      <thead><tr><th>北海道特有支出</th><th class="n">年額（万円）</th><th>說明</th></tr></thead>
+      <tbody>
+        <tr><th>除雪委託（基地＋前面道路）</th><td class="n">15–30</td><td>豪雪區更高</td></tr>
+        <tr><th>灯油鍋爐防凍常時運轉</th><td class="n">10–20</td><td>不在時也必須維持運轉</td></tr>
+        <tr><th>水道凍結防止帶電費</th><td class="n">2.5–6</td><td>冬季 24 小時通電，月 5,000–10,000 円</td></tr>
+      </tbody>
+      <tfoot><tr><td>僅北海道特有項目合計</td><td class="n">30–60</td><td>約台幣 6–12 萬／年</td></tr></tfoot>
+    </table>
+  </div>
+
+  <div class="callout warn">
+    <span class="tag">最大隱性風險：水抜き</span>
+    <p>離開前未做好排水防凍 → 管線凍裂，單次修繕數十万至百万円，而且<strong>發生在你不在的時候，會泡到樓下</strong>。這是遠端持有北海道房產最難控制的風險，必須付費委託定期巡迴（空屋管理代行月 5,000–15,000 円）。管理費在此不是開銷，是保險。</p>
+  </div>
+
+  <h3>兩個「別碰」</h3>
+  <ul class="plain">
+    <li><strong>一戸建て（獨棟）。</strong>沖繩的獨棟是好選擇，北海道不是——自己扛除雪 15–30 万円、屋頂雪載重、鍋爐更換。年持有費三檔最高，卻最難脫手。</li>
+    <li><strong>ニセコ／倶知安。</strong>2026 年公示地價 <span class="n">20 万円/㎡</span>（坪 <span class="n">66 万円</span>）、年增 <span class="n amber">+10.5%</span>、過去 10 年漲 <span class="n amber">6.6 倍</span>，連續三年全日本地價漲幅第一。可用 condo 已是 8,000 万円～2 億円級。這是外資投機／外幣資產配置命題，不是渡假房命題。</li>
+  </ul>
+</section>
+
+<!-- ============ 對照 ============ -->
+<section>
+  <h2><span class="num">05</span>雙地決策對照</h2>
+  <div class="tw">
+    <table>
+      <thead><tr><th>比較軸</th><th>沖繩</th><th>北海道</th></tr></thead>
+      <tbody>
+        <tr><th>最低入手（4–6 人）</th><td class="n">140–230 萬 TWD</td><td class="n">140–240 萬 TWD</td></tr>
+        <tr><th>年持有費</th><td class="n">13–18 萬 TWD</td><td class="n">13–24 萬 TWD</td></tr>
+        <tr><th>最佳物件型態</th><td>中古一戸建て</td><td>札幌市內マンション</td></tr>
+        <tr><th>主要破壞因子</th><td>鹽害・颱風・管理費失控</td><td>除雪・凍結・溫泉維護</td></tr>
+        <tr><th>可用季節</th><td>全年（夏季最佳）</td><td>冬季為主，窗口較窄</td></tr>
+        <tr><th>出租法規</th><td class="bad">縣條例加碼限制<br>住居專用地域約 120 日</td><td class="good">僅全國 180 日上限<br>較寬鬆</td></tr>
+        <tr><th>出租需求</th><td>夏季集中</td><td>雪季需求強、單價高</td></tr>
+        <tr><th>資產增值性</th><td class="bad">中古リゾマン下行</td><td class="good">札幌 +5.6%／年<br>ニセコ +10.5%／年</td></tr>
+        <tr><th>交通（台灣出發）</th><td class="good">直飛 2.5 小時、廉航多</td><td class="bad">直飛 4 小時、班次少、旺季貴</td></tr>
+        <tr><th>租 vs 買 損益兩平</th><td class="n">年住 30–45 晚</td><td class="n">年住 35–55 晚</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ============ 貸款與出租 ============ -->
+<section>
+  <h2><span class="num">06</span>貸款可行性與出租現實</h2>
+
+  <h3>貸款：實務上要準備全額現金</h3>
+  <p>非居住者台灣人可透過台系銀行（東京之星、兆豐）承作，但條件為<strong>成數 5–7 成、利率 2.2–2.8%、年限 25 年內</strong>，且承辦據點集中在東京關東地區。<strong>沖繩與北海道的物件基本上要以現金購入。</strong></p>
+
+  <h3>出租補貼：大概率不成立</h3>
+  <ul class="plain">
+    <li>築古リゾートマンション的<strong>管理規約多半明文禁止民泊</strong>——買前必須調閱規約全文。</li>
+    <li>即便允許，住宅宿泊事業法上限為<strong>年 180 日</strong>；沖繩縣另有條例，住居專用地域僅週末＋假日約 120 日、學校周邊 100 m 內更嚴。</li>
+    <li>全年營運需<strong>旅館業許可</strong>（簡易宿所），門檻與成本是另一個量級。</li>
+    <li>扣除代管 20–25%、清潔費、平台費與空置期後，淨收益無法覆蓋前述持有費。</li>
+  </ul>
+
+  <h3>機會成本：損益兩平點</h3>
+  <div class="tw">
+    <table>
+      <thead><tr><th>情境（年實住 14 晚）</th><th class="n">沖繩</th><th class="n">北海道</th></tr></thead>
+      <tbody>
+        <tr><th>租 3LDK 渡假公寓／包棟 單價</th><td class="n">2–3 万円／晚</td><td class="n">1.5–4 万円／晚</td></tr>
+        <tr><th>年租屋支出</th><td class="n">28–42 万円<br>（約 6–8 萬 TWD）</td><td class="n">約 35 万円<br>（約 7 萬 TWD）</td></tr>
+        <tr><th>年持有費</th><td class="n">65–90 万円<br>（13–18 萬 TWD）</td><td class="n">67–118 万円<br>（13–24 萬 TWD）</td></tr>
+        <tr><th>損益兩平</th><td class="n amber">年住 30–45 晚</td><td class="n amber">年住 35–55 晚</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="cap">上述持有費比較尚未計入 140–240 萬台幣本金的機會成本。計入後兩平點還會往上推。</p>
+</section>
+
+<!-- ============ 建議 ============ -->
+<section>
+  <h2><span class="num">07</span>建議路線</h2>
+  <div class="tw">
+    <table>
+      <thead><tr><th>你的真實需求</th><th>該做什麼</th></tr></thead>
+      <tbody>
+        <tr><th>純度假，年住 &lt; 35 晚</th><td><strong>兩個都不要買。</strong>租房，零維護、零流動性風險，把本金放在別處。</td></tr>
+        <tr><th>想要日圓資產＋偶爾自用</th><td><strong>札幌市內 3LDK 中古マンション</strong>（約 2,400 万円）。平時長租收租，當作收益資產而非渡假房。</td></tr>
+        <tr><th>真的要渡假房且會常去</th><td><strong>沖繩中古一戸建て</strong>。交通近、全年可用、無除雪、持有費較低。</td></tr>
+        <tr><th>資產配置／看好升值</th><td>ニセコ，但門檻 8,000 万円起跳，且已在高位、屬外資動能行情。</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ============ 查核 ============ -->
+<section>
+  <h2><span class="num">08</span>買前查核清單</h2>
+
+  <h3>兩地共通（缺一不可）</h3>
+  <ol class="check">
+    <li><strong>管理規約全文</strong>——民泊可否、寵物、出租限制。</li>
+    <li><strong>重要事項調查報告書</strong>——修繕積立金現在餘額、滯納總額、未來調漲決議、長期修繕計畫。</li>
+    <li><strong>管委會近 3 年議事錄</strong>——確認外牆防水上次施工年份。</li>
+  </ol>
+
+  <h3>北海道追加四項</h3>
+  <ol class="check">
+    <li><strong>總戶數</strong>——溫泉大樓 20 戶以下直接跳過。</li>
+    <li><strong>除雪費歸屬</strong>——是否已含在管理費內，或另按次計費。</li>
+    <li><strong>溫泉配管與鍋爐上次更新年份</strong>——10–15 年週期，接近就是接手炸彈。</li>
+    <li><strong>不在期間的水抜き作業</strong>——由誰負責、費用多少。</li>
+  </ol>
+</section>
+
+<footer>
+  沖繩・北海道渡假房評估　|　調查日 2026-09-11　|　匯率換算基準 1 JPY ≈ 0.20 TWD<br>
+  資料來源：日本國稅廳、國土交通省公示地價、沖繩縣住宅宿泊事業條例、SUUMO／アットホーム／ニフティ不動産 掛牌資料、各地別莊管理業者公開報價。<br>
+  本報告為公開資料彙整之試算，非投資建議。實際費用依個別物件、管委會決議與稅務條件而異，簽約前請取得該物件之重要事項調查報告書並諮詢日本稅理士與宅建士。
+</footer>
+
+</div>
+
+</body>
+</html>
