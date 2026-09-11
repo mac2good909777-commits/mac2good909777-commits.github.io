@@ -670,7 +670,7 @@
   .v2-article-body { font-size: 17px; line-height: 1.9; }
   .v2-article-body :where(p, li) { font-size: 17px; }
   .v2-article-body blockquote { font-size: 16px; line-height: 1.8; }
-  .v2-article-hero__excerpt { font-size: 17px; line-height: 1.8; }
+  .v2-article-hero__excerpt { font-size: 19px; line-height: 1.8; }
   .v2-article-body table { font-size: 15px; }
   /* 文章內 inline 卡片的小字一併放大 */
   .v2-article-body [style*="font-size:12px"] { font-size: 14px !important; }
