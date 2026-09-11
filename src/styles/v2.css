@@ -67,7 +67,7 @@
 /* === 中文斷行（避免標點落單、詞彙被拆開） === */
 .v2 { line-break: strict; word-break: normal; overflow-wrap: break-word; }
 .v2 :where(p, li, dd, blockquote, figcaption) { text-wrap: pretty; }
-.v2 :where(h1, h2, h3, h4) { text-wrap: balance; word-break: keep-all; }
+.v2 :where(h1, h2, h3, h4) { text-wrap: balance; }
 .v2-article-hero__title, .v2-article-hero__excerpt,
 .v2-cat-hero__title, .v2-cat-hero__desc,
 .v2-section__title, .v2-section__lede { text-wrap: pretty; }
@@ -495,7 +495,7 @@
 .v2-article-hero__crumb {
   font-size: var(--v2-fs-sm); letter-spacing: 0.12em; text-transform: uppercase;
   color: var(--v2-text-soft); margin-bottom: 24px;
-  text-wrap: pretty; word-break: keep-all;
+  text-wrap: pretty;
 }
 .v2-article-hero__crumb a { color: var(--v2-text-soft); }
 .v2-article-hero__crumb a:hover { color: var(--v2-ink); }
