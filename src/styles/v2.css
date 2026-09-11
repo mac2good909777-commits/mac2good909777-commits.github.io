@@ -664,6 +664,21 @@
   .v2-hero__cta .v2-btn { flex: 1 1 auto; justify-content: center; }
   /* insight / pillar title 行距收緊，不佔過多高度 */
   .v2-insight__title { font-size: var(--v2-fs-md); line-height: 1.4; }
+
+  /* === 手機閱讀字級放大（15px 對中文長文偏小） === */
+  :root { --v2-fs-sm: 16.5px; --v2-fs-md: 21px; }
+  .v2-article-body { font-size: 17px; line-height: 1.9; }
+  .v2-article-body :where(p, li) { font-size: 17px; }
+  .v2-article-body blockquote { font-size: 16px; line-height: 1.8; }
+  .v2-article-hero__excerpt { font-size: 17px; line-height: 1.8; }
+  .v2-article-body table { font-size: 15px; }
+  /* 文章內 inline 卡片的小字一併放大 */
+  .v2-article-body [style*="font-size:12px"] { font-size: 14px !important; }
+  .v2-article-body [style*="font-size:13px"] { font-size: 15px !important; }
+  .v2-article-body [style*="font-size:14px"] { font-size: 15.5px !important; }
+  .v2-article-body [style*="font-size:26px"] { font-size: 29px !important; }
+  .v2-article-body [style*="font-size:19px"] { font-size: 21px !important; }
+
   /* 分類 hero 與 article hero 頂部留白縮小 */
   .v2-cat-hero { padding: 84px 0 48px; }
   .v2-article-hero { padding: 84px 0 40px; }
