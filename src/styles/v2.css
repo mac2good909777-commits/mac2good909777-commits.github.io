@@ -65,7 +65,7 @@
 .v2 :where(p) { margin: 0 0 18px; font-size: var(--v2-fs-sm); }
 
 /* === 中文斷行（避免標點落單、詞彙被拆開） === */
-.v2 { line-break: strict; word-break: normal; overflow-wrap: break-word; }
+.v2 { line-break: normal; word-break: normal; overflow-wrap: break-word; }
 .v2 :where(p, li, dd, blockquote, figcaption) { text-wrap: pretty; }
 .v2 :where(h1, h2, h3, h4) { text-wrap: balance; }
 .v2-article-hero__title, .v2-article-hero__excerpt,
