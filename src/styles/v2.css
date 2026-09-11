@@ -656,6 +656,9 @@
   .v2-article-body table tbody td { white-space: nowrap; }
   /* 文章內 inline grid 卡片：手機一律單欄，避免出現孤行 */
   .v2-article-body div[style*="display:grid"] { grid-template-columns: 1fr !important; }
+  /* 標籤串自成一列，並隱藏其前方的分隔點（避免「·」落在行尾） */
+  .v2-article-hero__meta > span:last-child { flex: 1 1 100%; }
+  .v2-article-hero__meta > span:nth-last-child(2) { display: none; }
   /* v2-hero 按鈕與 lede 內容寬度不撐破 gutter */
   .v2-hero__cta { width: 100%; }
   .v2-hero__cta .v2-btn { flex: 1 1 auto; justify-content: center; }
