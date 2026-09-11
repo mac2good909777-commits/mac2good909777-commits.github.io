@@ -68,14 +68,14 @@ body{margin:0;font-family:var(--v2-font);color:var(--v2-text);background:var(--v
 .v2-num p:last-child{margin-bottom:0}
 
 /* 數據列 */
-.v2-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-  gap:0;margin:34px 0 8px;border-top:1px solid var(--v2-line)}
-.v2-stat{padding:22px 24px 20px;border-bottom:1px solid var(--v2-line);border-right:1px solid var(--v2-line)}
-.v2-stat:last-child{border-right:none}
+.v2-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;
+  background:var(--v2-line);border:1px solid var(--v2-line);margin:34px 0 8px}
+.v2-stat{background:var(--v2-bg);padding:22px 24px 20px}
 .v2-stat__label{font-size:var(--v2-fs-sm);letter-spacing:.18em;text-transform:uppercase;
   color:var(--v2-text-soft);margin-bottom:10px}
-.v2-stat__num{font-size:var(--v2-fs-lg);color:var(--v2-navy);line-height:1.1;font-weight:600}
-.v2-stat__num small{font-size:var(--v2-fs-md);font-weight:500}
+.v2-stat__num{font-size:var(--v2-fs-lg);color:var(--v2-navy);line-height:1.15;font-weight:600;
+  word-break:keep-all;overflow-wrap:normal}
+.v2-stat__num small{font-size:var(--v2-fs-md);font-weight:500;white-space:nowrap}
 .v2-stat__sub{font-size:var(--v2-fs-sm);color:var(--v2-text-soft);margin-top:10px;line-height:1.7}
 
 /* 表格 */
@@ -147,25 +147,51 @@ ul.v2-list b{color:var(--v2-ink);display:block;margin-bottom:4px}
   color:var(--v2-text);font-size:var(--v2-fs-sm);line-height:1.85}
 .v2-quote b{color:var(--v2-ink)}
 
+
+.v2-cat-hero__title{word-break:keep-all}
+.v2-cat-hero__title .pre{display:block;font-size:var(--v2-fs-md);font-weight:500;
+  color:var(--v2-text-soft);letter-spacing:.02em;margin-bottom:10px}
+/* 中文斷行：避免標點落單、詞彙被拆開 */
+body{line-break:strict;word-break:normal;overflow-wrap:break-word}
+:where(p),.v2-faq__a,.v2-note,.v2-stat__sub,.v2-src li{text-wrap:pretty}
+:where(h1,h2,h3),.v2-cat-hero__title,.v2-section__title,.v2-cta__title{text-wrap:balance}
+.v2-cat-hero__desc,.v2-section__lede{text-wrap:pretty}
+/* meta／導言列：每項自成一段，不用字元當分隔符 */
+.v2-metarow{display:flex;flex-direction:column;gap:5px}
+.v2-metarow > span{display:block}
+@media(min-width:760px){
+  .v2-metarow{flex-direction:row;flex-wrap:wrap;gap:5px 14px;align-items:baseline}
+  .v2-metarow > span + span{padding-left:15px;border-left:1px solid var(--v2-line)}
+}
+.v2-notice{margin-top:20px;color:var(--v2-navy)}
+.v2-notice .lbl{display:block;margin-bottom:8px}
+.v2-notice .lks{display:flex;flex-direction:column;gap:6px}
+.v2-notice .lks a{white-space:nowrap;border-bottom:1px solid var(--v2-line);align-self:flex-start}
+@media(min-width:760px){.v2-notice .lks{flex-direction:row;flex-wrap:wrap;gap:6px 20px}}
+
 @media(max-width:700px){
+  .v2-stats{grid-template-columns:1fr}
+  .v2-series{grid-template-columns:1fr}
+
   .v2-cat-hero{padding:72px 0 44px}
-  .v2-stat{border-right:none}
   table{min-width:680px}
   .v2-compare{padding:22px 20px}
 }
 </style>
 
 <style>
-.v2-series{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:0;
-  margin:30px 0 0;border-top:1px solid var(--v2-line)}
-.v2-series a,.v2-series span{display:block;padding:18px 20px;border-bottom:1px solid var(--v2-line);
-  border-right:1px solid var(--v2-line)}
-.v2-series > :last-child{border-right:none}
+.v2-series{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
+  background:var(--v2-line);border:1px solid var(--v2-line);margin:30px 0 0}
+.v2-series a,.v2-series > span{display:block;padding:18px 20px;background:var(--v2-bg)}
 .v2-series .k{font-size:var(--v2-fs-sm);letter-spacing:.18em;color:var(--v2-text-soft);
   text-transform:uppercase;margin-bottom:6px;display:block}
-.v2-series .t{font-size:var(--v2-fs-md);color:var(--v2-navy);font-weight:600;line-height:1.4}
-.v2-series .now .t{color:var(--v2-ink)}
+.v2-series .t{font-size:var(--v2-fs-md);color:var(--v2-navy);font-weight:600;line-height:1.4;
+  display:block;word-break:keep-all}
 .v2-series .now{background:var(--v2-bg-cream)}
+.v2-series .now .t{color:var(--v2-ink)}
+.v2-series .soon .t{color:var(--v2-text-soft)}
+.v2-series .s{display:block;margin-top:8px;font-size:var(--v2-fs-sm);
+  color:var(--v2-text-soft);letter-spacing:.08em}
 .v2-series a:hover{background:var(--v2-bg-cream)}
 .v2-src{border-top:2px solid var(--v2-navy);margin-top:26px;padding-top:20px}
 .v2-src h3{margin-bottom:14px}
@@ -186,11 +212,11 @@ ul.v2-list b{color:var(--v2-ink);display:block;margin-bottom:4px}
 <section class="v2-cat-hero">
   <div class="v2-wrap v2-cat-hero__inner">
     <div class="v2-cat-hero__kicker">MARKET VIEW ・ 上篇</div>
-    <h1 class="v2-cat-hero__title">彰濱工業區行情解讀（上）：<br>民間轉手的整批素地與整棟廠房</h1>
+    <h1 class="v2-cat-hero__title"><span class="pre">彰濱工業區行情解讀</span>民間轉手的整批素地與整棟廠房</h1>
     <p class="v2-cat-hero__desc">
       彰濱不是一個市場。同樣在這個園區，有人每坪不到 5 萬買到地，也有人每坪超過 19 萬買廠房——差距不是議價能力，而是您買的根本是兩件不同的東西。本系列分三篇拆解，上篇先看真正由買賣雙方議出來的價格：民間之間的整棟廠房與整批素地。
     </p>
-    <div class="v2-cat-hero__meta">觀察期間 2023年1月–2026年7月　｜　資料來源：內政部不動產交易實價登錄、公開資訊觀測站、睦聚買方研究表　｜　張現傑．睦聚工業地產</div>
+    <div class="v2-cat-hero__meta v2-metarow"><span>觀察期間 2023年1月–2026年7月</span><span>資料來源：內政部不動產交易實價登錄、公開資訊觀測站、睦聚買方研究表</span><span>張現傑．睦聚工業地產</span></div>
   </div>
 </section>
 
@@ -209,8 +235,8 @@ ul.v2-list b{color:var(--v2-ink);display:block;margin-bottom:4px}
     </ul>
     <div class="v2-series">
 <span class="now"><span class="k">上篇・本篇</span><span class="t">民間轉手的行情</span></span>
-<a href="/changbin-2026-2/"><span class="k">中篇</span><span class="t">園區釋出的素地</span></a>
-<a href="/changbin-2026-3/"><span class="k">下篇</span><span class="t">誰在買</span></a>
+<span class="soon"><span class="k">中篇</span><span class="t">園區釋出的素地</span><span class="s">編寫中</span></span>
+<span class="soon"><span class="k">下篇</span><span class="t">誰在買</span><span class="s">編寫中</span></span>
 </div>
 
     <h2 class="v2-section__title" style="font-size:var(--v2-fs-md);color:var(--v2-navy);margin-top:44px;">先講結論</h2>
@@ -351,7 +377,7 @@ ul.v2-list b{color:var(--v2-ink);display:block;margin-bottom:4px}
     </div>
     <div class="v2-faq__item">
       <div class="v2-faq__q">我打算自建，該用哪一層的價格當基準？</div>
-      <p class="v2-faq__a">要拉回素地那一層，不能拿含建物的 12 萬元／坪去估。園區釋出的素地價格與取得方式，請見本系列<a href="/changbin-2026-2/">中篇</a>。</p>
+      <p class="v2-faq__a">要拉回素地那一層，不能拿含建物的 12 萬元／坪去估。園區釋出的素地價格與取得方式，將於本系列中篇說明（編寫中）。</p>
     </div>
 
     <div class="v2-src">
