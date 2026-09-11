@@ -63,6 +63,15 @@
 .v2 [style*="font-family"] { font-family: var(--v2-font) !important; }
 
 .v2 :where(p) { margin: 0 0 18px; font-size: var(--v2-fs-sm); }
+
+/* === 中文斷行（避免標點落單、詞彙被拆開） === */
+.v2 { line-break: strict; word-break: normal; overflow-wrap: break-word; }
+.v2 :where(p, li, dd, blockquote, figcaption) { text-wrap: pretty; }
+.v2 :where(h1, h2, h3, h4) { text-wrap: balance; word-break: keep-all; }
+.v2-article-hero__title, .v2-article-hero__excerpt,
+.v2-cat-hero__title, .v2-cat-hero__desc,
+.v2-section__title, .v2-section__lede { text-wrap: pretty; }
+.v2-article-hero__title, .v2-cat-hero__title, .v2-section__title { text-wrap: balance; }
 /* 用 :where() 降 specificity 到 0，讓 .v2-btn--primary / .v2-nav__link 等單 class 能覆蓋顏色 */
 .v2 :where(a) { color: inherit; text-decoration: none; }
 .v2 :where(img) { max-width: 100%; height: auto; display: block; }
@@ -486,14 +495,18 @@
 .v2-article-hero__crumb {
   font-size: var(--v2-fs-sm); letter-spacing: 0.12em; text-transform: uppercase;
   color: var(--v2-text-soft); margin-bottom: 24px;
+  text-wrap: pretty; word-break: keep-all;
 }
 .v2-article-hero__crumb a { color: var(--v2-text-soft); }
 .v2-article-hero__crumb a:hover { color: var(--v2-ink); }
 .v2-article-hero__meta {
-  display: flex; gap: 16px; align-items: center;
+  display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: baseline;
   font-size: var(--v2-fs-sm); letter-spacing: 0.14em; text-transform: uppercase;
   color: var(--v2-text-soft); margin-bottom: 24px;
 }
+/* 分類與日期不可斷；標籤串可換行但每個 #tag 不拆開 */
+.v2-article-hero__meta > span { white-space: nowrap; }
+.v2-article-hero__meta > span:last-child { white-space: normal; word-break: keep-all; }
 .v2-article-hero__category { color: var(--v2-navy); font-weight: 600; }
 .v2-article-hero__title {
   font-size: var(--v2-fs-lg);
@@ -634,8 +647,15 @@
   .v2-article-body { line-height: 1.85; }
   .v2-article-body h2 { margin-top: 36px; }
   .v2-article-body h3 { margin-top: 28px; }
-  /* 文章內 table 可水平捲動，避免擠壓 */
-  .v2-article-body { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  /* 文章內 table 可水平捲動（只捲表格，不要整篇跟著橫移） */
+  .v2-article-body table {
+    display: block; width: 100%; overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .v2-article-body table thead th,
+  .v2-article-body table tbody td { white-space: nowrap; }
+  /* 文章內 inline grid 卡片：手機一律單欄，避免出現孤行 */
+  .v2-article-body div[style*="display:grid"] { grid-template-columns: 1fr !important; }
   /* v2-hero 按鈕與 lede 內容寬度不撐破 gutter */
   .v2-hero__cta { width: 100%; }
   .v2-hero__cta .v2-btn { flex: 1 1 auto; justify-content: center; }
