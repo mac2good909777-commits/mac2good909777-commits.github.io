@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="沖繩與北海道渡假房的買房預算與每年持有費，金額一律台幣。">
+<title>沖繩・北海道渡假房評估</title>
+<link rel="icon" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Noto+Sans+TC:wght@400;500;700&family=Roboto+Mono:wght@500;700&display=swap">
+<style>
+html{color-scheme:light}
+body{margin:0}
+img{max-width:100%}
+</style>
+</head>
+<body>
+<style>
+:root{
+  --paper:#F1F7F6;
+  --card:#FFFFFF;
+  --border:#DCEAE8;
+  --line:#EAF2F1;
+
+  --ink:#12302E;
+  --ink-2:#33534F;
+  --ink-3:#4E6D6A;
+  --ink-4:#7B9491;
+
+  --oki:#0B6E69;
+  --oki-soft:#E0F1EE;
+  --hok:#3D5C8F;
+  --hok-soft:#E5EBF7;
+
+  --gold:#A6640F;
+  --warn:#BE4A2E;
+  --warn-soft:#FBEAE5;
+  --good:#2C7D59;
+
+  --serif:"Fraunces",Georgia,serif;
+  --sans:"Noto Sans TC","Microsoft JhengHei",system-ui,sans-serif;
+  --mono:"Roboto Mono",Consolas,monospace;
+  --r:16px;
+  --sh:0 1px 2px rgba(18,48,46,.04), 0 10px 28px -16px rgba(18,48,46,.22);
+}
+*{box-sizing:border-box}
+html{color-scheme:light}
+body{
+  background:var(--paper);
+  color:var(--ink-3);
+  font-family:var(--sans);
+  font-size:16px;
+  line-height:1.8;
+  margin:0;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:620px;margin:0 auto;padding-inline:18px;padding-block:0 52px}
+
+/* ---- 標頭 ---- */
+header{padding-block:38px 26px}
+.kicker{
+  font-family:var(--mono);font-size:11px;letter-spacing:2px;
+  text-transform:uppercase;color:var(--ink-4);margin:0 0 12px;
+}
+h1{
+  font-family:var(--serif);font-optical-sizing:auto;
+  font-size:clamp(30px,8.5vw,40px);font-weight:600;line-height:1.2;
+  letter-spacing:-.5px;color:var(--ink);margin:0 0 12px;text-wrap:balance;
+}
+.sub{font-size:15px;color:var(--ink-3);margin:0 0 20px}
+.horizon{
+  height:4px;border-radius:2px;
+  background:linear-gradient(90deg,var(--oki),#4E8C93 45%,#6C87B4 62%,var(--hok));
+}
+
+/* ---- 區塊 ---- */
+section{margin-bottom:44px}
+h2{
+  font-family:var(--serif);font-size:24px;font-weight:600;
+  letter-spacing:-.3px;line-height:1.35;color:var(--ink);
+  margin:0 0 6px;text-wrap:balance;
+}
+.h2num{
+  font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:1.6px;
+  color:var(--region,var(--oki));display:block;margin-bottom:6px;
+}
+.rule{height:2px;width:46px;border-radius:1px;background:var(--region,var(--oki));opacity:.7;margin:0 0 22px}
+h3{font-family:var(--serif);font-size:18px;font-weight:600;color:var(--ink);margin:30px 0 10px;letter-spacing:-.1px}
+p{margin:0 0 15px}
+strong{color:var(--ink);font-weight:700}
+.n{font-family:var(--mono);font-variant-numeric:tabular-nums;letter-spacing:-.3px}
+.gold{color:var(--gold);font-weight:700}
+
+/* ---- 一句話結論 ---- */
+.verdict{
+  background:var(--card);border:1px solid var(--border);border-radius:var(--r);
+  padding:24px 22px;box-shadow:var(--sh);margin-bottom:14px;
+}
+.verdict .big{
+  font-family:var(--serif);font-size:23px;line-height:1.45;font-weight:600;
+  color:var(--ink);margin:0 0 12px;letter-spacing:-.2px;
+}
+.verdict p{font-size:15px;margin:0}
+
+/* ---- 地域卡 ---- */
+.place{
+  background:var(--card);border:1px solid var(--border);
+  border-top:4px solid var(--c);border-radius:var(--r);
+  padding:22px;box-shadow:var(--sh);margin-bottom:14px;
+}
+.place.o{--c:var(--oki)}
+.place.h{--c:var(--hok)}
+.place h3{
+  font-size:22px;margin:0 0 16px;color:var(--ink);
+  display:flex;align-items:center;gap:10px;
+}
+.place h3 .dot{width:10px;height:10px;border-radius:50%;background:var(--c);flex:none}
+.figs{display:flex;gap:10px;margin-bottom:16px}
+.fig{flex:1;background:var(--paper);border-radius:11px;padding:13px 14px}
+.fig .lab{font-size:11px;letter-spacing:.8px;color:var(--ink-4);font-weight:700;margin-bottom:4px}
+.fig .val{font-family:var(--serif);font-size:23px;font-weight:600;color:var(--ink);line-height:1.15;letter-spacing:-.5px}
+.fig .u{font-family:var(--sans);font-size:12px;color:var(--ink-4);font-weight:500;margin-left:3px}
+.place dl{margin:0;font-size:14.5px}
+.place dt{
+  font-family:var(--mono);font-size:10.5px;letter-spacing:1.2px;
+  color:var(--ink-4);font-weight:700;margin-top:14px;
+}
+.place dd{margin:2px 0 0;color:var(--ink-2)}
+.place dd.hit{color:var(--warn)}
+.place dd strong{color:var(--c)}
+
+/* ---- 明細列 ---- */
+.rows{
+  background:var(--card);border:1px solid var(--border);border-radius:var(--r);
+  overflow:hidden;box-shadow:var(--sh);margin:16px 0 8px;
+}
+.rows .hd{
+  background:var(--region-soft,var(--oki-soft));
+  padding:11px 18px;font-size:12.5px;font-weight:700;color:var(--ink);
+  letter-spacing:.3px;
+}
+.row{
+  display:flex;justify-content:space-between;align-items:baseline;gap:14px;
+  padding:11px 18px;border-top:1px solid var(--line);font-size:14.5px;
+}
+.row .k{color:var(--ink-2);flex:1}
+.row .v{font-family:var(--mono);font-variant-numeric:tabular-nums;color:var(--ink);font-weight:500;white-space:nowrap}
+.row .v.free{color:var(--good);font-weight:700;font-family:var(--sans);font-size:13px}
+.row .v.bad{color:var(--warn);font-weight:700}
+.row.total{
+  background:#FAFDFC;border-top:2px solid var(--border);
+  font-weight:700;padding-block:14px;
+}
+.row.total .k{color:var(--ink);font-weight:700}
+.row.total .v{font-weight:700;font-size:16px}
+.note{font-size:13px;color:var(--ink-4);margin:8px 2px 0}
+
+/* ---- 提示框 ---- */
+.box{
+  background:var(--card);border:1px solid var(--border);
+  border-left:4px solid var(--ink-4);border-radius:var(--r);
+  padding:18px 20px;margin:20px 0;font-size:15px;
+}
+.box.warn{background:var(--warn-soft);border-color:#F2D8D0;border-left-color:var(--warn)}
+.box .tag{
+  display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:1.6px;
+  text-transform:uppercase;font-weight:700;color:var(--ink-4);margin-bottom:7px;
+}
+.box.warn .tag{color:var(--warn)}
+.box p:last-child{margin-bottom:0}
+
+/* ---- 清單 ---- */
+ol.ck{margin:14px 0 0;padding:0;list-style:none;counter-reset:c}
+ol.ck li{
+  counter-increment:c;position:relative;padding-left:38px;
+  margin-bottom:13px;font-size:15px;
+}
+ol.ck li::before{
+  content:counter(c);position:absolute;left:0;top:4px;
+  width:25px;height:25px;border-radius:50%;
+  background:var(--region,var(--oki));color:#fff;
+  font-family:var(--mono);font-size:12px;font-weight:700;
+  display:flex;align-items:center;justify-content:center;
+}
+ul.p{margin:12px 0;padding:0;list-style:none}
+ul.p li{position:relative;padding-left:18px;margin-bottom:10px;font-size:15px}
+ul.p li::before{
+  content:"";position:absolute;left:2px;top:12px;width:6px;height:6px;
+  border-radius:50%;background:var(--region,var(--oki));opacity:.5;
+}
+
+/* ---- 建議 ---- */
+.advice{display:flex;flex-direction:column;gap:10px;margin-top:16px}
+.advice .a{
+  background:var(--card);border:1px solid var(--border);border-radius:var(--r);
+  padding:16px 18px;box-shadow:var(--sh);
+}
+.advice .q{font-size:13px;color:var(--ink-4);font-weight:700;margin-bottom:5px}
+.advice .r{font-size:15.5px;color:var(--ink-2);margin:0}
+.advice .r strong{color:var(--ink)}
+
+footer{
+  border-top:1px solid var(--border);margin-top:46px;padding-top:20px;
+  font-size:12.5px;color:var(--ink-4);line-height:1.8;
+}
+
+@media (min-width:560px){
+  .wrap{padding-inline:24px}
+  body{font-size:16.5px}
+}
+</style>
+
+<div class="wrap">
+
+<header>
+  <p class="kicker">渡假房評估 / 2026</p>
+  <h1>沖繩・北海道<br>渡假房評估</h1>
+  <p class="sub">4–6 人使用．最低買房預算與每年持有費．金額一律台幣</p>
+  <div class="horizon"></div>
+</header>
+
+<!-- 01 -->
+<section>
+  <span class="h2num">01</span>
+  <h2>先說結論</h2>
+  <div class="rule"></div>
+
+  <div class="verdict">
+    <p class="big">兩個都買得起，但每年養它的錢，比你想的多很多。</p>
+    <p>最低預算買得到的房，<strong>一年持有費大約是房價的 10%</strong>。買 140 萬的房，每年要再丟 13–24 萬。五年，等於再買一間。</p>
+  </div>
+
+  <div class="box warn">
+    <span class="tag">一句話</span>
+    <p>如果<strong>一年住不到 35 晚</strong>，租比買划算，而且零維護、零風險。</p>
+  </div>
+</section>
+
+<!-- 02 -->
+<section>
+  <span class="h2num">02</span>
+  <h2>兩地怎麼比</h2>
+  <div class="rule"></div>
+
+  <div class="place o">
+    <h3><span class="dot"></span>沖繩</h3>
+    <div class="figs">
+      <div class="fig">
+        <div class="lab">入手</div>
+        <div class="val n">140–230<span class="u">萬</span></div>
+      </div>
+      <div class="fig">
+        <div class="lab">每年</div>
+        <div class="val n">13–18<span class="u">萬</span></div>
+      </div>
+    </div>
+    <dl>
+      <dt>該買什麼</dt>
+      <dd><strong>獨棟透天</strong>，不要買老舊度假大樓</dd>
+      <dt>為什麼</dt>
+      <dd>透天的修繕自己決定；大樓的管理費是管委會決定的，只會漲</dd>
+      <dt>最大地雷</dt>
+      <dd class="hit">海風鹽害、颱風、管理費失控</dd>
+      <dt>加分</dt>
+      <dd>直飛 2.5 小時、廉航多、全年都能去</dd>
+    </dl>
+  </div>
+
+  <div class="place h">
+    <h3><span class="dot"></span>北海道</h3>
+    <div class="figs">
+      <div class="fig">
+        <div class="lab">入手</div>
+        <div class="val n">140–240<span class="u">萬</span></div>
+      </div>
+      <div class="fig">
+        <div class="lab">每年</div>
+        <div class="val n">13–24<span class="u">萬</span></div>
+      </div>
+    </div>
+    <dl>
+      <dt>該買什麼</dt>
+      <dd><strong>札幌市區公寓</strong>，結論跟沖繩剛好相反</dd>
+      <dt>為什麼</dt>
+      <dd>透天要自己鏟雪、自己扛屋頂積雪，雪讓「大樓共同管理」從缺點變優點</dd>
+      <dt>最大地雷</dt>
+      <dd class="hit">鏟雪費、水管結凍、溫泉維護</dd>
+      <dt>扣分</dt>
+      <dd>直飛 4 小時、班次少、主要只有冬天好用</dd>
+    </dl>
+  </div>
+
+  <div class="box">
+    <span class="tag">只能選一個的話</span>
+    <p><strong>選沖繩。</strong>交通、可用季節、持有費三項都贏。北海道的優勢（會漲、雪季租金好）只存在於札幌市區和二世谷，那已經是 <span class="n">480 萬到 4,000 萬</span>台幣的價位，不是最低預算這回事了。</p>
+  </div>
+</section>
+
+<!-- 03 -->
+<section>
+  <span class="h2num">03</span>
+  <h2>錢花在哪</h2>
+  <div class="rule"></div>
+  <p>買進去那一次要花：<strong>房價 ＋ 約 12–15% 的手續稅費 ＋ 家具家電</strong>。真正的重點是下面每年跑不掉的。</p>
+
+  <div class="rows" style="--region-soft:var(--oki-soft)">
+    <div class="hd">沖繩．每年（買老舊度假大樓）</div>
+    <div class="row"><span class="k">管理費＋修繕基金</span><span class="v">6–10 萬</span></div>
+    <div class="row"><span class="k">房屋持有稅</span><span class="v">1.2–2 萬</span></div>
+    <div class="row"><span class="k">火險．地震險</span><span class="v">0.6–1.2 萬</span></div>
+    <div class="row"><span class="k">水電基本費（空屋也收）</span><span class="v">0.6–1 萬</span></div>
+    <div class="row"><span class="k">代管（通風、清潔、颱風後洗鹽）</span><span class="v">1.6–4 萬</span></div>
+    <div class="row"><span class="k">除濕防霉、家電汰換</span><span class="v">1–2 萬</span></div>
+    <div class="row"><span class="k">日本報稅代理</span><span class="v">0.6–2 萬</span></div>
+    <div class="row total"><span class="k">合計</span><span class="v">13–18 萬</span></div>
+  </div>
+
+  <div class="rows" style="--region-soft:var(--hok-soft)">
+    <div class="hd">北海道．每年（買附溫泉度假大樓）</div>
+    <div class="row"><span class="k">管理費＋修繕基金＋溫泉費</span><span class="v">7–12 萬</span></div>
+    <div class="row"><span class="k">溫泉權更新（每 10 年一次攤提）</span><span class="v">1 萬</span></div>
+    <div class="row"><span class="k">鏟雪</span><span class="v free">管委會負擔</span></div>
+    <div class="row"><span class="k">防凍暖氣（不住也要開）</span><span class="v">1.6–3 萬</span></div>
+    <div class="row"><span class="k">房屋持有稅</span><span class="v">1.2–2 萬</span></div>
+    <div class="row"><span class="k">火險（含雪害）</span><span class="v">0.6–1.2 萬</span></div>
+    <div class="row"><span class="k">空屋巡管</span><span class="v">1.2–2.4 萬</span></div>
+    <div class="row"><span class="k">日本報稅代理</span><span class="v">0.6–2 萬</span></div>
+    <div class="row total"><span class="k">合計</span><span class="v">13–24 萬</span></div>
+  </div>
+
+  <p class="note">若在北海道買透天，鏟雪要自付 <span class="n">3–6 萬</span>／年，總額變成 <span class="n">14–28 萬</span>，是三種選擇裡最貴的。</p>
+</section>
+
+<!-- 04 -->
+<section>
+  <span class="h2num">04</span>
+  <h2>三個容易被忽略的坑</h2>
+  <div class="rule"></div>
+
+  <h3>一、便宜的房子沒有便宜的持有成本</h3>
+  <p>沖繩、北海道那些 <span class="n">50–120</span> 萬台幣的物件，幾乎都是 1980–90 年代蓋的老度假大樓，附泳池、大廳、大浴場。<strong>公設越多，管理費越貴。</strong></p>
+  <p>它便宜的真正原因，是原屋主想賣賣不掉、還積欠管理費。社區修繕基金常常有大洞，<strong>你買的是別人的欠款結構</strong>。</p>
+
+  <h3>二、貸不到款，要準備全額現金</h3>
+  <p>台灣人在日本能貸的銀行（東京之星、兆豐）只做到 <strong>5–7 成、利率 2.2–2.8%</strong>，而且據點都在東京。<strong>沖繩和北海道的房子，實務上只能現金買。</strong></p>
+
+  <h3>三、想靠短租補貼，多半行不通</h3>
+  <ul class="p">
+    <li>老度假大樓的<strong>管委會規約大多明文禁止短租</strong>。</li>
+    <li>就算可以，日本法規上限<strong>一年 180 天</strong>；沖繩縣另有加嚴條例，住宅區只能週末假日、一年約 120 天。</li>
+    <li>扣掉代管抽 20–25%、清潔費、平台費，淨收入蓋不過上面的持有費。</li>
+  </ul>
+
+  <div class="box warn">
+    <span class="tag">北海道限定</span>
+    <p><strong>水管結凍是最貴的意外。</strong>離開前沒把水排乾淨，管線凍裂一次要修好幾萬到二十幾萬台幣，而且都發生在你不在的時候，還會漏到樓下。這筆巡管費不是開銷，是保險。</p>
+  </div>
+</section>
+
+<!-- 05 -->
+<section>
+  <span class="h2num">05</span>
+  <h2>那到底該不該買</h2>
+  <div class="rule"></div>
+  <p>一年去住 14 晚的話，在當地租一間 4–6 人住的房子，大概花 <strong class="n">6–8 萬</strong>台幣。但買下來每年要 <strong class="n">13–24 萬</strong>，<strong>而且還沒算 140–240 萬本金放在那裡的機會成本。</strong></p>
+
+  <div class="advice">
+    <div class="a">
+      <div class="q">一年住不到 35 晚</div>
+      <p class="r"><strong>不要買。</strong>租就好，零維護、隨時能換地方。</p>
+    </div>
+    <div class="a">
+      <div class="q">想要日圓資產，偶爾自己去住</div>
+      <p class="r">買<strong>札幌市區公寓</strong>（約 480 萬台幣），平常長租收租金，把它當投資、不當渡假房。</p>
+    </div>
+    <div class="a">
+      <div class="q">真的常去，一年 35 晚以上</div>
+      <p class="r">買<strong>沖繩獨棟透天</strong>。交通近、全年可用、不用鏟雪、持有費最低。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 06 -->
+<section>
+  <span class="h2num">06</span>
+  <h2>看上物件時，先問這幾題</h2>
+  <div class="rule"></div>
+  <ol class="ck">
+    <li><strong>管委會規約</strong>：能不能短租？能不能養寵物？</li>
+    <li><strong>修繕基金現在剩多少</strong>、有多少人欠繳、<strong>未來要漲多少</strong>（通常已經決議好了）。</li>
+    <li><strong>外牆防水上次做是哪一年</strong>，看近三年管委會會議紀錄。</li>
+  </ol>
+
+  <div style="--region:var(--hok)">
+    <h3>北海道再多問四題</h3>
+    <ol class="ck">
+      <li><strong>總共幾戶</strong>？溫泉維護費用是固定的，<strong>20 戶以下直接跳過</strong>。</li>
+      <li><strong>鏟雪費含在管理費裡嗎</strong>，還是另外按次算？</li>
+      <li><strong>溫泉管線和鍋爐上次換是哪一年</strong>？10–15 年要換一次，快到期就是接手炸彈。</li>
+      <li><strong>你不在的時候，排水防凍誰做</strong>、一次多少錢？</li>
+    </ol>
+  </div>
+</section>
+
+<footer>
+  調查日 2026-09-11．匯率以 1 日圓 ≈ 0.2 台幣換算．金額為區間估算<br>
+  資料來源：日本國稅廳、國土交通省公告地價、沖繩縣短租條例、日本房產網站掛牌行情、各地代管業者公開報價<br>
+  本頁為公開資料整理，不是投資建議。實際費用依個別物件與管委會決議而異，簽約前務必取得該物件的產權與管理費調查報告。
+</footer>
+
+</div>
+
+</body>
+</html>
