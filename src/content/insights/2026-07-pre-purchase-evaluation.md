@@ -26,12 +26,14 @@ draft: false
 - <b>廠房處分・房地合一稅試算</b>——帶入取得成本、資本改良、移轉費用與貸款餘額，算出課稅所得、稅後淨額與實拿現金。
 - <b>企業擴廠選址建議書</b>——生技業擴充 2,000 坪，比較「買現成 vs 買地自建」兩種達標路徑並精選具體標的。
 
+<!-- 暫時隱藏：service-demo 案例展示頁尚未開放，待開放後移除本註解即可還原
 <div style="border:1px solid #E2E8F0;border-top:4px solid #2B5A8C;border-radius:10px;padding:20px 22px;margin:22px 0;background:#fff;">
   <div style="font-size:12px;letter-spacing:1px;color:#94A3B8;">完整案例展示</div>
   <div style="font-size:19px;font-weight:700;color:#2B5A8C;margin:6px 0;">廠房購置・處分 決策前期評估服務</div>
   <div style="font-size:14px;color:#4B5563;line-height:1.8;">四個案例的完整報告（分析結構、比較表與結論建議）可逐案展開。</div>
   <div style="margin-top:12px;font-size:15px;"><a href="https://mac2good909777-commits.github.io/service-demo/">前往查看完整案例 →</a></div>
 </div>
+-->
 
 > 案例均為實際承辦案件。為保護客戶與交易雙方，已移除公司名稱、精確地址與地號等身分資料，並對地籍圖與現場照片遮蔽處理。展示目的僅在說明評估方法與服務能力。
 
