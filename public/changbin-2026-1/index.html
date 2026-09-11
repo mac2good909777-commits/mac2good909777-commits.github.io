@@ -169,6 +169,13 @@ body{line-break:strict;word-break:normal;overflow-wrap:break-word}
 @media(min-width:760px){.v2-notice .lks{flex-direction:row;flex-wrap:wrap;gap:6px 20px}}
 
 @media(max-width:700px){
+  /* 手機閱讀字級放大 */
+  :root{--v2-fs-sm:16.5px;--v2-fs-md:21px}
+  body{font-size:17px;line-height:1.9}
+  :where(p){font-size:17px}
+  .v2-cat-hero__desc,.v2-section__lede{font-size:16.5px}
+  .v2-faq__a,.v2-note,.v2-stat__sub,.v2-src li{font-size:15.5px}
+  table{font-size:15px}
   .v2-stats{grid-template-columns:1fr}
   .v2-series{grid-template-columns:1fr}
 
