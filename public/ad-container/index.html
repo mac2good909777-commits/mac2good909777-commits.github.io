@@ -52,6 +52,9 @@ th,td{padding:10px 14px;border:1px solid var(--line);text-align:left;white-space
 th{color:#fff;font-weight:600;background:#2B5937}
 table tr:nth-child(odd):not(:first-child) td{background:var(--band)}
 td.r,th.r{text-align:right;font-variant-numeric:tabular-nums}
+#out td:first-child,#out th:first-child{white-space:normal;min-width:150px}
+#out{min-width:0;font-size:13px}
+#out th,#out td{padding:8px 10px}
 tr.total td{font-weight:700;background:var(--cream)!important;color:var(--ink)}
 .calc{display:grid;gap:24px;grid-template-columns:minmax(0,300px) minmax(0,1fr)}
 @media (max-width:760px){.calc{grid-template-columns:minmax(0,1fr)}}
@@ -222,17 +225,18 @@ function calc(){
   const base=price*fee*incl, reserve=base*0.02, A=base*a, ref=base*0.05, mgr=base*0.02;
   const rest=base-reserve-A-ref-mgr, svc=rest*0.7, cap=rest*0.3;
   const sv=w.map(x=>svc*x/ws), cp=cap/3;
+  const sp=i=>Math.round(w[i]/ws*100)+'%', a2=$('a').value+'%';
   const rows=[
-    ['A 出場地人',A,null,null,A],
-    ['B',ref,sv[0],cp,ref+sv[0]+cp],
-    ['C',0,sv[1],cp,sv[1]+cp],
-    ['D',0,sv[2],cp,sv[2]+cp],
-    ['管理人（暫存）',mgr,null,null,mgr],
-    ['公積金',null,null,null,reserve]
+    [`<b>A</b>｜出場地人 ${a2}`,A,null,null,A],
+    [`<b>B</b>｜轉介 5%・服務 ${sp(0)}・出資 1/3`,ref,sv[0],cp,ref+sv[0]+cp],
+    [`<b>C</b>｜服務 ${sp(1)}・出資 1/3`,0,sv[1],cp,sv[1]+cp],
+    [`<b>D</b>｜服務 ${sp(2)}・出資 1/3`,0,sv[2],cp,sv[2]+cp],
+    ['<b>管理人 E</b>｜2%（暫存）',mgr,null,null,mgr],
+    ['<b>公積金</b>｜2%（上限 20 萬）',null,null,null,reserve]
   ];
   $('base').textContent=`服務費 ${fmt(price*fee)} × 計入 ${$('incl').value}% ＝ 業績基數 ${fmt(base)}`;
   const c=v=>v==null||v===0?'—':fmt(v);
-  let h='<tr><th>對象</th><th class="r">角色股</th><th class="r">服務分</th><th class="r">出資分</th><th class="r">合計</th><th class="r">佔基數</th></tr>';
+  let h='<tr><th>對象（角色・服務・出資）</th><th class="r">角色股</th><th class="r">服務分</th><th class="r">出資分</th><th class="r">合計</th><th class="r">佔基數</th></tr>';
   rows.forEach(r=>{h+=`<tr><td>${r[0]}</td><td class="r">${c(r[1])}</td><td class="r">${c(r[2])}</td><td class="r">${c(r[3])}</td><td class="r"><b>${fmt(r[4])}</b></td><td class="r">${base?pct(r[4]/base):'—'}</td></tr>`});
   h+=`<tr class="total"><td>合計</td><td class="r">${fmt(A+ref+mgr)}</td><td class="r">${fmt(svc)}</td><td class="r">${fmt(cap)}</td><td class="r">${fmt(base)}</td><td class="r">100%</td></tr>`;
   $('out').innerHTML=h;
