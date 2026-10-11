@@ -142,7 +142,6 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:6px 16px}
     <div>
       <p id="base" style="color:var(--ink);font-weight:500;margin-bottom:12px"></p>
       <div class="tablewrap"><table id="out"></table></div>
-      <p class="warn" id="co"></p>
       <p class="note">出資比例以均攤（各 1/3）計；管理人股在人選確定前暫存。金額為業績，未扣業務與公司拆帳。</p>
     </div>
   </div>
@@ -241,8 +240,6 @@ function calc(){
   rows.forEach(r=>{h+=`<tr><td>${r[0]}</td><td class="r">${c(r[1])}</td><td class="r">${c(r[2])}</td><td class="r">${c(r[3])}</td><td class="r"><b>${fmt(r[4])}</b></td><td class="r">${base?pct(r[4]/base):'—'}</td></tr>`});
   h+=`<tr class="total"><td>合計</td><td class="r">${fmt(A+ref+mgr)}</td><td class="r">${fmt(svc)}</td><td class="r">${fmt(cap)}</td><td class="r">${fmt(base)}</td><td class="r">100%</td></tr>`;
   $('out').innerHTML=h;
-  const bcd=rows[1][4]+rows[2][4]+rows[3][4];
-  $('co').innerHTML=`<b>公司端分潤</b> ＝ B、C、D 業績 ${fmt(bcd)} × 50% ＝ <b>${fmt(bcd*0.5)}</b>（B ${fmt(rows[1][4]*0.5)}｜C ${fmt(rows[2][4]*0.5)}｜D ${fmt(rows[3][4]*0.5)}）`;
 }
 document.querySelectorAll('input[type=range]').forEach(i=>i.addEventListener('input',calc));
 calc();
