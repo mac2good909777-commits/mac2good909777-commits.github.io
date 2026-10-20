@@ -6,10 +6,31 @@ import V4Base from '../layouts/V4Base.astro';
     <div class="v2-wrap--read">
       <div class="v2-section__kicker" style="justify-content:center;">404</div>
       <h1 class="v2-section__title" style="margin-left:auto;margin-right:auto;">頁面不存在</h1>
-      <p style="color:var(--v2-text-soft);margin-bottom:32px;">
+      <p style="color:var(--v2-text-soft);margin-bottom:12px;">
         你要找的頁面可能已移動或不存在。
+      </p>
+      <p style="color:var(--v2-text-soft);margin-bottom:32px;">
+        若是從物件連結點進來的，請直接聯絡專案負責人
+        <a href="tel:0953909777" style="white-space:nowrap;">0953-909-777</a>，我們會把正確的資料給你。
       </p>
       <a class="v2-btn v2-btn--primary" href="/">回首頁 <span class="v2-btn__arrow">→</span></a>
     </div>
   </section>
+
+  <script is:inline>
+    // 截斷連結救援（2026-10-20 加）
+    // 591／臉書等平台會把長網址中段顯示成「......」，使用者照抄就變成
+    // /....../DayaCraneb/ 這種路徑。取最後一段當案碼，先確認
+    // /properties/<案碼>/ 真的存在才轉過去；不存在就留在本頁，不亂轉。
+    (function () {
+      var segs = location.pathname.split('/').filter(Boolean);
+      var code = segs[segs.length - 1];
+      if (!code || !/^[A-Za-z][A-Za-z0-9-]{2,40}$/.test(code)) return;
+      var target = '/properties/' + code + '/';
+      if (location.pathname === target) return;
+      fetch(target, { method: 'HEAD' })
+        .then(function (r) { if (r.ok) location.replace(target + location.search + location.hash); })
+        .catch(function () {});
+    })();
+  </script>
 </V4Base>
