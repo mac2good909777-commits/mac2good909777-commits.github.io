@@ -9,6 +9,7 @@ const articleSchema = z.object({
   author: z.string().default('張現傑'),
   sourceNote: z.string().optional(),
   draft: z.boolean().default(false),
+  properties: z.array(z.string()).default([]),
 });
 
 export const collections = {

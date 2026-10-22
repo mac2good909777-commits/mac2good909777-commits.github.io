@@ -1,0 +1,71 @@
+---
+interface Props {
+  codes: string[];
+  slug: string;
+}
+const { codes, slug } = Astro.props;
+
+const SITE = 'https://mac2good909777-commits.github.io';
+const CASES_URL = 'https://raw.githubusercontent.com/mac2good909777-commits/properties-admin/main/cases.json';
+
+const NAMED: Record<string, string> = {
+  amp: '&', lt: '<', gt: '>', quot: '"', apos: "'", nbsp: ' ',
+  times: '×', mdash: '—', ndash: '–', hellip: '…',
+};
+function decode(s: string): string {
+  return s
+    .replace(/&#x([0-9a-f]+);/gi, (_, h) => String.fromCodePoint(parseInt(h, 16)))
+    .replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(parseInt(n, 10)))
+    .replace(/&([a-z]+);/gi, (m, n) => NAMED[n.toLowerCase()] ?? m);
+}
+function firstLine(html: string): string {
+  const head = String(html ?? '').split(/<br\s*\/?>/i)[0];
+  return decode(head.replace(/<[^>]*>/g, '')).replace(/\s+/g, ' ').trim();
+}
+
+type Card = { href: string; name: string; loc: string; kind: string; spec: string };
+let cards: Card[] = [];
+
+if (codes.length > 0) {
+  try {
+    const res = await fetch(CASES_URL);
+    if (res.ok) {
+      const data: any = await res.json();
+      const list: any[] = Array.isArray(data?.cases) ? data.cases : [];
+      cards = codes
+        .map((code) => list.find((c) => c?.code === code))
+        .filter((c) => c && c.status === 'live' && (c.kind === 'sale' || c.kind === 'rent') && !c._disabled)
+        .slice(0, 3)
+        .map((c) => ({
+          href: `${SITE}/properties/${c.code}${String(c.code).includes('-') ? '-b' : 'b'}/?from=mv-${slug}`,
+          name: String(c.name ?? ''),
+          loc: String(c.loc ?? ''),
+          kind: c.kind === 'sale' ? '售' : '租',
+          spec: firstLine(c.spec),
+        }));
+    }
+  } catch {
+    cards = [];
+  }
+}
+---
+{cards.length > 0 && (
+  <section class="v2-props">
+    <div class="v2-wrap">
+      <div class="v2-section__kicker">本區在手物件</div>
+      <h2 class="v2-props__title">這一區，我們手上的物件</h2>
+      <p class="v2-props__note">價格與完整銷售報告書備索，請洽專案負責人 <a href="tel:0953909777">0953-909-777</a></p>
+      <div class="v2-props__grid">
+        {cards.map((c) => (
+          <a class="v2-props__card" href={c.href}>
+            <span class="v2-props__kind">{c.kind}</span>
+            <h3 class="v2-props__name">{c.name}</h3>
+            <p class="v2-props__loc">{c.loc}</p>
+            {c.spec && <p class="v2-props__spec">{c.spec}</p>}
+            <span class="v2-props__link">看物件資料 →</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+)}

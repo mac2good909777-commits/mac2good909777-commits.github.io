@@ -1,6 +1,7 @@
 ---
 import V4Base from './V4Base.astro';
 import V4Insight from '../components/v4/V4Insight.astro';
+import V4Properties from '../components/v4/V4Properties.astro';
 import { CATEGORIES, type CategoryKey } from '../consts';
 import { getCollection } from 'astro:content';
 
@@ -13,8 +14,9 @@ interface Props {
   coverImage?: string;
   sourceNote?: string;
   slug: string;
+  properties?: string[];
 }
-const { title, date, tags, category, excerpt, coverImage, sourceNote, slug } = Astro.props;
+const { title, date, tags, category, excerpt, coverImage, sourceNote, slug, properties = [] } = Astro.props;
 const cat = CATEGORIES[category];
 const dateStr = date.toISOString().slice(0, 10).replace(/-/g, '.');
 const SITE = 'https://mac2good909777-commits.github.io';
@@ -65,6 +67,8 @@ const related = (await getCollection(category as any, ({ data, slug: s }: any) =
       )}
     </div>
   </article>
+
+  {category === 'market-view' && <V4Properties codes={properties} slug={slug} />}
 
   {related.length > 0 && (
     <section class="v2-related">
