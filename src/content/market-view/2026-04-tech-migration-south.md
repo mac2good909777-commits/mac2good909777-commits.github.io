@@ -7,6 +7,7 @@ author: "張現傑"
 coverImage: "/images/cover-tech-migration.jpg"
 sourceNote: "本文同步刊載於睦聚工業地產專欄。"
 draft: false
+properties: ["ChangBin11439", "ChangBinPlating"]
 ---
 
 ## 一、市場變化不只在於需求增加，而是買方結構改變

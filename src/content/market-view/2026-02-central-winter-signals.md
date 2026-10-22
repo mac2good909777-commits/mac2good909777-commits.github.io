@@ -7,6 +7,7 @@ author: "張現傑"
 coverImage: "/images/cover-winter-signals.jpg"
 sourceNote: "本文同步刊載於睦聚工業地產專欄。"
 draft: false
+properties: ["ChangBin11439", "ChangBinPlating"]
 ---
 
 ## 重點摘要
