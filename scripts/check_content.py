@@ -10,6 +10,7 @@
 規則（market-view、industry-data 為錯誤；insights 只警告）：
   1. 禁用語：scripts/forbidden.txt（! 開頭為錯誤，其餘警告）
   2. 敏感字串：scripts/sensitive.txt（錯誤）
+  8-11. 「你」→「您」、emoji、Markdown **、「唯一」（來源：Drive SKILL/ 各 skill 的寫作規則，2026-11-02 併入）
   3. 有成交數字或提到實價登錄 → 必須寫「內政部」+「實價登錄」來源
   4. 必須有「僅供市場參考」免責句（sourceNote 或內文）
   5. 「不是…而是…」句型 → 警告（規則：不武斷）
@@ -95,7 +96,8 @@ def check(path):
         hard = item.startswith("!")
         w = item[1:] if hard else item
         for m in re.finditer(re.escape(w), whole):
-            if whole[max(0, m.start() - 1):m.start()] == "不":   # 「不一定」「不必然」不算
+            pre = whole[max(0, m.start() - 4):m.start()]
+            if re.search(r"(不|不是|非|沒有|並非|而非|無|不提供|不做)$", pre):   # 「不一定」「不是搶手稀缺」「不提供三年平均」不算
                 continue
             ctx = whole[max(0, m.start() - 15): m.end() + 15].replace("\n", " ")
             msg = "禁用語「%s」：…%s…" % (w, ctx)
@@ -128,6 +130,26 @@ def check(path):
         warns.append("內文有 %d 個門牌（實登成交表可接受；在手物件不可）：%s%s" % (len(addr), "、".join(addr[:3]), "…" if len(addr) > 3 else ""))
     for m in re.finditer(r"[\u4e00-\u9fff]{1,6}段\s?\d{1,4}(-\d+)?\s?地號", plain):
         errors.append("疑似地號：%s" % m.group(0))
+
+    # 8 讀者是法人：第二人稱一律「您」（writing-and-geo.md）
+    ni = [m.start() for m in re.finditer(r"你(?!們)", plain)]
+    if ni and strict:
+        ctx = plain[max(0, ni[0] - 10): ni[0] + 10].replace("\n", " ")
+        warns.append("用了「你」%d 次，專欄讀者是法人，一律改「您」：…%s…" % (len(ni), ctx))
+
+    # 9 不用 emoji／貼圖（專欄硬規則；EDM 會跑版）
+    emo = re.findall(r"[\U0001F300-\U0001FAFF\u2600-\u27BF\u2B50\u2705\u274C]", body)
+    if emo:
+        (errors if strict else warns).append("內文有 emoji %d 個（%s），專欄與電子報不用 emoji" % (len(emo), "".join(emo[:5])))
+
+    # 10 Markdown ** 粗體：電子報／EDM 會顯示成星號，強調改用小標或 <b>
+    bold = len(re.findall(r"\*\*[^*\n]{1,40}\*\*", body))
+    if bold and strict:
+        warns.append("Markdown 粗體 ** 共 %d 處；若要進電子報請改小標或 <b>" % bold)
+
+    # 11 「唯一」只當自我檢核法，不寫上頁面（page-architecture.md）
+    for m in re.finditer(r"唯一", plain):
+        warns.append("「唯一」兩字不寫上頁面（是檢核法不是文案）：…%s…" % plain[max(0, m.start() - 12): m.end() + 12].replace("\n", " "))
 
     return rel, strict, errors, warns
 
