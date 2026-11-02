@@ -5,7 +5,7 @@ export const SITE = {
   tagline: '工業不動產・市場觀察・產業資訊分析',
   licenseNo: '不動產經紀人｜登錄字號：（請填入）',
   contact: {
-    line: 'https://line.me/ti/p/WqW34GMG5R',
+    line: 'https://line.me/ti/p/~0953909777',
     phone: '0953-909-777',
     email: 'a.ruei.he@gmail.com',
     fbPage: 'https://www.facebook.com/industrial.realestate.notes',
