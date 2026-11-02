@@ -122,10 +122,11 @@ def check(path):
     for m in re.finditer(r"不是[^。！？\n]{1,20}而是", plain):
         warns.append("「不是…而是」句型（不武斷規則）：%s" % m.group(0))
 
-    # 6 門牌／地號
-    for m in re.finditer(r"[一-鿿]{1,6}(路|街|巷)[一-鿿0-9]{0,6}\d{1,4}(之\d+)?號", plain):
-        errors.append("疑似門牌：%s" % m.group(0))
-    for m in re.finditer(r"[一-鿿]{1,6}段\s?\d{1,4}(-\d+)?\s?地號", plain):
+    # 6 門牌／地號：實價登錄公開成交表可以有門牌，所以只警告；在手物件描述若出現門牌請人工改掉
+    addr = [m.group(0) for m in re.finditer(r"[\u4e00-\u9fff]{1,6}(路|街|巷)[\u4e00-\u9fff0-9]{0,6}\d{1,4}(之\d+)?號", plain)]
+    if addr:
+        warns.append("內文有 %d 個門牌（實登成交表可接受；在手物件不可）：%s%s" % (len(addr), "、".join(addr[:3]), "…" if len(addr) > 3 else ""))
+    for m in re.finditer(r"[\u4e00-\u9fff]{1,6}段\s?\d{1,4}(-\d+)?\s?地號", plain):
         errors.append("疑似地號：%s" % m.group(0))
 
     return rel, strict, errors, warns
