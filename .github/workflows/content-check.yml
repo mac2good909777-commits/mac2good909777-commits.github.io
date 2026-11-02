@@ -1,0 +1,23 @@
+name: Content check
+
+on:
+  pull_request:
+    paths:
+      - "src/content/**"
+      - "scripts/**"
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: 文案規則檢核（有異動的文章）
+        run: |
+          git fetch origin main --depth=200
+          python3 scripts/check_content.py

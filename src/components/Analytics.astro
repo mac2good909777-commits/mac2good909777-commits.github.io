@@ -12,6 +12,32 @@ const enabled = import.meta.env.PROD && !GA_ID.includes('X');
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', GA_ID);
+
+      // 關鍵事件：點電話、點 LINE、點 Email、送出表單。
+      // 到 GA4「管理 > 事件」把 click_phone / click_line / form_submit 標為關鍵事件即可。
+      document.addEventListener('click', function (e) {
+        var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+        if (!a) return;
+        var h = a.getAttribute('href') || '';
+        var name = null;
+        if (h.indexOf('tel:') === 0) name = 'click_phone';
+        else if (h.indexOf('line.me') !== -1 || h.indexOf('lin.ee') !== -1) name = 'click_line';
+        else if (h.indexOf('mailto:') === 0) name = 'click_email';
+        else if (h.indexOf('facebook.com') !== -1) name = 'click_facebook';
+        if (!name) return;
+        gtag('event', name, {
+          link_url: h,
+          link_text: (a.textContent || '').trim().slice(0, 60),
+          page_path: location.pathname
+        });
+      }, true);
+      document.addEventListener('submit', function (e) {
+        var f = e.target;
+        gtag('event', 'form_submit', {
+          form_id: (f && (f.id || f.getAttribute('name'))) || 'unnamed',
+          page_path: location.pathname
+        });
+      }, true);
     </script>
   </>
 )}
